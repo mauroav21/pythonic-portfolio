@@ -8,22 +8,24 @@ export const site = {
   username: "@mauroav.dev",
   email: "contacto@mauroav.dev",
   location: "Saltillo, México",
-  role: "Computer Systems Engineering | SCM Engineer | DevOps & Cloud Enthusiast",
+  role: "Computer Systems Engineering | Co-founder & CEO @ Zikit | FullStack Developer @ Grupo Server",
   greeting: "Hola, soy Mauro Alvarado.",
   url: "https://mauroav.dev",
   github: "https://github.com/mauroav21",
   linkedin: "https://www.linkedin.com/in/mauroav/",
   cvPath: "/Mauro_Alvarado_CV.pdf",
-  avatarPath: "/images/avatar.jpg",
+  avatarPath: "/images/avatar.png",
 } as const;
 
 export const seo = {
   title: `${site.name} | Portfolio`,
   description:
-    "Portfolio de Mauro Alvarado — Computer Systems Engineer especializado en DevOps, SCM y ecosistemas cloud-native.",
+    "Portfolio de Mauro Alvarado — Computer Systems Engineer, Co-founder & CEO de Zikit y FullStack Developer, especializado en DevOps y ecosistemas cloud-native.",
   keywords: [
     "Mauro Alvarado",
     "portfolio",
+    "Zikit",
+    "FullStack Developer",
     "DevOps",
     "SCM Engineer",
     "Cloud",
@@ -35,7 +37,7 @@ export const seo = {
 } as const;
 
 export const aboutText = [
-  "Soy Computer Systems Engineer, actualmente trabajando como SCM Engineer, con una especialización profunda en DevOps y ecosistemas cloud-native. Mi carrera está impulsada por la pasión por el cómputo en la nube, el liderazgo técnico y la transformación digital a través de infraestructura escalable.",
+  "Soy Computer Systems Engineer, cofundador y CEO de Zikit y FullStack Developer Engineer en Grupo Server, con una especialización profunda en DevOps y ecosistemas cloud-native. Mi carrera está impulsada por la pasión por el cómputo en la nube, el liderazgo técnico y la transformación digital a través de infraestructura escalable.",
   "Además de mi rol como ingeniero, tengo un historial comprobado construyendo y liderando comunidades tecnológicas de alto impacto.",
 ] as const;
 
