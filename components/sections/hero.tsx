@@ -2,122 +2,85 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { Mail, FileText, MapPin } from "lucide-react";
-import { SiGithub } from "react-icons/si";
-import { TbBrandLinkedin } from "react-icons/tb";
-import { site, aboutText } from "@/data/site";
-import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
+import { ArrowDown } from "lucide-react";
+import { site } from "@/data/site";
 
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 24 },
   show: (delay: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] as const },
   }),
 };
 
+const hl = "text-accent";
+
 export function Hero() {
   return (
-    <section
-      id="about"
-      className="relative flex min-h-[calc(100vh-4rem)] scroll-mt-20 items-center overflow-hidden pt-24 pb-16"
-    >
-      <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
-      <Container className="relative">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
-          <div>
-            <motion.p
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-sm text-muted-foreground"
-            >
-              <MapPin className="size-3.5 text-accent" />
-              {site.location}
-            </motion.p>
+    <section id="top" className="relative flex min-h-screen items-center overflow-hidden">
+      <div
+        className="absolute inset-y-0 right-0 aspect-square h-full opacity-80 dark:opacity-40 [mask-composite:intersect] [mask-image:linear-gradient(to_right,transparent,black_60%),linear-gradient(to_bottom,black_75%,transparent)] [-webkit-mask-composite:source-in] lg:opacity-100 lg:dark:opacity-60"
+        aria-hidden="true"
+      >
+        <Image
+          src={site.avatarPath}
+          alt=""
+          fill
+          priority
+          sizes="100vh"
+          className="object-cover"
+        />
+      </div>
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent dark:via-background/60 dark:to-accent/10"
+        aria-hidden="true"
+      />
+      <div className="pointer-events-none absolute -top-40 right-0 size-[40rem] rounded-full bg-accent/20 blur-3xl" aria-hidden="true" />
+      <div className="relative w-full px-6 pt-32 pb-24 sm:px-8 lg:pl-[18rem]">
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0}
+          className="text-xs font-bold tracking-widest text-muted-foreground uppercase"
+        >
+          Hola, soy {site.name}
+        </motion.p>
 
-            <motion.h1
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.1}
-              className="mt-6 text-balance text-4xl font-semibold tracking-tight sm:text-6xl"
-            >
-              {site.greeting}
-            </motion.h1>
+        <motion.h1
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0.1}
+          className="mt-8 max-w-3xl text-4xl leading-[1.15] font-bold tracking-tight text-muted-foreground sm:text-5xl"
+        >
+          Ingeniero <span className={hl}>cloud y DevOps</span>, cofundador de{" "}
+          <span className={hl}>Zikit</span> y líder de <span className={hl}>comunidades</span>.
+        </motion.h1>
 
-            <motion.p
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.2}
-              className="mt-4 text-balance text-lg font-medium text-accent sm:text-xl"
-            >
-              {site.role}
-            </motion.p>
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0.25}
+          className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground"
+        >
+          Construyo infraestructura escalable y productos web, y dedico parte de mi tiempo a que
+          más personas aprendan, conecten y crezcan en tecnología.
+        </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.3}
-              className="mt-6 max-w-xl space-y-4 text-base leading-relaxed text-muted-foreground"
-            >
-              {aboutText.map((paragraph) => (
-                <p key={paragraph.slice(0, 24)}>{paragraph}</p>
-              ))}
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="show"
-              custom={0.4}
-              className="mt-8 flex flex-wrap items-center gap-3"
-            >
-              <Button href={site.github} external variant="primary">
-                <SiGithub className="size-4" />
-                GitHub
-              </Button>
-              <Button href={site.linkedin} external variant="secondary">
-                <TbBrandLinkedin className="size-4" />
-                LinkedIn
-              </Button>
-              <Button href={`mailto:${site.email}`} external variant="secondary">
-                <Mail className="size-4" />
-                Contacto
-              </Button>
-              <Button href={site.cvPath} external variant="ghost">
-                <FileText className="size-4" />
-                CV
-              </Button>
-            </motion.div>
-          </div>
-
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            custom={0.15}
-            className="relative mx-auto aspect-square w-full max-w-sm"
-          >
-            <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-accent/30 via-accent/5 to-transparent blur-2xl" />
-            <div className="relative aspect-square overflow-hidden rounded-[2rem] border border-border bg-surface shadow-xl">
-              <Image
-                src={site.avatarPath}
-                alt={site.name}
-                fill
-                priority
-                sizes="(min-width: 1024px) 24rem, 80vw"
-                className="object-cover"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </Container>
+        <motion.a
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={0.4}
+          href="#experience"
+          className="mt-14 inline-flex items-center gap-2 text-sm font-bold transition-opacity hover:opacity-70"
+        >
+          Ver trayectoria <ArrowDown className="size-4" />
+        </motion.a>
+      </div>
     </section>
   );
 }

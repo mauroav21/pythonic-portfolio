@@ -17,7 +17,7 @@ const item = {
 
 export function TechStack() {
   return (
-    <section id="stack" className="scroll-mt-20 border-y border-border bg-surface-muted/50 py-14">
+    <section id="stack" className="scroll-mt-20 border-t border-border py-14">
       <Container>
         <Reveal>
           <p className="mb-6 font-mono text-xs font-medium tracking-wide text-muted-foreground uppercase">

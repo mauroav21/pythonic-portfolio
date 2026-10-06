@@ -8,11 +8,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/cn";
 
 const links = [
-  { href: "#about", label: "Sobre mí" },
-  { href: "#experience", label: "Experiencia" },
-  { href: "#projects", label: "Proyectos" },
-  { href: "#communities", label: "Comunidades" },
+  { href: "#experience", label: "Trayectoria" },
+  { href: "#work", label: "Proyectos" },
+  { href: "#leadership", label: "Liderazgo" },
   { href: "#writing", label: "Material" },
+  { href: "#contact", label: "Contacto" },
 ];
 
 export function Navbar() {
@@ -35,10 +35,9 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       )}
     >
-      <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6 sm:px-8">
-        <Link href="#about" className="text-sm font-semibold tracking-tight">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:px-8">
+        <Link href="#top" className="text-sm leading-tight font-bold tracking-tight">
           {site.name}
-          <span className="text-muted-foreground"> · {site.username}</span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -46,7 +45,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-foreground"
+              className="text-xs font-bold tracking-wider text-muted-foreground uppercase transition-colors duration-300 hover:text-accent"
             >
               {link.label}
             </a>
@@ -75,7 +74,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-foreground"
+                className="text-xs font-bold tracking-wider text-muted-foreground uppercase transition-colors duration-300 hover:text-accent"
               >
                 {link.label}
               </a>
