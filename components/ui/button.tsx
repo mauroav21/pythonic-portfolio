@@ -6,7 +6,7 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
 
 const variants = {
-  primary: "bg-foreground text-background hover:opacity-85",
+  primary: "bg-accent text-accent-foreground hover:opacity-85",
   secondary:
     "border border-border bg-surface text-foreground hover:border-border-strong hover:bg-surface-muted",
   ghost: "text-foreground hover:bg-surface-muted",

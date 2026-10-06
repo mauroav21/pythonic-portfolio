@@ -9,15 +9,14 @@ export function ExperienceSection() {
   return (
     <Section
       id="experience"
-      eyebrow="Trayectoria"
+      index="01"
+      label="Trayectoria"
       title="Experiencia y formación"
       description={sectionText.experience}
     >
-      <div className="grid gap-12 sm:grid-cols-2">
+      <div className="space-y-16">
         <Timeline heading="Experiencia" entries={experience} />
         <Timeline heading="Educación" entries={education} />
-      </div>
-      <div className="mt-12">
         <Timeline heading="Certificaciones" entries={certifications} />
       </div>
     </Section>
