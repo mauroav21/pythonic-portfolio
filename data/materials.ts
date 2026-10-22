@@ -1,6 +1,24 @@
 import type { CardEntry } from "./types";
 
 /**
+ * Conferencias y charlas que has presentado.
+ */
+export const talks = [
+  { title: "ARQ 101", subtitle: "Diseño de Arquitecturas en la Nube" },
+  { title: "Serverless 101", subtitle: "Introducción a la infraestructura Serverless" },
+  { title: "Disrupción Digital", subtitle: "Construyendo en una nueva era" },
+  { title: "Keep Building Together", subtitle: "The Power of Community" },
+  {
+    title: "Automatización de Pruebas 101",
+    subtitle: "Conociendo el mundo de las pruebas automatizadas",
+  },
+  { title: "Evolve", subtitle: "La importancia de seguir aprendiendo" },
+  { title: "WWW", subtitle: "Internet, una historia en desarrollo" },
+  { title: "Cloud", subtitle: "De la promesa a la implementación" },
+  { title: "El Mahut y el Elefante", subtitle: "La ilusión de tener el control" },
+] as const;
+
+/**
  * Artículos, charlas y material educativo que has creado.
  */
 export const materials: CardEntry[] = [

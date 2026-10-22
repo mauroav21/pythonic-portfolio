@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
-import { materials } from "@/data/materials";
+import { materials, talks } from "@/data/materials";
 import { sectionText } from "@/data/site";
 
 export function MaterialsSection() {
@@ -37,6 +37,25 @@ export function MaterialsSection() {
           </Reveal>
         ))}
       </ul>
+
+      <h3 className="mt-16 font-mono text-xs tracking-widest text-muted-foreground uppercase">
+        Conferencias
+      </h3>
+      <ol className="mt-4 border-t border-border">
+        {talks.map((t, i) => (
+          <Reveal key={t.title} delay={Math.min(i * 0.04, 0.3)}>
+            <li className="grid grid-cols-[2.5rem_1fr] items-baseline gap-4 border-b border-border py-5 sm:grid-cols-[3rem_1fr_1.5fr]">
+              <span className="font-mono text-xs text-muted-foreground">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="text-lg font-semibold tracking-tight">{t.title}</span>
+              <span className="col-start-2 text-sm text-muted-foreground sm:col-start-auto">
+                {t.subtitle}
+              </span>
+            </li>
+          </Reveal>
+        ))}
+      </ol>
     </Section>
   );
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
-import { communities } from "@/data/communities";
+import { communities, leadershipPhotos } from "@/data/communities";
 import { leadership } from "@/data/site";
 
 export function CommunitiesSection() {
@@ -19,6 +19,25 @@ export function CommunitiesSection() {
           <Reveal key={p.title} delay={i * 0.08}>
             <h3 className="font-semibold">{p.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+          </Reveal>
+        ))}
+      </div>
+
+      <div className="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-5">
+        {leadershipPhotos.map((photo, i) => (
+          <Reveal key={photo.src} delay={i * 0.06}>
+            <figure>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-surface-muted">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(min-width: 1024px) 20vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <figcaption className="mt-2 text-xs text-muted-foreground">{photo.caption}</figcaption>
+            </figure>
           </Reveal>
         ))}
       </div>
