@@ -57,7 +57,9 @@ export function Navbar() {
           <ThemeToggle />
           <button
             type="button"
-            aria-label="Abrir menú"
+            aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
             className="flex size-9 items-center justify-center rounded-full border border-border text-foreground"
           >
@@ -67,7 +69,10 @@ export function Navbar() {
       </nav>
 
       {open ? (
-        <div className="border-t border-border bg-background/95 px-6 py-4 backdrop-blur-md md:hidden">
+        <div
+          id="mobile-menu"
+          className="border-t border-border bg-background/95 px-6 py-4 backdrop-blur-md md:hidden"
+        >
           <div className="flex flex-col gap-4">
             {links.map((link) => (
               <a

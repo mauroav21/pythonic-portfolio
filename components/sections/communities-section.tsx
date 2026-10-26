@@ -7,11 +7,15 @@ import { materials } from "@/data/materials";
 import { leadership } from "@/data/site";
 import { cn } from "@/lib/cn";
 
-const wide = { tile: "col-span-2 lg:col-span-6", height: "lg:h-[380px]" };
-const row1 = { tile: "lg:col-span-3", height: "lg:h-[380px]" };
-const row2 = { tile: "lg:col-span-3", height: "lg:h-[280px]" };
-const row3 = { tile: "lg:col-span-4", height: "lg:h-[300px]" };
-const row3Last = { tile: "col-span-2 lg:col-span-4", height: "lg:h-[300px]" };
+const half = "(min-width: 1024px) 50vw, 100vw";
+const quarter = "(min-width: 1024px) 25vw, 50vw";
+const third = "(min-width: 1024px) 33vw, 50vw";
+
+const wide = { tile: "col-span-2 lg:col-span-6", height: "lg:h-[380px]", sizes: half };
+const row1 = { tile: "lg:col-span-3", height: "lg:h-[380px]", sizes: quarter };
+const row2 = { tile: "lg:col-span-3", height: "lg:h-[280px]", sizes: quarter };
+const row3 = { tile: "lg:col-span-4", height: "lg:h-[300px]", sizes: third };
+const row3Last = { tile: "col-span-2 lg:col-span-4", height: "lg:h-[300px]", sizes: "(min-width: 1024px) 33vw, 100vw" };
 
 const layout = [wide, row1, row1, row2, row2, row2, row2, row3, row3, row3Last];
 
@@ -52,7 +56,7 @@ export function CommunitiesSection() {
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  sizes={layout[i].sizes}
                   className="object-cover"
                 />
               </div>
@@ -76,7 +80,7 @@ export function CommunitiesSection() {
                     className="group flex items-center gap-6 py-6"
                   >
                     <div className="relative size-24 shrink-0 overflow-hidden bg-surface-muted">
-                      <Image src={c.image} alt={c.title} fill sizes="6rem" className="object-cover" />
+                      <Image src={c.image} alt="" fill sizes="6rem" className="object-cover" />
                     </div>
                     <div>
                       <h4 className="text-lg font-bold tracking-tight transition-colors group-hover:text-accent">
@@ -106,7 +110,7 @@ export function CommunitiesSection() {
                     className="group flex items-center gap-4 py-6"
                   >
                     <div className="relative size-[4.5rem] shrink-0 overflow-hidden bg-surface-muted">
-                      <Image src={m.image} alt={m.title} fill sizes="4.5rem" className="object-cover" />
+                      <Image src={m.image} alt="" fill sizes="4.5rem" className="object-cover" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-bold tracking-tight transition-colors group-hover:text-accent">
