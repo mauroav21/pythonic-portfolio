@@ -11,11 +11,11 @@ const half = "(min-width: 1024px) 50vw, 100vw";
 const quarter = "(min-width: 1024px) 25vw, 50vw";
 const third = "(min-width: 1024px) 33vw, 50vw";
 
-const wide = { tile: "col-span-2 lg:col-span-6", height: "lg:h-[380px]", sizes: half };
-const row1 = { tile: "lg:col-span-3", height: "lg:h-[380px]", sizes: quarter };
-const row2 = { tile: "lg:col-span-3", height: "lg:h-[280px]", sizes: quarter };
-const row3 = { tile: "lg:col-span-4", height: "lg:h-[300px]", sizes: third };
-const row3Last = { tile: "col-span-2 lg:col-span-4", height: "lg:h-[300px]", sizes: "(min-width: 1024px) 33vw, 100vw" };
+const wide = { tile: "col-span-2 lg:col-span-6", height: "lg:h-[380px] xl:h-[500px]", sizes: half };
+const row1 = { tile: "lg:col-span-3", height: "lg:h-[380px] xl:h-[500px]", sizes: quarter };
+const row2 = { tile: "lg:col-span-3", height: "lg:h-[280px] xl:h-[360px]", sizes: quarter };
+const row3 = { tile: "lg:col-span-4", height: "lg:h-[300px] xl:h-[400px]", sizes: third };
+const row3Last = { tile: "col-span-2 lg:col-span-4", height: "lg:h-[300px] xl:h-[400px]", sizes: "(min-width: 1024px) 33vw, 100vw" };
 
 const layout = [wide, row1, row1, row2, row2, row2, row2, row3, row3, row3Last];
 
@@ -66,7 +66,7 @@ export function CommunitiesSection() {
         ))}
       </div>
 
-      <div className="mt-20 grid gap-16 lg:grid-cols-[1fr_28rem] lg:gap-20">
+      <div className="mt-20 grid gap-16 lg:grid-cols-[1fr_32rem] lg:gap-24">
         <div>
           <h3 className="text-2xl font-bold tracking-tight">Comunidades donde participo</h3>
           <ul className="mt-5 border-t border-border-strong">
