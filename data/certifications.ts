@@ -12,6 +12,6 @@ export const certifications: TimelineEntry[] = [
     description:
       "Acreditación base que valida el dominio de conceptos fundamentales, seguridad, servicios y modelos de precios dentro del ecosistema de Amazon Web Services (AWS).",
     date: "2026",
-    certificate: "https://ejemplo.com/certificado/123456",
+    certificate: "/404",
   },
 ];
