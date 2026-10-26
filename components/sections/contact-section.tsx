@@ -1,42 +1,42 @@
-import { Mail, FileText } from "lucide-react";
-import { SiGithub } from "react-icons/si";
-import { TbBrandLinkedin } from "react-icons/tb";
 import { site } from "@/data/site";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
-import { Button } from "@/components/ui/button";
+
+const links = [
+  { label: "Email", value: site.email, href: `mailto:${site.email}` },
+  { label: "GitHub", value: "github.com/mauroav21", href: site.github },
+  { label: "LinkedIn", value: "linkedin.com/in/mauroav", href: site.linkedin },
+  { label: "CV", value: "Descargar PDF", href: site.cvPath },
+];
 
 export function ContactSection() {
   return (
-    <section id="contact" className="scroll-mt-16 border-t border-border py-24 sm:py-32">
+    <section id="contact" className="scroll-mt-16 bg-surface py-24 sm:py-32">
       <Container>
         <Reveal>
-          <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-            <span className="text-accent">05</span> / Contacto
-          </p>
-          <h2 className="mt-6 max-w-4xl text-4xl font-bold tracking-tighter text-balance uppercase sm:text-6xl lg:text-8xl">
-            Hablemos.
+          <h2 className="max-w-4xl text-5xl font-bold tracking-tighter text-balance text-muted-foreground sm:text-7xl lg:text-8xl">
+            Construyamos algo <span className="text-accent">juntos</span>
           </h2>
-          <a
-            href={`mailto:${site.email}`}
-            className="mt-8 inline-block text-xl text-accent underline-offset-4 hover:underline sm:text-2xl"
-          >
-            {site.email}
-          </a>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Button href={site.linkedin} external variant="primary">
-              <TbBrandLinkedin className="size-4" /> LinkedIn
-            </Button>
-            <Button href={site.github} external variant="secondary">
-              <SiGithub className="size-4" /> GitHub
-            </Button>
-            <Button href={`mailto:${site.email}`} external variant="secondary">
-              <Mail className="size-4" /> Email
-            </Button>
-            <Button href={site.cvPath} external variant="ghost">
-              <FileText className="size-4" /> CV
-            </Button>
-          </div>
+          <ul className="mt-16 grid border-t border-border-strong sm:grid-cols-2 lg:grid-cols-4">
+            {links.map((link) => (
+              <li
+                key={link.label}
+                className="border-b border-border py-6 sm:pr-6 lg:border-b-0 lg:border-l lg:border-border lg:px-6 lg:first:border-l-0 lg:first:pl-0"
+              >
+                <a
+                  href={link.href}
+                  target={link.label === "Email" ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  <p className="text-xs text-muted-foreground">{link.label}</p>
+                  <p className="mt-2 text-base font-semibold transition-colors group-hover:text-accent lg:text-[0.95rem]">
+                    {link.value}
+                  </p>
+                </a>
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </Container>
     </section>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { technologies } from "@/data/technologies";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
+import { SectionTitle } from "@/components/ui/section";
 
 const list = {
   hidden: {},
@@ -17,15 +18,13 @@ const item = {
 
 export function TechStack() {
   return (
-    <section id="stack" className="scroll-mt-20 border-t border-border py-14">
+    <section id="stack" className="scroll-mt-20 py-20 sm:py-28">
       <Container>
         <Reveal>
-          <p className="mb-6 font-mono text-xs font-medium tracking-wide text-muted-foreground uppercase">
-            Tecnologías
-          </p>
+          <SectionTitle title="Con qué" highlight="trabajo" />
         </Reveal>
         <motion.ul
-          className="flex flex-wrap gap-3"
+          className="mt-12 flex flex-wrap gap-3"
           variants={list}
           initial="hidden"
           whileInView="show"
