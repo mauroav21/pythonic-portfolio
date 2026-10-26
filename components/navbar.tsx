@@ -35,7 +35,7 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       )}
     >
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 sm:px-8">
+      <nav className="mx-auto flex h-16 max-w-[112rem] items-center justify-between px-6 sm:px-8 lg:px-12 xl:px-16">
         <Link href="#top" className="text-sm leading-tight font-bold tracking-tight">
           {site.name}
         </Link>
