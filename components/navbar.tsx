@@ -11,7 +11,7 @@ const links = [
   { href: "#experience", label: "Trayectoria" },
   { href: "#work", label: "Proyectos" },
   { href: "#leadership", label: "Liderazgo" },
-  { href: "#writing", label: "Material" },
+  { href: "#talks", label: "Charlas" },
   { href: "#contact", label: "Contacto" },
 ];
 

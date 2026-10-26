@@ -3,36 +3,56 @@ import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
 import { communities, leadershipPhotos } from "@/data/communities";
+import { materials } from "@/data/materials";
 import { leadership } from "@/data/site";
+import { cn } from "@/lib/cn";
+
+const wide = { tile: "col-span-2 lg:col-span-6", height: "lg:h-[380px]" };
+const row1 = { tile: "lg:col-span-3", height: "lg:h-[380px]" };
+const row2 = { tile: "lg:col-span-3", height: "lg:h-[280px]" };
+const row3 = { tile: "lg:col-span-4", height: "lg:h-[300px]" };
+const row3Last = { tile: "col-span-2 lg:col-span-4", height: "lg:h-[300px]" };
+
+const layout = [wide, row1, row1, row2, row2, row2, row2, row3, row3, row3Last];
 
 export function CommunitiesSection() {
   return (
     <Section
       id="leadership"
-      index="03"
-      label="Liderazgo"
-      title="Liderazgo de comunidades"
+      title="Comunidades que"
+      highlight="crecen"
       description={leadership.statement}
     >
-      <div className="grid gap-8 sm:grid-cols-3">
+      <div className="grid border-y border-border sm:grid-cols-3">
         {leadership.principles.map((p, i) => (
           <Reveal key={p.title} delay={i * 0.08}>
-            <h3 className="font-semibold">{p.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+            <div className="h-full border-border py-6 sm:px-7 sm:first:pl-0 sm:[&:not(:first-child)]:border-l">
+              <h3 className="font-semibold">{p.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+            </div>
           </Reveal>
         ))}
       </div>
 
-      <div className="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-5">
+      <div className="mt-12 grid grid-cols-2 gap-3 lg:grid-cols-12">
         {leadershipPhotos.map((photo, i) => (
-          <Reveal key={photo.src} delay={i * 0.06}>
+          <Reveal
+            key={photo.src}
+            delay={Math.min(i * 0.04, 0.3)}
+            className={layout[i].tile}
+          >
             <figure>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-surface-muted">
+              <div
+                className={cn(
+                  "relative h-44 overflow-hidden bg-surface-muted sm:h-56",
+                  layout[i].height
+                )}
+              >
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  sizes="(min-width: 1024px) 20vw, 50vw"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
                 />
               </div>
@@ -42,42 +62,68 @@ export function CommunitiesSection() {
         ))}
       </div>
 
-      <ul className="mt-16 border-t border-border">
-        {communities.map((c, i) => (
-          <Reveal key={c.title} delay={Math.min(i * 0.05, 0.3)}>
-            <li className="border-b border-border">
-              <a
-                href={c.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group grid items-center gap-6 py-8 sm:grid-cols-[10rem_1fr_auto]"
-              >
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-surface-muted">
-                  <Image
-                    src={c.image}
-                    alt={c.title}
-                    fill
-                    sizes="(min-width: 640px) 10rem, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div>
-                  <p className="font-mono text-xs text-muted-foreground">
-                    {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-1 text-3xl font-bold tracking-tighter uppercase transition-colors group-hover:text-accent sm:text-5xl">
-                    {c.title}
-                  </h3>
-                  <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                    {c.description}
-                  </p>
-                </div>
-                <ArrowUpRight className="hidden size-6 text-muted-foreground transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent sm:block" />
-              </a>
-            </li>
-          </Reveal>
-        ))}
-      </ul>
+      <div className="mt-20 grid gap-16 lg:grid-cols-[1fr_28rem] lg:gap-20">
+        <div>
+          <h3 className="text-2xl font-bold tracking-tight">Comunidades donde participo</h3>
+          <ul className="mt-5 border-t border-border-strong">
+            {communities.map((c, i) => (
+              <Reveal key={c.title} delay={Math.min(i * 0.05, 0.3)}>
+                <li className="border-b border-border">
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-6 py-6"
+                  >
+                    <div className="relative size-24 shrink-0 overflow-hidden bg-surface-muted">
+                      <Image src={c.image} alt={c.title} fill sizes="6rem" className="object-cover" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold tracking-tight transition-colors group-hover:text-accent">
+                        {c.title}
+                      </h4>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        {c.description}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-2xl font-bold tracking-tight">Donde publico mis artículos</h3>
+          <ul className="mt-5 border-t border-border-strong">
+            {materials.map((m, i) => (
+              <Reveal key={m.title} delay={Math.min(i * 0.05, 0.3)}>
+                <li className="border-b border-border">
+                  <a
+                    href={m.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-4 py-6"
+                  >
+                    <div className="relative size-[4.5rem] shrink-0 overflow-hidden bg-surface-muted">
+                      <Image src={m.image} alt={m.title} fill sizes="4.5rem" className="object-cover" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-bold tracking-tight transition-colors group-hover:text-accent">
+                        {m.title}
+                      </h4>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        {m.description}
+                      </p>
+                    </div>
+                    <ArrowUpRight className="size-5 shrink-0 text-muted-foreground transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent" />
+                  </a>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </div>
     </Section>
   );
 }

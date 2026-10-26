@@ -12,24 +12,24 @@ export function Timeline({
   return (
     <div>
       <Reveal>
-        <h3 className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-          {heading}
-        </h3>
+        <h3 className="text-xl font-semibold tracking-tight">{heading}</h3>
       </Reveal>
-      <ul className="mt-4 border-t border-border">
+      <ul className="mt-4 border-t border-border-strong">
         {entries.map((entry, index) => (
           <Reveal key={entry.title + entry.subtitle} delay={Math.min(index * 0.05, 0.3)}>
-            <li className="grid gap-2 border-b border-border py-6 sm:grid-cols-[9rem_1fr] sm:gap-8">
-              <span className="font-mono text-xs text-muted-foreground sm:pt-1">{entry.date}</span>
+            <li className="grid gap-3 border-b border-border py-8 md:grid-cols-[10rem_1fr_1.4fr] md:gap-10">
               <div>
-                <h4 className="text-lg font-semibold tracking-tight">{entry.title}</h4>
-                <p className="text-sm font-medium text-accent">
-                  {entry.subtitle}
-                  {entry.location ? (
-                    <span className="text-muted-foreground"> · {entry.location}</span>
-                  ) : null}
-                </p>
-                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                <p className="font-mono text-xs text-accent">{entry.date}</p>
+                {entry.location ? (
+                  <p className="mt-2 font-mono text-xs text-muted-foreground">{entry.location}</p>
+                ) : null}
+              </div>
+              <div>
+                <h4 className="text-2xl font-bold tracking-tight">{entry.subtitle}</h4>
+                <p className="mt-1 text-sm text-muted-foreground">{entry.title}</p>
+              </div>
+              <div>
+                <p className="text-sm leading-relaxed text-muted-foreground">
                   {entry.description}
                 </p>
                 {entry.certificate ? (

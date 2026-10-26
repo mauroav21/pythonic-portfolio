@@ -15,21 +15,6 @@ export const leadershipPhotos = [
     caption: "Impacto de la programación competitiva",
   },
   {
-    src: "/images/leadership/laboratorio.jpg",
-    alt: "Estudiantes en un laboratorio de cómputo durante un taller",
-    caption: "Taller en laboratorio de cómputo",
-  },
-  {
-    src: "/images/leadership/grupo.jpg",
-    alt: "Foto grupal de estudiantes y organizadores al cierre de un evento",
-    caption: "Cierre de evento con la comunidad",
-  },
-  {
-    src: "/images/leadership/escalera.jpg",
-    alt: "Foto grupal de la comunidad en la escalinata de un edificio histórico",
-    caption: "Encuentro de comunidades en la nube",
-  },
-  {
     src: "/images/leadership/community-day.jpg",
     alt: "Grupo de estudiantes frente al letrero de AWS Community Day",
     caption: "AWS Community Day",
@@ -40,9 +25,24 @@ export const leadershipPhotos = [
     caption: "Evento de Cloud Clubs",
   },
   {
+    src: "/images/leadership/laboratorio.jpg",
+    alt: "Estudiantes en un laboratorio de cómputo durante un taller",
+    caption: "Taller en laboratorio de cómputo",
+  },
+  {
+    src: "/images/leadership/escalera.jpg",
+    alt: "Foto grupal de la comunidad en la escalinata de un edificio histórico",
+    caption: "Encuentro de comunidades en la nube",
+  },
+  {
     src: "/images/leadership/dinamica.jpg",
     alt: "Dinámica de rifa en el escenario durante un evento de la comunidad",
     caption: "Dinámica en el escenario",
+  },
+  {
+    src: "/images/leadership/grupo.jpg",
+    alt: "Foto grupal de estudiantes y organizadores al cierre de un evento",
+    caption: "Cierre de evento con la comunidad",
   },
   {
     src: "/images/leadership/videollamada.jpg",
