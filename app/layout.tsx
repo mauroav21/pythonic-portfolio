@@ -57,8 +57,14 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
         <ThemeProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-accent-foreground"
+          >
+            Saltar al contenido
+          </a>
           <Navbar />
-          <main>{children}</main>
+          <main id="main">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
