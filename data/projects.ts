@@ -12,7 +12,7 @@ export const projects: Project[] = [
     description:
       "Aplicación web para gestión de proyectos y tareas con autenticación de usuarios, asignación de tareas y seguimiento en tiempo real.",
     image: "/images/projects/project.jpeg",
-    repo: "https://github.com/mauroav21/task-manager",
+    repo: "/404",
     technologies: ["React", "Node.js", "MongoDB", "Express"],
   },
   {
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     description:
       "Plataforma de comercio electrónico con carrito de compras, pasarela de pagos, gestión de inventario y panel de administración.",
     image: "/images/projects/project.jpeg",
-    repo: "https://github.com/mauroav21/ecommerce-platform",
+    repo: "/404",
     technologies: ["Python", "Django", "PostgreSQL", "Stripe"],
   },
   {
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     description:
       "Modelo de aprendizaje profundo para clasificación de imágenes usando redes neuronales convolucionales con interfaz web.",
     image: "/images/projects/project.jpeg",
-    repo: "https://github.com/mauroav21/image-classifier",
+    repo: "/404",
     technologies: ["Python", "TensorFlow", "Flask", "Docker"],
   },
 ];
