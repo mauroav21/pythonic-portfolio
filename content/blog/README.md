@@ -7,7 +7,7 @@ Este README se ignora. Formato:
 ---
 title: Título del artículo
 date: 2026-10-29
-description: Resumen de una o dos líneas.
+description: "Resumen de una o dos líneas."
 tags: [AWS, Serverless]
 draft: false
 ---
