@@ -8,11 +8,12 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/cn";
 
 const links = [
-  { href: "#experience", label: "Trayectoria" },
-  { href: "#work", label: "Proyectos" },
-  { href: "#leadership", label: "Liderazgo" },
-  { href: "#talks", label: "Charlas" },
-  { href: "#contact", label: "Contacto" },
+  { href: "/#experience", label: "Trayectoria" },
+  { href: "/#work", label: "Proyectos" },
+  { href: "/#leadership", label: "Liderazgo" },
+  { href: "/#talks", label: "Charlas" },
+  { href: "/#blog", label: "Blog" },
+  { href: "/#contact", label: "Contacto" },
 ];
 
 export function Navbar() {
@@ -36,7 +37,7 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto flex h-16 max-w-[112rem] items-center justify-between px-6 sm:px-8 lg:px-12 xl:px-16">
-        <Link href="#top" className="text-sm leading-tight font-bold tracking-tight">
+        <Link href="/"className="text-sm leading-tight font-bold tracking-tight">
           {site.name}
         </Link>
 
