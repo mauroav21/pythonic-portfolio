@@ -236,6 +236,12 @@ Elige EKS cuando tengas una razón concreta (portabilidad, ecosistema, experienc
 7. **Observabilidad:** logs estructurados, panel con las cuatro señales, alarmas.
 8. **Costos:** dimensionamiento medido, etiquetas, presupuesto y política de ciclo de vida en ECR.
 
+## Cómo lo vivo yo: Fargate y Kubernetes
+
+Kubernetes fue, con diferencia, lo que más me costó entender cuando empecé con AWS. Tiene muchísimas piezas, un vocabulario propio y una curva que no perdona. Por eso, cuando alguien me pregunta por contenedores sin tener ya un equipo con experiencia en Kubernetes, mi primera respuesta suele ser ECS con Fargate: menos conceptos, menos operación y suficiente para la mayoría de los casos.
+
+Fargate además es la base de una solución de la que me siento orgulloso: **runners de CI/CD autohospedados, efímeros y sin servidores**, que redujeron de forma importante el costo y me dieron mucha más libertad para lanzar despliegues. Lo conté con detalle, incluyendo los errores del camino, en este artículo: [Runners serverless con AWS Fargate: efímeros, baratos y sin servidores que mantener](https://builder.aws.com/content/3IhG8rAvz7DJJLElh1fsQeguYvk/runners-serverless-con-aws-fargate-efimeros-baratos-y-sin-servidores-que-mantener).
+
 ## Para finalizar
 
 ECS con Fargate te da contenedores en producción sin servidores que parchar, pero te exige hacer bien lo que importa: la red hacia ECR, los dos roles, las verificaciones de salud con su periodo de gracia, el apagado ordenado y los despliegues con rollback.

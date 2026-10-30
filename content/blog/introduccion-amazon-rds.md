@@ -175,6 +175,12 @@ Cómo bajar la cuenta sin perder seguridad:
 - Latencia de lectura/escritura elevada.
 - Eventos de conmutación por falla y de reinicio (suscripción a eventos de RDS vía SNS).
 
+## Dos lecciones que me dejó a mí
+
+**La primera fue con mi propio dinero.** En mi cuenta personal me han llegado facturas sorpresa por máquinas virtuales y bases RDS que se quedaron encendidas. Nada grave, pero suficiente para que hoy me parezca innegociable lo que decía arriba: etiquetas, alertas de presupuesto y apagar lo que no se usa. En una cuenta de empresa, ese mismo descuido se multiplica.
+
+**La segunda fue con una base que se reinició** por un problema de configuración muy sencillo: la forma en que una librería manejaba el tiempo. Nada exótico, y aun así tumbó una base. Me enseñó a no despreciar los detalles "aburridos" (zonas horarias, relojes, tiempos de espera) y a revisar con calma la configuración de las librerías que hablan con la base de datos, no solo la de la base.
+
 ## Para finalizar
 
 RDS convierte una base de datos en un servicio, pero no en una caja mágica. Lo que hace por ti es enorme; lo que sigue siendo tuyo —el esquema, las consultas, las conexiones, las pruebas de restauración y de conmutación— es lo que decide si tu sistema aguanta un mal día.

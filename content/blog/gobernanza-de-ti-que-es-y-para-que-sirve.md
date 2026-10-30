@@ -92,6 +92,10 @@ Se piensa que gobernanza y trabajo ágil se oponen. No tiene por qué: la buena 
 - **Medir solo técnica**, sin conectar con objetivos del negocio.
 - **Frenar la innovación** en lugar de gestionar el riesgo.
 
+## Por qué me interesa
+
+Llevo un tiempo adentrándome en el área de gobernanza, sobre todo por los proyectos que dirijo. Cuando lideras proyectos y, además, eres responsable de DevSecOps, te das cuenta de que muchas decisiones técnicas son también decisiones de gobierno: quién aprueba qué, qué riesgos se aceptan y con qué evidencia se demuestra que se cumplió lo acordado. Es un tema en el que sigo aprendiendo, y por eso esta serie la escribo también para ordenar mis propias ideas.
+
 ## Para finalizar
 
 La gobernanza de TI es el sistema por el cual se dirige y controla el uso de la tecnología para que aporte valor con riesgos aceptables. Si empiezas por lo que duele, con roles claros y pocas reglas útiles, es una ventaja y no un freno.

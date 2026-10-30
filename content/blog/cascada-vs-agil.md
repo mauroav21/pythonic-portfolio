@@ -81,6 +81,12 @@ Si la mayoría de las respuestas apunta a incertidumbre y cambio, ve por lo ági
 - **Usar cascada con requisitos que se sabe que cambiarán.**
 - **Cambiar de metodología a mitad del proyecto** como solución a un problema que no es de metodología.
 
+## Dónde me siento más en mi elemento
+
+He gestionado de principio a fin proyectos muy distintos: capítulos y comunidades estudiantiles, congresos, concursos de programación y de redes, el AWS Student Community Day México, un CMMS a la medida y el área de DevSecOps. En la gran mayoría trabajé con metodologías ágiles, y es donde me siento más en mi elemento: ciclos cortos, retroalimentación frecuente y la libertad de ajustar sobre la marcha.
+
+Pero hay algo que no negocio con ninguna metodología: la **trazabilidad**. Poder seguir un requisito hasta lo que se entregó, y un entregable hasta la necesidad que lo originó, me parece una de las cosas más valiosas de gestionar bien un proyecto. Como decía Susana Siller: *«Todo con orden»*. Y el orden, para mí, es compatible con la agilidad.
+
 ## Para finalizar
 
 Ninguna metodología arregla un equipo sin objetivos claros, sin confianza o sin respaldo. Elige según la incertidumbre del proyecto y el costo del cambio, y adapta con criterio.

@@ -87,6 +87,12 @@ Muchos conflictos nacen de confundir estas tres cosas. Si el objetivo es más am
 - **Ignorar el tiempo de revisión, pruebas y despliegue.**
 - **Obsesionarse con la precisión**: perder horas estimando a detalle algo que ni siquiera se sabe si se hará.
 
+## Una estimación que "cumplió" y me dejó pensando
+
+En un proyecto con tiempos muy ajustados, cumplimos la fecha pero a costa de no mapear todos los procesos ni identificar a todas las áreas involucradas. El cliente quedó satisfecho, que era el objetivo, pero yo me quedé con la sensación de haber entregado algo por debajo de mis estándares. Lo que faltaba se resolvió en funcionalidades futuras.
+
+Desde entonces, cuando estimo, pregunto dos cosas además del tiempo: **¿qué parte del problema aún no entendemos?** y **¿qué estamos dejando fuera para llegar a la fecha, y quién lo sabe?** Una estimación honesta no es solo un número: es el número más la lista de lo que no se está considerando.
+
 ## Para finalizar
 
 Estimar bien no es adivinar mejor, sino ser honesto con la incertidumbre. Usa rangos, compara con el pasado, estima en equipo y divide el trabajo grande. Y recuerda que una estimación es información para decidir, no una promesa grabada en piedra.

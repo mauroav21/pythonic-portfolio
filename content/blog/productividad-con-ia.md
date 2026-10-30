@@ -80,6 +80,14 @@ Guarda los pedidos que funcionaron bien: plantillas para tus tareas repetidas. E
 
 Producir más texto, más código o más documentos no es lo mismo que producir más valor. Si la IA te permite generar el triple de contenido y nadie lo lee, o el triple de código con más errores, no ganaste nada. Pregúntate siempre qué resultado cambió.
 
+## Cómo la uso yo (y la vez que me ahorró y me costó a la vez)
+
+Hoy me apoyo mucho en Claude Code y en ChatGPT (no en Codex), sobre todo para **planeación, diseño y código**. Me ayudan a pensar alternativas, a estructurar un diseño antes de escribirlo y a acelerar el trabajo repetitivo.
+
+Hubo un proyecto en el que la IA hizo las dos cosas a la vez. Me ayudó a entregar antes de tiempo; al revisar lo que habíamos producido, detecté varios problemas. El proyecto salió a tiempo, pero la experiencia me dejó una regla clara: **la velocidad que da la IA hay que pagarla con revisión**. Desde entonces puse controles más estrictos para evitar que vuelva a pasar.
+
+Esos controles son los mismos que uso para cualquier código: **pruebas unitarias, pruebas de integración, inspección manual y análisis estático (SAST)** con herramientas como SonarQube. Si lo que genera la IA no pasa por ahí, para mí no está terminado.
+
 ## Para finalizar
 
 La IA es una gran palanca para quien sabe qué quiere, puede evaluar lo que recibe y mide el efecto real. Úsala como a un colega muy rápido pero poco fiable: delégale lo que puedas revisar, dale contexto y revisa antes de confiar.

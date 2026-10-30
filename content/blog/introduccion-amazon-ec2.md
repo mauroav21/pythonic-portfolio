@@ -198,6 +198,10 @@ Si no necesitas controlar el sistema operativo, hay opciones con menos operació
 7. **Etiquetas** y **alarma de presupuesto**.
 8. Todo definido como **código** (CloudFormation, CDK o Terraform).
 
+## Lo que me enseñó mi cuenta personal
+
+Las máquinas virtuales que dejé corriendo en mi cuenta personal fueron mi primera clase de costos en AWS: no hay nada como ver una factura que no esperabas para entender por qué las etiquetas, los presupuestos con alerta y el apagado automático de entornos no son opcionales. Desde entonces, lo primero que hago en una cuenta nueva es dejar la alerta de presupuesto antes de lanzar nada.
+
 ## Para finalizar
 
 EC2 te da control total y, con él, la responsabilidad de parches, seguridad, capacidad y costo. Si las instancias se crean desde una plantilla versionada, se acceden por Session Manager, se escalan con un ASG en varias zonas y se compran con una estrategia basada en mediciones, la operación es predecible.

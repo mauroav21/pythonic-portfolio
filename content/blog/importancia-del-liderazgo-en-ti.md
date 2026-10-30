@@ -71,6 +71,16 @@ Esto no es solo asunto de "gente blanda". Los estudios de DORA (DevOps Research 
 - **El líder héroe**, que apaga todos los incendios y evita que el equipo aprenda a hacerlo.
 - **Liderar por cargo** en lugar de por confianza. La autoridad formal se obedece, la confianza se sigue.
 
+## Lo que he aprendido liderando comunidades
+
+Mi escuela de liderazgo no fue una oficina sino las comunidades estudiantiles. Fui presidente del capítulo de sistemas computacionales del TecNM Saltillo, capitán del AWS Cloud Club, líder del AWS Student Builder Group (la evolución de ese programa de AWS), restauré el club de programación y fui host y coorganizador del AWS Student Community Day México 2026. En todas había voluntarios, nadie reportaba a nadie y el mérito no se pagaba con un sueldo.
+
+**Aprender gestión de proyectos mientras lideras.** Mi mayor reto fue, sencillamente, ir aprendiendo a la vez: gestión de proyectos, a delegar, a liderar. Recuerdo un evento en el que el proveedor de audio nos falló con el sonido y nos avisaron con menos de una hora de anticipación. Había que sacar el evento adelante, así que nos pusimos a resolver, lo logramos sin mayor problema y el evento salió bien. Me quedé con una idea: en liderazgo, lo que importa no es que no haya imprevistos, sino cómo respondes cuando llegan.
+
+**Formar a mi equipo directo.** Al principio me apoyaba en la gente que ya me rodeaba. Después empecé a trabajar con personas que no conocía; por un proyecto o por coincidencia, iba detectando sus capacidades y fortalezas. Lo que más me funciona es definir **responsabilidades y libertades** con claridad, **cuándo algo debe escalarse y cuál es el proceso para resolverlo**. Es una de las cosas que se me da con naturalidad, y también la que más he aprendido a hacer a propósito.
+
+Organizar el Community Day me recordó la pasión que tengo por la gestión de proyectos, y lo mucho que me falta por aprender, para mí y para mi comunidad. Esa es, creo, la mejor señal de que algo te interesa de verdad.
+
 ## Para finalizar
 
 El liderazgo en TI no es un talento con el que se nace ni un título que se recibe. Es un conjunto de hábitos que se practican: dar dirección, quitar obstáculos, cuidar a las personas y ser honesto cuando algo sale mal.

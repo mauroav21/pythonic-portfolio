@@ -85,6 +85,18 @@ El líder de un equipo eficiente quita obstáculos, aclara prioridades, protege 
 - **Dividir por capas técnicas** (frontend, backend, bases de datos) cuando el producto necesita cruzarlas todas.
 - **Tratar a las personas como recursos intercambiables.**
 
+## Cómo armo yo mis equipos
+
+Lo que mejor me ha funcionado es **formar a mi equipo directo** pensando en habilidades y fortalezas, no solo en disponibilidad. Al principio recurría a las personas que ya conocía; con el tiempo empecé a trabajar con gente que no conocía y, a través de un proyecto o por simple coincidencia, iba detectando lo que cada una hacía mejor.
+
+Tres hábitos me han servido:
+
+1. **Definir responsabilidades y libertades** desde el principio: qué decide cada quien y dónde tiene espacio para hacerlo a su manera.
+2. **Acordar cuándo algo debe escalarse** y cuál es el proceso para resolverlo, antes de que haya un problema. Es lo que evita que una crisis se convierta en una discusión.
+3. **Mantener una cultura sin culpables**, donde equivocarse se pueda decir en voz alta.
+
+Es una de las cosas que se me dan con naturalidad, pero no es un talento mágico: es un conjunto de acuerdos que se pueden aprender y que conviene poner por escrito.
+
 ## Para finalizar
 
 Un equipo eficiente es pequeño, completo, con misión clara, autónomo, honesto y sostenible. No requiere héroes ni horas extra; requiere buenas condiciones: claridad, confianza y un sistema de trabajo que no se interponga.

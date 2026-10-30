@@ -190,6 +190,12 @@ No necesitas reorganizar la empresa. Un camino razonable para un equipo:
 
 Elige **un servicio piloto**, aprende y expande. Cambiar todo a la vez casi siempre termina en nada.
 
+## Cómo lo vivo desde DevSecOps
+
+Hoy soy desarrollador full stack y, a la vez, responsable de DevSecOps. Esa mezcla me ha dado una perspectiva que no tendría de otra forma: cuando construyes y también te toca desplegar y proteger lo que construyes, dejas de ver al pipeline y a la seguridad como obstáculos y los empiezas a ver como parte del producto.
+
+He trabajado en sectores muy distintos (comercio, jurídico, financiero, inmobiliario y construcción), y lo que más me ha sorprendido es lo mucho que se repite el patrón: los problemas de entrega casi nunca son de herramientas, son de **claridad, trazabilidad y confianza entre equipos**. Lo que más impacto me ha dado ha sido quitar fricción: por ejemplo, pasar a runners de CI/CD efímeros y sin servidores, que bajaron el costo y me dieron libertad para desplegar sin depender de infraestructura que mantener.
+
 ## Antipatrones frecuentes
 
 - **Renombrar equipos** ("equipo DevOps") sin cambiar responsabilidades ni incentivos.

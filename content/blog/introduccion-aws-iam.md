@@ -215,6 +215,12 @@ Una secuencia que funciona:
 | Emergencia | Una o dos identidades "break glass" con MFA física, alertas en cada uso |
 | Revisión | Access Analyzer, informe de credenciales y revisión periódica de permisos |
 
+## Mi forma de ver la seguridad
+
+Hasta ahora no he vivido un incidente de seguridad grave. No lo atribuyo a suerte: en las empresas por las que he pasado había controles de código y de seguridad fuertes, y eso me formó. Aprendí ahí a trabajar con esa disciplina, y después a mantenerla por mi cuenta: estar al día, leer sobre vulnerabilidades y asumir que el mundo de las amenazas no se detiene aunque mi sistema esté tranquilo.
+
+Hoy, como responsable de DevSecOps, lo resumo así: la seguridad no se logra con una herramienta ni con un permiso bien escrito, sino con el hábito de revisar. IAM es el mejor ejemplo, porque casi nunca falla por un error técnico espectacular: falla porque nadie volvió a mirar un permiso que se dio con prisa.
+
 ## Para finalizar
 
 IAM parece engorroso porque cada incidente es una combinación de capas. Pero el modelo se resume en pocas ideas: todo está denegado por defecto, un `Deny` explícito siempre gana, las SCP y los límites solo recortan, y las credenciales temporales son siempre mejores que las permanentes.

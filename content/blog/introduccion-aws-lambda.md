@@ -311,6 +311,12 @@ Lo que suele costar más que Lambda en estos sistemas no es Lambda:
 - Aplicaciones con estado en memoria o conexiones persistentes de larga duración.
 - Latencias que no toleran ni el p99 de un cold start y donde la concurrencia aprovisionada no compensa.
 
+## Cómo la uso yo
+
+Lambda es el servicio de AWS que más uso. Buena parte de lo que construyo fuera del trabajo nace de querer hacerme la vida más sencilla: automatizar algo que me estorba y no tener que acordarme de mantenerlo. Trato de llevar esa misma idea a las empresas: que los procesos complejos sean fáciles de entender.
+
+Una función pequeña, con una sola responsabilidad y un disparador claro, se le puede explicar a alguien que no la escribió en cinco minutos. Para mí eso vale tanto como lo que ahorra en infraestructura. Por eso insisto tanto en lo que ves arriba (idempotencia, DLQ, límites de concurrencia): no son detalles técnicos, son lo que hace que una automatización "sencilla" siga siendo sencilla el día que algo falla.
+
 ## Para finalizar
 
 Lambda es sencilla de empezar y se vuelve fiable cuando asumes tres cosas: los entornos se reutilizan (y se destruyen), los eventos pueden repetirse y la concurrencia es un recurso compartido que hay que presupuestar. Con idempotencia, DLQ, límites de concurrencia en las funciones que tocan recursos frágiles y observabilidad desde el primer día, deja de dar sorpresas.

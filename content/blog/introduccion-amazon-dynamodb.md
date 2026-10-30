@@ -219,6 +219,10 @@ Si la condición falla, obtienes `ConditionalCheckFailedException`: la señal pa
 6. Prueba con **datos de volumen realista** y patrones de acceso reales, no con tres elementos.
 7. Alarmas: errores de *throttling*, latencia, errores de usuario del sistema, edad del iterador de Streams.
 
+## En mi caja de herramientas
+
+Junto con Lambda, RDS y SES, DynamoDB es de lo que más uso. Las soluciones serverless que armo suelen apoyarse en ella porque no tengo que pensar en conexiones ni en parches, y eso encaja con mi forma de trabajar: construir cosas que sean fáciles de entender y de mantener. Lo que me ha tocado aprender, y por eso insisto tanto en la sección de patrones de acceso, es que la comodidad de operar casi nada se paga con la disciplina de pensar el modelo antes de crear la tabla.
+
 ## Para finalizar
 
 DynamoDB premia a quien piensa antes de crear la tabla. Con patrones de acceso claros, claves bien repartidas e índices justos, la tabla responde en milisegundos y escala sola. Con patrones vagos, termina como un almacén caro del que solo se sabe sacar datos recorriéndolo entero.

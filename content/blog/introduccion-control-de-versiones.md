@@ -261,6 +261,16 @@ Lo que entra en el historial **queda ahí**, aunque lo borres en un commit poste
 - **Versionado semántico (SemVer):** `MAYOR.MENOR.PARCHE`. Sube el MAYOR por cambios incompatibles, el MENOR por funciones compatibles y el PARCHE por correcciones.
 - **Un lanzamiento** reproducible = un commit etiquetado + un artefacto construido por el pipeline a partir de él.
 
+## Una historia propia: tres personas, una sola rama
+
+Lo que más me enseñó sobre Git no fue un curso, fue un proyecto con una fecha muy ajustada. Éramos tres desarrolladores enviando cambios a `main` al mismo tiempo, para llegar a una salida en tiempo récord. Los pull requests chocaban con frecuencia porque tocábamos los mismos archivos, y una vez llegamos a trabajar, sin darnos cuenta, la misma funcionalidad.
+
+Nada de eso se arregla con un comando. Se arregla con acuerdos: **quién trabaja qué**, ramas de vida corta, integrar con frecuencia y comunicar antes de empezar, no después de chocar. Fue una lección de coordinación más que de técnica.
+
+## Cómo manejamos las ramas hoy
+
+En mi equipo trabajamos con una **definición de terminado (DoD)** adaptada a las medidas de la empresa: un cambio no está listo hasta que cumple lo acordado (pruebas, revisión, controles de seguridad, trazabilidad). Y combinamos **ramas de vida corta**, para el trabajo diario, con **ramas de vida larga** donde el proceso lo exige. Mi preferencia sigue siendo la corta, por todo lo que explicaba arriba sobre el dolor de integrar tarde.
+
 ## Herramientas y ajustes que ayudan
 
 ```bash

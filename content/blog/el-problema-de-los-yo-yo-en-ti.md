@@ -75,6 +75,12 @@ No hay respuestas "correctas" que te califiquen; sirven para mirar tus patrones.
 
 Lo contrario del yo-yo no es la persona sin ambición, sino quien mide su éxito por lo que el equipo logra sin él. Ese es el liderazgo en TI que más sostiene a las organizaciones: el que hace crecer a otros, comparte la visión y reconoce el mérito donde está.
 
+## Lo que pienso yo, desde el liderazgo
+
+Para mí, esto es sobre todo un riesgo cultural. Una sola persona que necesita ser el centro puede desgastar la armonía de un equipo y, con el tiempo, la cultura de toda una organización. Por eso creo que **detectarlo a tiempo es una de las tareas más importantes de quien lidera**: antes de que se vuelva costumbre y antes de que la gente buena decida irse.
+
+La cultura que busco construir es la contraria: una donde todos pueden crecer, donde no se busca culpables y donde los miembros del equipo se apoyan entre sí. Liderar comunidades de voluntarios me reforzó esa idea, porque ahí nadie puede ordenarle nada a nadie: solo funciona lo que se sostiene con confianza y con reconocimiento mutuo.
+
 ## Para finalizar
 
 El yo-yo es un síntoma de cómo se premia, de cómo se siente la gente y de lo que la cultura valora. Reconocerlo en uno mismo es la mitad del trabajo. La otra mitad es construir equipos donde compartir sea más valioso que acaparar.

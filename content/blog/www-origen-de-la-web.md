@@ -5,7 +5,7 @@ description: "Cómo nació la World Wide Web, qué problema quería resolver y l
 tags: [Web, Historia, Tim Berners-Lee]
 ---
 
-*Primero de tres artículos sobre la historia de la web y las preguntas que sigue abiertas. No es un resumen de ningún libro: reúne hechos históricos ampliamente documentados.*
+*Primero de tres artículos sobre la historia de la web y las preguntas que sigue abiertas. Nacen de mi charla «WWW: Internet, una historia en desarrollo», inspirada en el libro de Tim Berners-Lee, The Unfinished Story. No son un resumen del libro: reúnen hechos históricos ampliamente documentados y mi propia lectura.*
 
 Es fácil confundir internet con la web. Internet existía desde mucho antes: era la red de redes, con correo, transferencia de archivos y otros servicios. La **World Wide Web** es una de las cosas que se construyeron sobre ella, y su origen es sorprendentemente modesto.
 
@@ -64,6 +64,10 @@ Esa idea explica casi todo lo que vino después, y también lo que hoy se discut
 - **Los estándares abiertos y simples escalan** mejor que los sistemas cerrados y sofisticados.
 - **Las decisiones de apertura importan:** liberar la tecnología en 1993 hizo posible todo el ecosistema posterior.
 - **Nadie anticipó lo que se construiría encima.** Las plataformas sencillas dejan espacio a la creatividad.
+
+## Por qué doy esta charla
+
+No es una charla técnica. Parte de una idea simple: la web es una herramienta que casi todos usamos a diario, pero no todos sabemos de dónde salió. Me gusta contar cómo nació, cómo se convirtió en lo que es hoy y cómo sigue cambiando todos los días, porque entender el origen ayuda a decidir mejor hacia dónde queremos que vaya. Es, también, un recordatorio para quienes trabajamos en tecnología: lo que construimos hoy es parte de esa historia.
 
 ## Para finalizar
 

@@ -87,6 +87,12 @@ La cultura no se decreta; se construye con **conductas repetidas**, y empieza po
 7. **Contrata y promueve considerando la conducta** además de la habilidad técnica.
 8. **Escucha con regularidad.** Encuestas breves, conversaciones uno a uno y actúa sobre lo que oyes.
 
+## Cómo la entiendo yo
+
+Si tuviera que resumir la cultura que quiero ayudar a construir en tres ideas, serían estas: **que todos puedan crecer, que no haya culpables y que las personas del equipo se apoyen entre sí**. Todo lo demás (procesos, herramientas, rituales) se apoya en eso. Es lo que busco tanto en los equipos de trabajo como en las comunidades que he liderado, donde la confianza es lo único que sostiene el trabajo.
+
+Y lo aplico en lo técnico: por eso soy partidario de los análisis posteriores a incidentes sin culpables y de la trazabilidad como herramienta de aprendizaje, no de vigilancia.
+
 ## Cultura y comunidad
 
 Las comunidades tecnológicas muestran la cultura en estado puro: sin jerarquía formal ni salarios, la gente participa porque se siente bienvenida, aprende y aporta. Una comunidad que valora compartir, ayudar al que empieza y celebrar logros ajenos crece; una que protege egos se apaga. Los equipos de trabajo pueden aprender mucho de eso.

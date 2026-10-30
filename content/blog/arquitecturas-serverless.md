@@ -248,6 +248,12 @@ Controles: presupuestos con alertas, etiquetas de costos por flujo, límites de 
 
 No es una religión: muchas arquitecturas sólidas **mezclan** (API en contenedores, eventos y procesamiento en Lambda, datos en DynamoDB y S3).
 
+## Por qué me gusta este enfoque
+
+Mucho de lo que construyo en serverless empezó como soluciones para facilitarme la vida: automatizaciones, integraciones, pequeñas herramientas que no quería volver a hacer a mano. Con el tiempo descubrí que la misma idea sirve en las empresas: **cuanto más fácil es entender un proceso, más fácil es mantenerlo**. Un flujo con eventos claros, una cola con su DLQ y un par de funciones pequeñas se explica en una pizarra; un sistema donde todo depende de un servidor que "solo conoce una persona" no.
+
+El mejor ejemplo propio son los runners de CI/CD efímeros sobre contenedores sin servidores: menos costo, menos mantenimiento y más libertad para desplegar. Esa solución resume lo que busco con este estilo de arquitectura.
+
 ## Una forma sensata de empezar
 
 1. **Elige un flujo acotado** y de bajo riesgo (un procesamiento de archivos, una integración, un endpoint nuevo).

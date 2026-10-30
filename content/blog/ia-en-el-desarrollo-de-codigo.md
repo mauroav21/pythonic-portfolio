@@ -94,6 +94,16 @@ Los estudios muestran resultados mixtos y dependientes del contexto: algunos obs
 5. **Comparte prácticas y plantillas de prompts** entre el equipo.
 6. **Prepara a quienes empiezan:** que aprendan fundamentos, no solo a pedir código.
 
+## Mis reglas, aprendidas por las malas
+
+Yo uso Claude Code y ChatGPT para planear, diseñar y escribir código. Una vez me ayudaron a entregar un proyecto antes de tiempo y, al revisarlo, encontré varios problemas. Llegó a producción a tiempo, pero a partir de ahí endurecí mis controles. Hoy ningún código generado por IA entra sin pasar por tres filtros:
+
+1. **Pruebas** unitarias y de integración.
+2. **Inspección** humana de lo que cambia.
+3. **Análisis estático (SAST)**, por ejemplo con SonarQube, que atrapa patrones inseguros o descuidados que a simple vista se escapan.
+
+Como responsable de DevSecOps, esto último me importa especialmente: el código escrito por una máquina merece la misma desconfianza sana que el escrito por una persona.
+
 ## Para finalizar
 
 La IA en el desarrollo es un gran amplificador: acelera lo mecánico y deja más tiempo para diseñar y decidir. Pero amplifica tanto los aciertos como los errores. Quien tiene buenas prácticas de ingeniería (pruebas, revisión, integración continua) la aprovecha mucho mejor.

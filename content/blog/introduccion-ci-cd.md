@@ -263,6 +263,20 @@ Lo que impide revertir: cambios de esquema incompatibles, artefactos borrados y 
 7. **Endurece la cadena de suministro** (OIDC, permisos mínimos, escaneos, firmas).
 8. **Revisa las métricas cada mes** y ataca el mayor cuello de botella.
 
+## Lo que me ha tocado vivir
+
+**Mis herramientas.** Uso GitHub Actions en el día a día, le tengo cariño a GitLab, y mi favorita sigue siendo Azure DevOps. Lo que me importa de cada una no es la moda sino qué tan fácil hace que el pipeline sea legible y que la trazabilidad (de la tarea al commit, del commit al despliegue) quede completa.
+
+**Mi peor día de despliegue.** Me tocó desplegar una cantidad grande de microservicios en un solo día. Ya estaba todo listo. Y justo al intentar desplegar, el código dejó de pasar: aparecieron vulnerabilidades y librerías en cuarentena que bloquearon el pipeline. En otras ocasiones, el problema fue más tonto y más humano: me tocó desplegar imágenes hacia un proyecto distinto del que correspondía.
+
+Lo que me dejaron ambas cosas:
+
+1. **Los controles de seguridad no son el enemigo, pero no pueden aparecer por primera vez el día del despliegue.** Escanear dependencias en cada cambio, no solo al final, convierte un bloqueo de emergencia en una tarea normal de la semana.
+2. **Verifica el destino** antes de desplegar: proyecto, cuenta, entorno. Un pipeline que muestra con claridad a dónde va a ir cada artefacto, y que separa roles por entorno, evita errores que ninguna prueba detecta.
+3. **Un despliegue grande es un riesgo grande.** Cuanto más pequeños y frecuentes los cambios, menos dramático es cada día de lanzamiento.
+
+**Mi mejor mejora.** Implementé runners y agentes autohospedados sin servidores, efímeros, con contenedores. El resultado fue un ahorro económico importante y mucha más libertad para lanzar despliegues sin depender de máquinas que mantener. Si quieres el detalle técnico y los errores del camino, lo escribí en AWS Builder Center: [Runners serverless con AWS Fargate](https://builder.aws.com/content/3IhG8rAvz7DJJLElh1fsQeguYvk/runners-serverless-con-aws-fargate-efimeros-baratos-y-sin-servidores-que-mantener).
+
 ## Para finalizar
 
 CI/CD no se trata de herramientas sino de un contrato con tu equipo: integrar a menudo, mantener verde la rama principal, desplegar artefactos inmutables y tener un camino claro de ida y de vuelta. Cuando eso se cumple, desplegar deja de ser un evento y se convierte en una rutina.

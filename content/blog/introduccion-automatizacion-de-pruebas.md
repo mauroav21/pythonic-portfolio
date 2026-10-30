@@ -248,6 +248,12 @@ Tipos: **carga** (uso esperado), **estrés** (hasta romper), **picos** (subidas 
 - **Guarda los resultados** (formato JUnit) y los artefactos de fallo (capturas, trazas).
 - **Mide:** duración, tasa de pruebas inestables, tiempo en cola, defectos escapados a producción.
 
+## Cuando me pasé de pruebas
+
+Una vez trabajé en un proyecto que tenía que salir antes de lo planeado. La reacción del equipo fue la más natural: llenar el proyecto de pruebas para sentirnos seguros. Funcionó para sentirnos seguros, pero llegamos a tener una suite que tardaba muchísimo en terminar. Cuando cada ciclo de retroalimentación se alarga tanto, la suite deja de ser una ayuda y empieza a ser un peaje.
+
+De ahí saqué dos reglas que sigo desde entonces: **medir cuánto tarda la suite como si fuera una funcionalidad más**, y **preguntarme en qué nivel de la pirámide cuesta menos detectar cada riesgo**. Más pruebas no es lo mismo que mejores pruebas.
+
 ## Qué automatizar y qué no
 
 **Sí:**

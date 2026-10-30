@@ -7,6 +7,11 @@ tags: [Gestión de proyectos, Planeación, HBR]
 
 *Esta serie parte de ideas de la Guía de Harvard Business Review sobre gestión de proyectos. Son notas con mi propia lectura y experiencia, no un resumen del libro.*
 
+> «Todo con orden.»
+> — Susana Siller
+
+Es una frase que me acompaña en cada proyecto. Para mí, el orden empieza antes de escribir una línea de código o de agendar un evento: empieza por definir bien qué se va a hacer.
+
 Hay una escena que se repite: arranca un proyecto con entusiasmo, el equipo empieza a construir y tres meses después descubren que cada quien entendía algo distinto. El retraso no se debe a que trabajaran lento, sino a que nunca se puso de acuerdo, por escrito y de forma clara, qué se iba a lograr.
 
 Esa fase previa, a veces incómoda, es donde se ganan o se pierden la mayoría de los proyectos.
@@ -77,6 +82,14 @@ Si no puedes responder alguna, ya encontraste dónde se va a torcer el proyecto,
 - **Definición enorme que nadie lee.** Una página clara vale más que cuarenta ambiguas.
 - **Tratar la definición como inamovible.** Debe poder cambiar, pero a través de un acuerdo explícito, no por deslizamiento.
 - **Saltarse a los usuarios.** Si nunca hablas con quien usará el resultado, estás adivinando.
+
+## Cuando no alcancé a mapearlo todo
+
+Me pasó en un proyecto con una fecha que no se podía mover. Para cumplir los tiempos no alcanzamos a mapear todos los procesos con el cuidado que merecían ni a identificar a todas las áreas involucradas. Entregamos en tiempo, que era justo lo que el cliente quería, y quedó contento con el resultado.
+
+Yo, sin embargo, sentí que lo que entregué estaba incompleto: no cumplía con mis estándares personales. Lo que faltaba y lo que había que mejorar se fue trabajando en funcionalidades posteriores. Aprendí que el alcance se puede recortar de forma consciente, pero lo que no conviene recortar es **entender el problema**: quién está involucrado, qué procesos toca y qué significa "terminado". Eso es lo que permite decidir qué se queda para después sin que se vuelva una deuda escondida.
+
+También por eso valoro tanto la **trazabilidad**: poder ir de la necesidad al entregable (de atrás hacia adelante) y del entregable a la necesidad que lo originó (de adelante hacia atrás). Cuando hay trazabilidad, recortar o priorizar es una decisión con información; cuando no la hay, es una apuesta.
 
 ## Para finalizar
 
