@@ -1,6 +1,6 @@
 ---
 title: "Cascada vs. ágil: cómo elegir el enfoque para tu proyecto"
-date: 2026-10-30
+date: 2026-06-18
 description: "Diferencias reales entre gestión en cascada y ágil, cuándo conviene cada una y por qué casi todos terminan en un híbrido."
 tags: [Gestión de proyectos, Ágil, Metodologías]
 ---

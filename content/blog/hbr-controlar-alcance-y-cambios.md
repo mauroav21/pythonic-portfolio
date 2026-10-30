@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: controlar el alcance y los cambios"
-date: 2026-10-30
+date: 2026-08-27
 description: "Qué es el scope creep, cómo evaluar una solicitud de cambio y cómo decir que no sin romper la relación."
 tags: [Gestión de proyectos, Alcance, HBR]
 ---

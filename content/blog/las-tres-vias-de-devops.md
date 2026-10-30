@@ -1,6 +1,6 @@
 ---
 title: "Las tres vías de DevOps: flujo, retroalimentación y aprendizaje continuo"
-date: 2026-10-30
+date: 2026-10-16
 description: "El marco de principios detrás de DevOps: acelerar el flujo de trabajo, amplificar la retroalimentación y construir una cultura de experimentación."
 tags: [DevOps, Cultura, Principios]
 ---

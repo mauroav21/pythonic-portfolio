@@ -1,6 +1,6 @@
 ---
 title: "La web hoy: de la apertura a la centralización"
-date: 2026-10-30
+date: 2026-08-21
 description: "Cómo pasamos de una web de sitios independientes a una dominada por grandes plataformas, y qué problemas de privacidad y control trajo."
 tags: [Web, Privacidad, Tim Berners-Lee]
 ---

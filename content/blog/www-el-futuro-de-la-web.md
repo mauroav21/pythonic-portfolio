@@ -1,6 +1,6 @@
 ---
 title: "El futuro de la web: datos propios, estándares abiertos e IA"
-date: 2026-10-30
+date: 2026-10-08
 description: "Propuestas para una web más abierta: web semántica, Solid, identidad descentralizada y el efecto de la inteligencia artificial en la web."
 tags: [Web, Futuro, Inteligencia Artificial]
 ---

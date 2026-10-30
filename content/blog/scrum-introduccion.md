@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Scrum: roles, eventos y artefactos sin complicarte"
-date: 2026-10-30
+date: 2026-07-22
 description: "Qué es Scrum, quiénes participan, qué eventos tiene y qué errores comunes convierten un marco ligero en burocracia."
 tags: [Gestión de proyectos, Scrum, Ágil]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: comunicar con quienes tienen interés en tu proyecto"
-date: 2026-10-30
+date: 2026-08-07
 description: "Cómo identificar a los interesados, adaptar el mensaje a cada uno y construir un plan de comunicación que no se vuelva ruido."
 tags: [Gestión de proyectos, Comunicación, HBR]
 ---

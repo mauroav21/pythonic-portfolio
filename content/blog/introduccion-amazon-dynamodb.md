@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon DynamoDB: NoSQL con latencia de milisegundos"
-date: 2026-10-30
+date: 2026-07-30
 description: "Claves de partición y ordenación, modos de capacidad, índices secundarios y por qué en DynamoDB se diseña a partir de los patrones de acceso."
 tags: [AWS, DynamoDB, NoSQL]
 ---

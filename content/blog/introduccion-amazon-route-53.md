@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon Route 53: DNS, dominios y enrutamiento inteligente"
-date: 2026-10-30
+date: 2026-10-02
 description: "Cómo funciona el DNS, qué ofrece Route 53, tipos de registros, registros alias y políticas de enrutamiento con verificaciones de salud."
 tags: [AWS, Route 53, DNS]
 ---

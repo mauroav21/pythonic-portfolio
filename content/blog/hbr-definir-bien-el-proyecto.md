@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: definir bien el proyecto antes de empezar"
-date: 2026-10-30
+date: 2026-06-08
 description: "Objetivo, alcance, criterios de éxito y supuestos. Por qué los proyectos se tuercen desde la primera semana y cómo evitarlo."
 tags: [Gestión de proyectos, Planeación, HBR]
 ---

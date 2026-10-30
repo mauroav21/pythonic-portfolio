@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: presupuesto y control de costos"
-date: 2026-10-30
+date: 2026-09-08
 description: "Cómo estimar el costo de un proyecto de TI, qué se olvida casi siempre y cómo vigilar el gasto sin burocracia."
 tags: [Gestión de proyectos, Presupuesto, HBR]
 ---

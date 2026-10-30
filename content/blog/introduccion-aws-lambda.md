@@ -1,6 +1,6 @@
 ---
 title: "Introducción a AWS Lambda: ejecuta código sin administrar servidores"
-date: 2026-10-30
+date: 2026-08-11
 description: "Cómo funciona Lambda, sus disparadores, límites, cold starts, modelo de costos y buenas prácticas para funciones confiables."
 tags: [AWS, Lambda, Serverless]
 ---

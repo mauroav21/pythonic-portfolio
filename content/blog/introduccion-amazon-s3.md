@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon S3: almacenamiento de objetos bien explicado"
-date: 2026-10-30
+date: 2026-06-22
 description: "Qué es S3, cómo funcionan buckets y objetos, las clases de almacenamiento, la seguridad por defecto y los errores de costo más comunes."
 tags: [AWS, S3, Almacenamiento]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon API Gateway: la puerta de entrada de tus APIs"
-date: 2026-10-30
+date: 2026-08-25
 description: "Tipos de API (REST, HTTP y WebSocket), etapas, autorización, limitación de tasa e integración con Lambda: cómo exponer servicios con seguridad."
 tags: [AWS, API Gateway, Serverless]
 ---

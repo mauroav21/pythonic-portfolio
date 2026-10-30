@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: planificar un cronograma que se pueda cumplir"
-date: 2026-10-30
+date: 2026-07-08
 description: "Desglose del trabajo, dependencias, ruta crítica y colchones. Cómo armar un cronograma realista en lugar de uno optimista."
 tags: [Gestión de proyectos, Planeación, HBR]
 ---

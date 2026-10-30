@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Kanban: visualiza el trabajo y limita lo que haces a la vez"
-date: 2026-10-30
+date: 2026-08-19
 description: "Tablero, límites de trabajo en curso y métricas de flujo: cómo funciona Kanban y cuándo usarlo en lugar de Scrum."
 tags: [Gestión de proyectos, Kanban, Ágil]
 ---

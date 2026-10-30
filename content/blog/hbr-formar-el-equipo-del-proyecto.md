@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: cómo formar el equipo correcto"
-date: 2026-10-30
+date: 2026-06-24
 description: "Roles, habilidades complementarias y acuerdos de trabajo. Quién debe estar en el equipo de un proyecto y cómo lograr que funcione como equipo."
 tags: [Gestión de proyectos, Equipos, HBR]
 ---

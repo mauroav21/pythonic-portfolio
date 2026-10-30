@@ -1,6 +1,6 @@
 ---
 title: "¿Qué es la inteligencia artificial? Una guía sin exageraciones"
-date: 2026-10-30
+date: 2026-06-10
 description: "IA, aprendizaje automático y aprendizaje profundo: qué significa cada término, qué puede y qué no puede hacer la IA hoy."
 tags: [Inteligencia Artificial, Fundamentos, Machine Learning]
 ---

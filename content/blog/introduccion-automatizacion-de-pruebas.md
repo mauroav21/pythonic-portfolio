@@ -1,6 +1,6 @@
 ---
 title: "Introducción a la automatización de pruebas: qué automatizar y qué no"
-date: 2026-10-30
+date: 2026-08-05
 description: "La pirámide de pruebas, tipos de pruebas, herramientas comunes y errores frecuentes al empezar a automatizar."
 tags: [Pruebas, QA, Automatización]
 ---

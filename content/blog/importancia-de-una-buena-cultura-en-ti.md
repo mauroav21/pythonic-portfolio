@@ -1,6 +1,6 @@
 ---
 title: "La importancia de una buena cultura en TI"
-date: 2026-10-30
+date: 2026-08-13
 description: "Qué es la cultura de un equipo técnico, cómo se nota en el trabajo diario y qué prácticas concretas la construyen o la destruyen."
 tags: [Cultura, Equipos, DevOps]
 ---

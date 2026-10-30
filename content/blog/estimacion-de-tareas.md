@@ -1,6 +1,6 @@
 ---
 title: "Estimar tareas de software sin mentirle a nadie"
-date: 2026-10-30
+date: 2026-09-16
 description: "Por qué estimamos mal, qué técnicas ayudan (rangos, puntos de historia, datos históricos) y cómo comunicar incertidumbre sin perder credibilidad."
 tags: [Gestión de proyectos, Estimación, Ágil]
 ---

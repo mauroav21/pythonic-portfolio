@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: cerrar bien y aprender del camino"
-date: 2026-10-30
+date: 2026-10-28
 description: "Entrega formal, traspaso a operación, retrospectiva y lecciones aprendidas: la fase de cierre que casi todos los equipos se saltan."
 tags: [Gestión de proyectos, Retrospectiva, HBR]
 ---

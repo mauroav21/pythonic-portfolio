@@ -1,6 +1,6 @@
 ---
 title: "El problema de los \"yo-yo\" en TI: cuando todos quieren ser el centro"
-date: 2026-10-30
+date: 2026-07-20
 description: "Qué pasa en un equipo cuando alguien necesita ser siempre el protagonista, cómo reconocerlo en ti mismo y cómo convivir con ello."
 tags: [Equipos, Cultura, Liderazgo]
 ---

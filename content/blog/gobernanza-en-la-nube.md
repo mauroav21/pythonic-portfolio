@@ -1,6 +1,6 @@
 ---
 title: "Gobernanza en la nube: guardarraíles para que los equipos avancen sin romper nada"
-date: 2026-10-30
+date: 2026-10-06
 description: "Cuentas múltiples, políticas preventivas, etiquetado, control de costos y automatización: cómo gobernar la nube sin frenar a los equipos."
 tags: [Gobernanza, Cloud, AWS]
 ---

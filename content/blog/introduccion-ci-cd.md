@@ -1,6 +1,6 @@
 ---
 title: "Introducción a CI/CD: del commit a producción sin sustos"
-date: 2026-10-30
+date: 2026-09-28
 description: "Qué son integración continua, entrega continua y despliegue continuo, cómo se ve un pipeline y qué prácticas lo vuelven confiable."
 tags: [CI/CD, DevOps, Automatización]
 ---

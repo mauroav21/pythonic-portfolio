@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: liderar sin autoridad formal"
-date: 2026-10-30
+date: 2026-09-22
 description: "Qué hacer cuando eres responsable del resultado de un proyecto pero nadie del equipo te reporta. Influencia, confianza y acuerdos."
 tags: [Gestión de proyectos, Liderazgo, HBR]
 ---

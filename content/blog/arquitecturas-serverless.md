@@ -1,6 +1,6 @@
 ---
 title: "Arquitecturas serverless: qué son, cuándo convienen y qué cuestan de verdad"
-date: 2026-10-30
+date: 2026-09-30
 description: "Funciones, servicios administrados y eventos: cómo se ve una arquitectura serverless, sus ventajas reales, sus límites y los errores más comunes."
 tags: [Serverless, AWS, Arquitectura]
 ---

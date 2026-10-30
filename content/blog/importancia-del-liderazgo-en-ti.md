@@ -1,6 +1,6 @@
 ---
 title: "La importancia del liderazgo en TI: lo que el código no resuelve"
-date: 2026-10-30
+date: 2026-06-16
 description: "Por qué los equipos técnicos fallan más por falta de liderazgo que por falta de tecnología, y qué prácticas concretas marcan la diferencia."
 tags: [Liderazgo, Equipos, Cultura]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "¿Qué son los agentes de IA? De responder preguntas a ejecutar tareas"
-date: 2026-10-30
+date: 2026-08-03
 description: "Qué diferencia a un agente de un chatbot, cómo funciona su ciclo de razonamiento y herramientas, y qué riesgos conviene controlar."
 tags: [Inteligencia Artificial, Agentes, LLM]
 ---

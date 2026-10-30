@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon CloudWatch: ver qué pasa en tus sistemas"
-date: 2026-10-30
+date: 2026-10-14
 description: "Métricas, registros, alarmas y paneles en CloudWatch: cómo montar observabilidad básica en AWS y evitar sorpresas de costo."
 tags: [AWS, CloudWatch, Observabilidad]
 ---

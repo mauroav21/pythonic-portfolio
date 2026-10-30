@@ -1,6 +1,6 @@
 ---
 title: "IA en el desarrollo de código: cómo usarla bien y qué vigilar"
-date: 2026-10-30
+date: 2026-08-31
 description: "Asistentes de autocompletado, chat y agentes de código: casos donde ayudan, prácticas para revisar su trabajo y riesgos de calidad y seguridad."
 tags: [Inteligencia Artificial, Desarrollo, Productividad]
 ---

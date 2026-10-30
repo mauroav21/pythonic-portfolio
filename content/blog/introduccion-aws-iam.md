@@ -1,6 +1,6 @@
 ---
 title: "Introducción a AWS IAM: quién puede hacer qué en tu cuenta"
-date: 2026-10-30
+date: 2026-06-04
 description: "Usuarios, grupos, roles y políticas de IAM, cómo se evalúan los permisos y las prácticas básicas de mínimo privilegio y MFA."
 tags: [AWS, IAM, Seguridad]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon SNS: notificaciones y publicación/suscripción"
-date: 2026-10-30
+date: 2026-09-10
 description: "Temas, suscriptores, filtrado de mensajes y el patrón fan-out con SQS: cómo enviar un evento a muchos destinos sin acoplarlos."
 tags: [AWS, SNS, Mensajería]
 ---

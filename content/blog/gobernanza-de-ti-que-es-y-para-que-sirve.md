@@ -1,6 +1,6 @@
 ---
 title: "Gobernanza de TI: qué es, para qué sirve y en qué se diferencia de la gestión"
-date: 2026-10-30
+date: 2026-06-26
 description: "Gobernanza vs. gestión, sus objetivos, marcos de referencia como COBIT e ISO/IEC 38500 y cómo empezar sin burocracia."
 tags: [Gobernanza, Gestión de TI, COBIT]
 ---

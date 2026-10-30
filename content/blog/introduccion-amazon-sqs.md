@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon SQS: colas para desacoplar tus sistemas"
-date: 2026-10-30
+date: 2026-09-04
 description: "Colas estándar y FIFO, visibilidad de mensajes, reintentos, colas de mensajes fallidos y patrones para procesar trabajo de forma confiable."
 tags: [AWS, SQS, Mensajería]
 ---

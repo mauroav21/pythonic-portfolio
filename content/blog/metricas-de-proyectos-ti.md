@@ -1,6 +1,6 @@
 ---
 title: "Métricas de proyectos de TI: qué medir para tomar mejores decisiones"
-date: 2026-10-30
+date: 2026-10-20
 description: "Métricas útiles para proyectos y equipos de TI, desde las de entrega (DORA) hasta las de valor, y cómo evitar los indicadores de vanidad."
 tags: [Gestión de proyectos, Métricas, DORA]
 ---

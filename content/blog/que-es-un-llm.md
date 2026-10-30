@@ -1,6 +1,6 @@
 ---
 title: "¿Qué es un LLM? Cómo funcionan los modelos de lenguaje sin tanto misterio"
-date: 2026-10-30
+date: 2026-07-10
 description: "Tokens, transformers, entrenamiento, ventana de contexto y alucinaciones: lo esencial para entender qué hay detrás de un asistente de IA."
 tags: [Inteligencia Artificial, LLM, Fundamentos]
 ---

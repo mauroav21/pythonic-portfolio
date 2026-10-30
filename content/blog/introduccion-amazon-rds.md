@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon RDS: bases de datos relacionales administradas"
-date: 2026-10-30
+date: 2026-07-24
 description: "Motores, Multi-AZ, réplicas de lectura, respaldos y Aurora: qué te resuelve RDS, qué sigue siendo tu responsabilidad y cómo elegir."
 tags: [AWS, RDS, Bases de datos]
 ---

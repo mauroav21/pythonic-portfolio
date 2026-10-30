@@ -1,6 +1,6 @@
 ---
 title: "Gobernanza de TI: riesgos y cumplimiento sin parálisis"
-date: 2026-10-30
+date: 2026-08-17
 description: "Cómo gestionar riesgos tecnológicos y requisitos de cumplimiento de forma práctica: inventario, evaluación, controles y evidencia."
 tags: [Gobernanza, Riesgos, Seguridad]
 ---

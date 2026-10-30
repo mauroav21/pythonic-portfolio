@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon CloudFront: contenido rápido y seguro cerca del usuario"
-date: 2026-10-30
+date: 2026-09-18
 description: "Qué es una CDN, cómo funcionan distribuciones, orígenes y cachés en CloudFront, y cómo protegerlo con HTTPS, OAC y WAF."
 tags: [AWS, CloudFront, CDN]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: gestionar riesgos antes de que se vuelvan problemas"
-date: 2026-10-30
+date: 2026-07-28
 description: "Cómo identificar, priorizar y responder a los riesgos de un proyecto con un registro simple y revisiones periódicas."
 tags: [Gestión de proyectos, Riesgos, HBR]
 ---

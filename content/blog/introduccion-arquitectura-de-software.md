@@ -1,6 +1,6 @@
 ---
 title: "Introducción a la arquitectura de software: decisiones que cuestan cambiar"
-date: 2026-10-30
+date: 2026-07-14
 description: "Qué es la arquitectura de software, atributos de calidad, estilos comunes (monolito, microservicios, eventos) y cómo documentar decisiones."
 tags: [Arquitectura, Software, Diseño]
 ---

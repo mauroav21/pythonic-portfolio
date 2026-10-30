@@ -1,6 +1,6 @@
 ---
 title: "Introducción a DevOps: más que herramientas, una forma de trabajar"
-date: 2026-10-30
+date: 2026-10-26
 description: "Qué es (y qué no es) DevOps, el problema que resuelve, sus prácticas principales y cómo empezar sin crear un equipo más."
 tags: [DevOps, Cultura, Automatización]
 ---

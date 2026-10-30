@@ -1,6 +1,6 @@
 ---
 title: "Cómo armar equipos eficientes en TI"
-date: 2026-10-30
+date: 2026-09-14
 description: "Tamaño, composición, autonomía y acuerdos de trabajo: qué hace que un equipo técnico entregue con constancia y sin quemarse."
 tags: [Equipos, Liderazgo, Organización]
 ---

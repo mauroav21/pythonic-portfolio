@@ -1,6 +1,6 @@
 ---
 title: "Introducción a la arquitectura cloud: conceptos para empezar bien"
-date: 2026-10-30
+date: 2026-09-02
 description: "Modelos de servicio, regiones y zonas de disponibilidad, responsabilidad compartida y los principios de un buen diseño en la nube."
 tags: [Cloud, Arquitectura, AWS]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon VPC: tu red privada en AWS"
-date: 2026-10-30
+date: 2026-07-06
 description: "Subredes públicas y privadas, tablas de rutas, gateways, grupos de seguridad y NACL: cómo diseñar una red básica y segura en AWS."
 tags: [AWS, VPC, Redes]
 ---

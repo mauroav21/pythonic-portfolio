@@ -1,6 +1,6 @@
 ---
 title: "Gestión de proyectos: medir el avance sin engañarte"
-date: 2026-10-30
+date: 2026-10-12
 description: "Por qué el 90 % terminado dura tanto, qué medir realmente en un proyecto y cómo construir señales tempranas de problema."
 tags: [Gestión de proyectos, Seguimiento, HBR]
 ---

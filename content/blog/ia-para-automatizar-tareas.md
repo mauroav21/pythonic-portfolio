@@ -1,6 +1,6 @@
 ---
 title: "IA para automatizar tareas: dónde sí vale la pena y cómo empezar"
-date: 2026-10-30
+date: 2026-09-24
 description: "Automatización clásica frente a IA, criterios para elegir tareas, un flujo de ejemplo y cómo mantener control y calidad."
 tags: [Inteligencia Artificial, Automatización, Productividad]
 ---

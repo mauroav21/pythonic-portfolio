@@ -1,6 +1,6 @@
 ---
 title: "Aumentar tu productividad con IA sin engañarte"
-date: 2026-10-30
+date: 2026-10-22
 description: "Dónde la IA sí ahorra tiempo, dónde lo hace perder, cómo medir el efecto real y hábitos para usarla con criterio."
 tags: [Inteligencia Artificial, Productividad, Trabajo]
 ---

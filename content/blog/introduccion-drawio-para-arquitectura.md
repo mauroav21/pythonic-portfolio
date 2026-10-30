@@ -1,6 +1,6 @@
 ---
 title: "Introducción a draw.io para diagramar arquitectura"
-date: 2026-10-30
+date: 2026-07-16
 description: "Cómo usar draw.io (diagrams.net) para crear diagramas de arquitectura claros: bibliotecas de AWS, capas, convenciones y buenas prácticas."
 tags: [Arquitectura, Herramientas, Documentación]
 ---

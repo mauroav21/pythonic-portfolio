@@ -1,6 +1,6 @@
 ---
 title: "El origen de la web: una propuesta en el CERN que cambió el mundo"
-date: 2026-10-30
+date: 2026-06-30
 description: "Cómo nació la World Wide Web, qué problema quería resolver y las tres ideas técnicas (URL, HTTP y HTML) que la hicieron posible."
 tags: [Web, Historia, Tim Berners-Lee]
 ---

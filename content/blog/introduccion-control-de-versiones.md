@@ -1,6 +1,6 @@
 ---
 title: "Introducción al control de versiones: por qué Git cambió la forma de trabajar en equipo"
-date: 2026-10-30
+date: 2026-06-12
 description: "Qué es el control de versiones, qué problema resuelve y los conceptos de Git que necesitas para trabajar en equipo sin pisarte con nadie."
 tags: [Git, Control de versiones, Fundamentos]
 ---

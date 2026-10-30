@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Amazon EC2: servidores virtuales en la nube"
-date: 2026-10-30
+date: 2026-07-02
 description: "Instancias, AMI, tipos, modelos de compra, almacenamiento, redes y escalado automático: lo esencial de EC2 y cómo no gastar de más."
 tags: [AWS, EC2, Cómputo]
 ---
