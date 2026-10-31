@@ -105,6 +105,4 @@ Si prefieres **diagramas como código**, existen Mermaid, PlantUML y Structurizr
 
 ## Para finalizar
 
-draw.io no te hará un buen arquitecto, pero elimina excusas: es gratuito, fácil y mantiene tus archivos en formatos abiertos. Lo importante es el criterio: una pregunta por diagrama, un orden de lectura claro, agrupaciones que comuniquen límites y etiquetas en todo.
-
-Un diagrama es una forma de conversación; si alguien tiene que preguntarte qué significa, aún no está terminado.
+draw.io no te hará un buen arquitecto, pero elimina excusas: es gratuito, fácil y mantiene tus archivos en formatos abiertos. Lo importante es el criterio: una pregunta por diagrama, un orden de lectura claro, agrupaciones que comuniquen límites y etiquetas en todo. Un diagrama es una forma de conversación; si alguien tiene que preguntarte qué significa, aún no está terminado.

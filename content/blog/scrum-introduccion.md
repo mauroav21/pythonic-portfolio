@@ -9,9 +9,7 @@ Scrum es el marco ágil más extendido. Su guía oficial, la Scrum Guide, ocupa 
 
 ## La idea central
 
-En lugar de planear todo y esperar al final, trabajas en ciclos de duración fija, llamados **Sprints** (normalmente de una a cuatro semanas). Al final de cada Sprint tienes un incremento del producto utilizable y aprendes qué ajustar.
-
-Scrum se basa en **empirismo**: transparencia (todos ven lo mismo), inspección (revisar con frecuencia) y adaptación (cambiar cuando haga falta).
+En lugar de planear todo y esperar al final, trabajas en ciclos de duración fija, llamados **Sprints** (normalmente de una a cuatro semanas). Al final de cada Sprint tienes un incremento del producto utilizable y aprendes qué ajustar. Scrum se basa en **empirismo**: transparencia (todos ven lo mismo), inspección (revisar con frecuencia) y adaptación (cambiar cuando haga falta).
 
 ## Los roles
 
@@ -72,6 +70,4 @@ Si el trabajo es continuo y de flujo constante (soporte, operaciones) más que d
 
 ## Para finalizar
 
-Scrum es simple de entender y difícil de practicar bien. Los eventos y roles son lo de menos; lo que importa es que el equipo vea su trabajo, entregue cada poco tiempo, escuche a los usuarios y mejore de forma deliberada.
-
-Si estás empezando, adopta el marco tal cual durante algunos Sprints, y luego adapta con base en lo que aprendas. Siguiente artículo: Kanban, la alternativa centrada en el flujo.
+Scrum es simple de entender y difícil de practicar bien. Los eventos y roles son lo de menos; lo que importa es que el equipo vea su trabajo, entregue cada poco tiempo, escuche a los usuarios y mejore de forma deliberada. Si estás empezando, adopta el marco tal cual durante algunos Sprints, y luego adapta con base en lo que aprendas. Siguiente artículo: Kanban, la alternativa centrada en el flujo.

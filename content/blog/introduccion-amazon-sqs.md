@@ -5,9 +5,7 @@ description: "Colas estándar y FIFO, visibilidad y reintentos, DLQ y redrive, l
 tags: [AWS, SQS, Mensajería]
 ---
 
-Casi toda arquitectura que crece termina necesitando una cola. Al principio un servicio llama a otro y funciona. Luego llega un pico y el segundo cae. Después uno de los dos se despliega y durante dos minutos nadie contesta. Más tarde alguien pide "reprocesar lo de ayer" y no hay de dónde.
-
-Una cola resuelve esas cuatro cosas, y SQS lo hace sin que administres nada. Pero tiene reglas precisas sobre entrega, visibilidad y orden que, si no conoces, producen justo los problemas que querías evitar: mensajes procesados dos veces, mensajes que no se procesan nunca, o un sistema que se atasca en un solo mensaje.
+Casi toda arquitectura que crece termina necesitando una cola. Al principio un servicio llama a otro y funciona. Luego llega un pico y el segundo cae. Después uno de los dos se despliega y durante dos minutos nadie contesta. Más tarde alguien pide "reprocesar lo de ayer" y no hay de dónde. Una cola resuelve esas cuatro cosas, y SQS lo hace sin que administres nada. Pero tiene reglas precisas sobre entrega, visibilidad y orden que, si no conoces, producen justo los problemas que querías evitar: mensajes procesados dos veces, mensajes que no se procesan nunca, o un sistema que se atasca en un solo mensaje.
 
 ## Qué es una cola, en concreto
 
@@ -198,9 +196,7 @@ Alarma recomendada: **antigüedad del mensaje más viejo** por encima del tiempo
 
 ## Costos
 
-SQS cobra por **solicitudes** (con una capa gratuita mensual); cada solicitud cubre hasta 64 KiB de carga útil, y una carga mayor cuenta como varias. Las colas FIFO tienen un precio por solicitud algo mayor que las estándar. Revisa la tabla vigente en la página oficial.
-
-Cómo no pagar de más:
+SQS cobra por **solicitudes** (con una capa gratuita mensual); cada solicitud cubre hasta 64 KiB de carga útil, y una carga mayor cuenta como varias. Las colas FIFO tienen un precio por solicitud algo mayor que las estándar. Revisa la tabla vigente en la página oficial. Cómo no pagar de más:
 
 - **Sondeo largo** siempre (evita millones de recepciones vacías).
 - **Lotes** para enviar, recibir y eliminar.
@@ -234,6 +230,4 @@ Normalmente el costo de SQS es insignificante frente a lo que cuesta lo que hay 
 
 ## Para finalizar
 
-SQS es una de las piezas más sencillas y más rentables de AWS, pero su simplicidad depende de que respetes tres reglas: el consumidor debe ser idempotente, el tiempo de visibilidad debe superar el de procesamiento, y toda cola de trabajo necesita una DLQ con alarma y retención larga.
-
-Con eso, una cola convierte picos en trabajo ordenado y fallos en reintentos controlados. Sin eso, convierte un fallo en una avalancha de duplicados.
+SQS es una de las piezas más sencillas y más rentables de AWS, pero su simplicidad depende de que respetes tres reglas: el consumidor debe ser idempotente, el tiempo de visibilidad debe superar el de procesamiento, y toda cola de trabajo necesita una DLQ con alarma y retención larga. Con eso, una cola convierte picos en trabajo ordenado y fallos en reintentos controlados. Sin eso, convierte un fallo en una avalancha de duplicados.

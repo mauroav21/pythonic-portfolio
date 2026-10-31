@@ -5,9 +5,7 @@ description: "Cómo piensa Git por dentro (commits, ramas, HEAD, índice), flujo
 tags: [Git, Control de versiones, Fundamentos]
 ---
 
-Mucha gente usa Git durante años con cinco comandos memorizados (`add`, `commit`, `push`, `pull` y una oración cuando algo sale mal). Funciona hasta que aparece un conflicto raro, un commit en la rama equivocada o un `push` rechazado, y entonces cada comando se vuelve un ritual con riesgo de perder trabajo.
-
-El antídoto es entender el **modelo mental** de Git. Con él, los comandos dejan de ser conjuros y se vuelven consecuencias lógicas. Esta guía va de eso, y termina con cómo deshacer prácticamente cualquier error.
+Mucha gente usa Git durante años con cinco comandos memorizados (`add`, `commit`, `push`, `pull` y una oración cuando algo sale mal). Funciona hasta que aparece un conflicto raro, un commit en la rama equivocada o un `push` rechazado, y entonces cada comando se vuelve un ritual con riesgo de perder trabajo. El antídoto es entender el **modelo mental** de Git. Con él, los comandos dejan de ser conjuros y se vuelven consecuencias lógicas. Esta guía va de eso, y termina con cómo deshacer prácticamente cualquier error.
 
 ## Qué problema resuelve
 
@@ -141,9 +139,7 @@ git rebase origin/main
 git push --force-with-lease       # nunca --force a secas
 ```
 
-**La regla de oro del rebase:** **no reescribas historia que otras personas ya descargaron.** Sobre tu rama personal, adelante; sobre `main` o ramas compartidas, no. Y `--force-with-lease` falla si alguien más empujó mientras tanto, a diferencia de `--force`, que borra su trabajo sin avisar.
-
-Preferencias comunes: **squash merge** para PR pequeños (historia limpia, un commit por cambio) o **rebase + merge** para conservar commits bien curados. Lo importante es que el equipo **elija una convención** y la use.
+**La regla de oro del rebase:** **no reescribas historia que otras personas ya descargaron.** Sobre tu rama personal, adelante; sobre `main` o ramas compartidas, no. Y `--force-with-lease` falla si alguien más empujó mientras tanto, a diferencia de `--force`, que borra su trabajo sin avisar. Preferencias comunes: **squash merge** para PR pequeños (historia limpia, un commit por cambio) o **rebase + merge** para conservar commits bien curados. Lo importante es que el equipo **elija una convención** y la use.
 
 ### Limpiar tus commits antes de compartirlos
 
@@ -263,9 +259,7 @@ Lo que entra en el historial **queda ahí**, aunque lo borres en un commit poste
 
 ## Una historia propia: tres personas, una sola rama
 
-Lo que más me enseñó sobre Git no fue un curso, fue un proyecto con una fecha muy ajustada. Éramos tres desarrolladores enviando cambios a `main` al mismo tiempo, para llegar a una salida en tiempo récord. Los pull requests chocaban con frecuencia porque tocábamos los mismos archivos, y una vez llegamos a trabajar, sin darnos cuenta, la misma funcionalidad.
-
-Nada de eso se arregla con un comando. Se arregla con acuerdos: **quién trabaja qué**, ramas de vida corta, integrar con frecuencia y comunicar antes de empezar, no después de chocar. Fue una lección de coordinación más que de técnica.
+Lo que más me enseñó sobre Git no fue un curso, fue un proyecto con una fecha muy ajustada. Éramos tres desarrolladores enviando cambios a `main` al mismo tiempo, para llegar a una salida en tiempo récord. Los pull requests chocaban con frecuencia porque tocábamos los mismos archivos, y una vez llegamos a trabajar, sin darnos cuenta, la misma funcionalidad. Nada de eso se arregla con un comando. Se arregla con acuerdos: **quién trabaja qué**, ramas de vida corta, integrar con frecuencia y comunicar antes de empezar, no después de chocar. Fue una lección de coordinación más que de técnica.
 
 ## Cómo manejamos las ramas hoy
 
@@ -343,6 +337,4 @@ Marcar    tag
 
 ## Para finalizar
 
-Git deja de intimidar cuando recuerdas tres ideas: la historia se compone de instantáneas enlazadas, las ramas son solo apuntadores baratos, y casi cualquier error es recuperable porque Git rara vez borra de verdad (el `reflog` es tu amigo).
-
-A partir de ahí, lo que hace trabajar bien en equipo no son los comandos sino los hábitos: commits pequeños y con sentido, ramas cortas, revisión constante, nada de secretos en el repositorio y una convención compartida de cómo se integra. Es la base sobre la que se apoya todo lo demás: CI/CD, infraestructura como código y la confianza para cambiar un sistema sin miedo.
+Git deja de intimidar cuando recuerdas tres ideas: la historia se compone de instantáneas enlazadas, las ramas son solo apuntadores baratos, y casi cualquier error es recuperable porque Git rara vez borra de verdad (el `reflog` es tu amigo). A partir de ahí, lo que hace trabajar bien en equipo no son los comandos sino los hábitos: commits pequeños y con sentido, ramas cortas, revisión constante, nada de secretos en el repositorio y una convención compartida de cómo se integra. Es la base sobre la que se apoya todo lo demás: CI/CD, infraestructura como código y la confianza para cambiar un sistema sin miedo.

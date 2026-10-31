@@ -5,9 +5,7 @@ description: "Qué es y qué no es serverless, patrones de arquitectura (API, ev
 tags: [Serverless, AWS, Arquitectura]
 ---
 
-Serverless se vende como "olvídate de los servidores". La parte cierta: no aprovisionas, no parchas y no escalas máquinas. La parte que se omite: sigues teniendo **sistemas distribuidos**, con sus fallos parciales, reintentos, duplicados y límites; solo que ahora cada pieza es una caja administrada con reglas propias y tú ensamblas el conjunto.
-
-Esta es una guía para ensamblarlo bien: qué patrones funcionan, cómo se maneja el error en cada capa, cómo se prueba y observa, y qué estropea la factura o la fiabilidad.
+Serverless se vende como "olvídate de los servidores". La parte cierta: no aprovisionas, no parchas y no escalas máquinas. La parte que se omite: sigues teniendo **sistemas distribuidos**, con sus fallos parciales, reintentos, duplicados y límites; solo que ahora cada pieza es una caja administrada con reglas propias y tú ensamblas el conjunto. Esta es una guía para ensamblarlo bien: qué patrones funcionan, cómo se maneja el error en cada capa, cómo se prueba y observa, y qué estropea la factura o la fiabilidad.
 
 ## Qué es serverless (con criterio)
 
@@ -18,9 +16,7 @@ Un servicio es serverless si reúne cuatro cosas:
 3. **Pago por uso** (solicitudes, tiempo de ejecución, datos), no por capacidad ociosa.
 4. **Alta disponibilidad integrada.**
 
-En AWS: **Lambda** (cómputo), **Fargate** (contenedores), **API Gateway** y **AppSync** (APIs), **DynamoDB** (datos), **S3** (objetos), **SQS/SNS/EventBridge** (mensajería y eventos), **Step Functions** (orquestación), **Cognito** (identidad), **Aurora Serverless** y **Kinesis**, entre otros.
-
-La arquitectura serverless típica tiene **poco código propio** y **mucho pegamento entre servicios administrados**. Esa proporción es una señal de salud: si tu "arquitectura serverless" es una Lambda enorme con un framework web dentro, probablemente solo cambiaste el lugar donde corre un monolito.
+En AWS: **Lambda** (cómputo), **Fargate** (contenedores), **API Gateway** y **AppSync** (APIs), **DynamoDB** (datos), **S3** (objetos), **SQS/SNS/EventBridge** (mensajería y eventos), **Step Functions** (orquestación), **Cognito** (identidad), **Aurora Serverless** y **Kinesis**, entre otros. La arquitectura serverless típica tiene **poco código propio** y **mucho pegamento entre servicios administrados**. Esa proporción es una señal de salud: si tu "arquitectura serverless" es una Lambda enorme con un framework web dentro, probablemente solo cambiaste el lugar donde corre un monolito.
 
 ## El cambio de mentalidad
 
@@ -115,9 +111,7 @@ Un fragmento de definición con **reintentos y captura de errores**:
 }
 ```
 
-Step Functions también se integra **directamente con más de 200 servicios** de AWS (DynamoDB, SQS, SNS, ECS, Glue...) **sin Lambda de por medio**, reduciendo código y costo. Y soporta el patrón **saga**: si un paso falla, ejecutas acciones de compensación de los anteriores.
-
-**Orquestación frente a coreografía.** Con *orquestación* (Step Functions) un coordinador explícito decide el orden: visible, fácil de depurar, con más acoplamiento al coordinador. Con *coreografía* (eventos) cada servicio reacciona por su cuenta: desacoplado, pero el flujo completo queda implícito y cuesta seguirlo. Para procesos de negocio con pasos y compensaciones, orquesta; para notificar cambios a quien le interese, coreografía.
+Step Functions también se integra **directamente con más de 200 servicios** de AWS (DynamoDB, SQS, SNS, ECS, Glue...) **sin Lambda de por medio**, reduciendo código y costo. Y soporta el patrón **saga**: si un paso falla, ejecutas acciones de compensación de los anteriores. **Orquestación frente a coreografía.** Con *orquestación* (Step Functions) un coordinador explícito decide el orden: visible, fácil de depurar, con más acoplamiento al coordinador. Con *coreografía* (eventos) cada servicio reacciona por su cuenta: desacoplado, pero el flujo completo queda implícito y cuesta seguirlo. Para procesos de negocio con pasos y compensaciones, orquesta; para notificar cambios a quien le interese, coreografía.
 
 ### 6. Tuberías de datos
 
@@ -209,9 +203,7 @@ El costo de una arquitectura serverless es la **suma de muchas partidas pequeña
 | **CloudWatch Logs** | Depende del volumen de logs; **a menudo la mayor partida** |
 | **Total** | Típicamente decenas de dólares como mucho a este volumen |
 
-A este tamaño, serverless es muy barato. La pregunta de costo aparece **a gran escala y con carga estable**: con cientos de millones de solicitudes constantes, contenedores o instancias bien dimensionadas y comprometidas pueden salir más baratos. **Haz la cuenta con tu volumen, no con la intuición.**
-
-Costos que sorprenden:
+A este tamaño, serverless es muy barato. La pregunta de costo aparece **a gran escala y con carga estable**: con cientos de millones de solicitudes constantes, contenedores o instancias bien dimensionadas y comprometidas pueden salir más baratos. **Haz la cuenta con tu volumen, no con la intuición.** Costos que sorprenden:
 
 - **Logs** excesivos o con retención infinita.
 - **NAT Gateway** si metes funciones en una VPC.
@@ -250,9 +242,7 @@ No es una religión: muchas arquitecturas sólidas **mezclan** (API en contenedo
 
 ## Por qué me gusta este enfoque
 
-Mucho de lo que construyo en serverless empezó como soluciones para facilitarme la vida: automatizaciones, integraciones, pequeñas herramientas que no quería volver a hacer a mano. Con el tiempo descubrí que la misma idea sirve en las empresas: **cuanto más fácil es entender un proceso, más fácil es mantenerlo**. Un flujo con eventos claros, una cola con su DLQ y un par de funciones pequeñas se explica en una pizarra; un sistema donde todo depende de un servidor que "solo conoce una persona" no.
-
-El mejor ejemplo propio son los runners de CI/CD efímeros sobre contenedores sin servidores: menos costo, menos mantenimiento y más libertad para desplegar. Esa solución resume lo que busco con este estilo de arquitectura.
+Mucho de lo que construyo en serverless empezó como soluciones para facilitarme la vida: automatizaciones, integraciones, pequeñas herramientas que no quería volver a hacer a mano. Con el tiempo descubrí que la misma idea sirve en las empresas: **cuanto más fácil es entender un proceso, más fácil es mantenerlo**. Un flujo con eventos claros, una cola con su DLQ y un par de funciones pequeñas se explica en una pizarra; un sistema donde todo depende de un servidor que "solo conoce una persona" no. El mejor ejemplo propio son los runners de CI/CD efímeros sobre contenedores sin servidores: menos costo, menos mantenimiento y más libertad para desplegar. Esa solución resume lo que busco con este estilo de arquitectura.
 
 ## Una forma sensata de empezar
 
@@ -265,6 +255,4 @@ El mejor ejemplo propio son los runners de CI/CD efímeros sobre contenedores si
 
 ## Para finalizar
 
-Serverless cambia dónde se acumula la complejidad: menos en operar máquinas, más en entender eventos, reintentos, límites y configuración. Cuando respetas esas reglas —idempotencia, estado externo, asincronía, DLQ con dueño, observabilidad desde el día uno—, entregas rápido con poca operación. Cuando no, descubres el "día dos": duplicados, atascos silenciosos y facturas que nadie puede explicar.
-
-La buena noticia es que casi todo eso se previene en el diseño. La pregunta no es "¿serverless sí o no?", sino "¿qué piezas de mi sistema se benefician de no tener servidores, y cuáles no?".
+Serverless cambia dónde se acumula la complejidad: menos en operar máquinas, más en entender eventos, reintentos, límites y configuración. Cuando respetas esas reglas —idempotencia, estado externo, asincronía, DLQ con dueño, observabilidad desde el día uno—, entregas rápido con poca operación. Cuando no, descubres el "día dos": duplicados, atascos silenciosos y facturas que nadie puede explicar. La buena noticia es que casi todo eso se previene en el diseño. La pregunta no es "¿serverless sí o no?", sino "¿qué piezas de mi sistema se benefician de no tener servidores, y cuáles no?".

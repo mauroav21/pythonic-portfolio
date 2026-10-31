@@ -5,17 +5,11 @@ description: "Cómo funciona la caché de CloudFront (clave, TTL, invalidaciones
 tags: [AWS, CloudFront, CDN]
 ---
 
-Poner CloudFront delante de un sitio es de las mejoras más baratas que existen: HTTPS, HTTP/2 y HTTP/3, compresión, caché y protección en el borde con unos pocos clics. Y, sin embargo, abundan los sitios con CloudFront que siguen lentos, o que sirven contenido viejo durante horas, o que cuestan más de lo esperado, o que mostraron los datos de un usuario a otro.
-
-Casi siempre es lo mismo: se activó la CDN sin entender la **caché**. Este artículo trata de entenderla.
+Poner CloudFront delante de un sitio es de las mejoras más baratas que existen: HTTPS, HTTP/2 y HTTP/3, compresión, caché y protección en el borde con unos pocos clics. Y, sin embargo, abundan los sitios con CloudFront que siguen lentos, o que sirven contenido viejo durante horas, o que cuestan más de lo esperado, o que mostraron los datos de un usuario a otro. Casi siempre es lo mismo: se activó la CDN sin entender la **caché**. Este artículo trata de entenderla.
 
 ## Qué hace una CDN y dónde vive la latencia
 
-Un usuario lejos de tu servidor paga latencia de ida y vuelta por cada conexión y cada recurso. Una CDN coloca copias en **ubicaciones de borde** cercanas. Un acierto de caché ("hit") se sirve desde allí; un fallo ("miss") obliga a ir al origen.
-
-Además de las ubicaciones de borde, CloudFront tiene **cachés regionales** intermedias y, opcionalmente, **Origin Shield**, una capa central adicional que consolida las solicitudes al origen. Efecto: menos tráfico hacia tu origen y mayor tasa de aciertos.
-
-Incluso con contenido que **no se cachea** (APIs dinámicas), CloudFront ayuda: termina TLS cerca del usuario y reutiliza conexiones persistentes hacia el origen por la red troncal de AWS.
+Un usuario lejos de tu servidor paga latencia de ida y vuelta por cada conexión y cada recurso. Una CDN coloca copias en **ubicaciones de borde** cercanas. Un acierto de caché ("hit") se sirve desde allí; un fallo ("miss") obliga a ir al origen. Además de las ubicaciones de borde, CloudFront tiene **cachés regionales** intermedias y, opcionalmente, **Origin Shield**, una capa central adicional que consolida las solicitudes al origen. Efecto: menos tráfico hacia tu origen y mayor tasa de aciertos. Incluso con contenido que **no se cachea** (APIs dinámicas), CloudFront ayuda: termina TLS cerca del usuario y reutiliza conexiones persistentes hacia el origen por la red troncal de AWS.
 
 ## Las piezas
 
@@ -33,11 +27,7 @@ Los comportamientos se evalúan **por orden de especificidad de patrón**; el co
 
 ## La clave de caché: donde se gana o se pierde
 
-Una respuesta cacheada se identifica por su **clave de caché**: por defecto, el nombre de host y la ruta. Todo lo que agregues a la clave (parámetros de consulta, cabeceras, cookies) **crea variantes distintas** del mismo objeto.
-
-Ejemplo del problema: tu sitio recibe `/imagen.jpg?utm_source=correo`, `/imagen.jpg?utm_source=redes`, `/imagen.jpg?utm_source=...`. Si la política incluye todos los parámetros de consulta, cada valor es una entrada distinta: **la tasa de aciertos cae y el origen recibe lo que debía absorber la caché**.
-
-Reglas prácticas:
+Una respuesta cacheada se identifica por su **clave de caché**: por defecto, el nombre de host y la ruta. Todo lo que agregues a la clave (parámetros de consulta, cabeceras, cookies) **crea variantes distintas** del mismo objeto. Ejemplo del problema: tu sitio recibe `/imagen.jpg?utm_source=correo`, `/imagen.jpg?utm_source=redes`, `/imagen.jpg?utm_source=...`. Si la política incluye todos los parámetros de consulta, cada valor es una entrada distinta: **la tasa de aciertos cae y el origen recibe lo que debía absorber la caché**. Reglas prácticas:
 
 1. **Mínima clave de caché.** Incluye solo lo que realmente cambia la respuesta.
 2. **Separa lo que *envías* al origen de lo que *cacheas*:** usa una política de solicitud al origen para enviar cabeceras que necesita el origen sin multiplicar la caché.
@@ -47,9 +37,7 @@ Reglas prácticas:
 
 ### Y lo contrario: no cachear lo personalizado
 
-Si una ruta devuelve contenido que **depende del usuario** (un panel, `/mi-cuenta`, respuestas autenticadas) y su clave de caché no incluye la identidad, **el primer usuario "calienta" la caché y el siguiente recibe sus datos**. Es el incidente más grave que puede causar una CDN mal configurada.
-
-Protecciones:
+Si una ruta devuelve contenido que **depende del usuario** (un panel, `/mi-cuenta`, respuestas autenticadas) y su clave de caché no incluye la identidad, **el primer usuario "calienta" la caché y el siguiente recibe sus datos**. Es el incidente más grave que puede causar una CDN mal configurada. Protecciones:
 
 - `Cache-Control: private` o `no-store` en el origen para respuestas personales.
 - Comportamientos separados para rutas autenticadas con `CachingDisabled`.
@@ -177,9 +165,7 @@ CloudFront cobra por:
 - **Solicitudes** HTTP/HTTPS, por cada 10 000.
 - **Funciones** (por invocación), WAF, invalidaciones sobre la cuota, registros en tiempo real, Origin Shield, métricas adicionales.
 
-Hay una **capa gratuita permanente** mensual (del orden de 1 TB de transferencia y 10 millones de solicitudes; verifica los valores vigentes). Además, **la transferencia desde S3 u otros orígenes de AWS hacia CloudFront no se cobra**, de modo que servir desde S3 a través de CloudFront suele ser **más barato** que servir directamente desde S3.
-
-Para controlar el gasto:
+Hay una **capa gratuita permanente** mensual (del orden de 1 TB de transferencia y 10 millones de solicitudes; verifica los valores vigentes). Además, **la transferencia desde S3 u otros orígenes de AWS hacia CloudFront no se cobra**, de modo que servir desde S3 a través de CloudFront suele ser **más barato** que servir directamente desde S3. Para controlar el gasto:
 
 - **Sube la tasa de aciertos**: menos tráfico al origen y más barato.
 - **Comprime** (gzip y Brotli) respuestas de texto.
@@ -218,6 +204,4 @@ Para controlar el gasto:
 
 ## Para finalizar
 
-CloudFront rinde mucho cuando entiendes que es, sobre todo, una caché con reglas. Mide la tasa de aciertos, mantén mínima la clave de caché, versiona los recursos estáticos, protege el origen y nunca cachees lo que depende de quién pregunta.
-
-Y si algún día tu sitio sigue lento tras ponerle CDN, no empieces por cambiar de proveedor: empieza por `curl -I` y mira `X-Cache`.
+CloudFront rinde mucho cuando entiendes que es, sobre todo, una caché con reglas. Mide la tasa de aciertos, mantén mínima la clave de caché, versiona los recursos estáticos, protege el origen y nunca cachees lo que depende de quién pregunta. Y si algún día tu sitio sigue lento tras ponerle CDN, no empieces por cambiar de proveedor: empieza por `curl -I` y mira `X-Cache`.

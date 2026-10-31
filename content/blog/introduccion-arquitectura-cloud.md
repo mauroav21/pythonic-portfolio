@@ -5,9 +5,7 @@ description: "Modelos de servicio, responsabilidad compartida, regiones y zonas,
 tags: [Cloud, Arquitectura, AWS]
 ---
 
-"Migrar a la nube" suele significar mover servidores de un lugar a otro. Si eso es todo lo que haces, obtienes la complejidad de la nube con las limitaciones de tu centro de datos: las mismas máquinas frágiles, ahora con facturación por hora. La nube cambia las reglas del juego, pero solo si diseñas para ellas.
-
-Esta guía recorre los principios que separan una arquitectura "alojada en la nube" de una arquitectura **diseñada para la nube**.
+"Migrar a la nube" suele significar mover servidores de un lugar a otro. Si eso es todo lo que haces, obtienes la complejidad de la nube con las limitaciones de tu centro de datos: las mismas máquinas frágiles, ahora con facturación por hora. La nube cambia las reglas del juego, pero solo si diseñas para ellas. Esta guía recorre los principios que separan una arquitectura "alojada en la nube" de una arquitectura **diseñada para la nube**.
 
 ## Qué cambia realmente
 
@@ -255,6 +253,4 @@ Qué la hace "buena": sin puntos únicos de falla, estado fuera del cómputo, de
 
 ## Para finalizar
 
-Una buena arquitectura cloud no es la que usa más servicios, sino la que asume que todo falla, mantiene el estado en el lugar correcto, se reconstruye desde código y hace explícitos sus compromisos entre costo, seguridad, rendimiento y fiabilidad.
-
-Si solo tuvieras tiempo de revisar una cosa, revisa lo que ocurre cuando falla una zona. Esa respuesta suele revelar casi todo lo demás.
+Una buena arquitectura cloud no es la que usa más servicios, sino la que asume que todo falla, mantiene el estado en el lugar correcto, se reconstruye desde código y hace explícitos sus compromisos entre costo, seguridad, rendimiento y fiabilidad. Si solo tuvieras tiempo de revisar una cosa, revisa lo que ocurre cuando falla una zona. Esa respuesta suele revelar casi todo lo demás.

@@ -9,9 +9,7 @@ La inteligencia artificial pasó en pocos años de ser tema de investigadores a 
 
 ## Una definición práctica
 
-La inteligencia artificial es el campo de la informática que busca construir sistemas capaces de realizar tareas que normalmente requieren inteligencia humana: percibir, razonar, aprender, comunicarse o tomar decisiones.
-
-El término se acuñó en 1956, en una conferencia en Dartmouth. Desde entonces el campo ha pasado por épocas de entusiasmo y de desencanto (los llamados "inviernos de la IA"). Hoy vivimos una de las épocas de mayor avance.
+La inteligencia artificial es el campo de la informática que busca construir sistemas capaces de realizar tareas que normalmente requieren inteligencia humana: percibir, razonar, aprender, comunicarse o tomar decisiones. El término se acuñó en 1956, en una conferencia en Dartmouth. Desde entonces el campo ha pasado por épocas de entusiasmo y de desencanto (los llamados "inviernos de la IA"). Hoy vivimos una de las épocas de mayor avance.
 
 ## Las capas: IA, aprendizaje automático y aprendizaje profundo
 
@@ -26,9 +24,7 @@ Los términos se usan como sinónimos, pero son círculos concéntricos:
 
 ## Cómo aprende una máquina
 
-En la programación tradicional escribes las reglas: "si el correo contiene esta palabra, es spam". En el aprendizaje automático le das **ejemplos** (miles de correos etiquetados) y el sistema descubre por sí mismo qué patrones distinguen unos de otros.
-
-Los grandes tipos de aprendizaje:
+En la programación tradicional escribes las reglas: "si el correo contiene esta palabra, es spam". En el aprendizaje automático le das **ejemplos** (miles de correos etiquetados) y el sistema descubre por sí mismo qué patrones distinguen unos de otros. Los grandes tipos de aprendizaje:
 
 - **Supervisado:** aprende con ejemplos etiquetados (esta imagen es un gato). Es el más común.
 - **No supervisado:** encuentra estructura en datos sin etiquetas (agrupar clientes similares).
@@ -89,6 +85,4 @@ Varios marcos regulatorios y de buenas prácticas están en desarrollo en distin
 
 ## Para finalizar
 
-La IA es un conjunto de técnicas, no una mente. Su valor real aparece cuando la usamos con objetivos claros, buenos datos y supervisión, entendiendo tanto sus capacidades como sus límites.
-
-Sin exageraciones ni miedo, la mejor postura es la curiosidad crítica: aprender cómo funciona, probarla en tareas concretas y juzgar sus resultados. En los siguientes artículos de esta serie voy más al detalle: agentes, uso en programación y automatización de tareas.
+La IA es un conjunto de técnicas, no una mente. Su valor real aparece cuando la usamos con objetivos claros, buenos datos y supervisión, entendiendo tanto sus capacidades como sus límites. Sin exageraciones ni miedo, la mejor postura es la curiosidad crítica: aprender cómo funciona, probarla en tareas concretas y juzgar sus resultados. En los siguientes artículos de esta serie voy más al detalle: agentes, uso en programación y automatización de tareas.

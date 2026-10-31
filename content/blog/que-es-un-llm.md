@@ -9,17 +9,11 @@ Hoy casi todos hemos escrito a un asistente de IA y recibido una respuesta que p
 
 ## Qué es un LLM
 
-LLM significa *Large Language Model*, modelo de lenguaje grande. Es un modelo de aprendizaje automático entrenado con enormes cantidades de texto para una tarea que suena modesta: **predecir cuál es el siguiente fragmento de texto** dado lo que ya hay.
-
-Si le das "El cielo está", el modelo asigna probabilidades a lo que puede seguir: "azul", "despejado", "nublado". Elige uno, lo añade y repite. Una respuesta larga es esa predicción hecha cientos de veces seguidas.
-
-Parece poco, pero para predecir bien el texto el modelo termina capturando gramática, hechos, estilos y patrones de razonamiento presentes en los datos con que se entrenó.
+LLM significa *Large Language Model*, modelo de lenguaje grande. Es un modelo de aprendizaje automático entrenado con enormes cantidades de texto para una tarea que suena modesta: **predecir cuál es el siguiente fragmento de texto** dado lo que ya hay. Si le das "El cielo está", el modelo asigna probabilidades a lo que puede seguir: "azul", "despejado", "nublado". Elige uno, lo añade y repite. Una respuesta larga es esa predicción hecha cientos de veces seguidas. Parece poco, pero para predecir bien el texto el modelo termina capturando gramática, hechos, estilos y patrones de razonamiento presentes en los datos con que se entrenó.
 
 ## Tokens: la unidad real
 
-Los modelos no leen palabras ni letras, sino **tokens**: pedazos de texto, a veces una palabra completa, a veces una sílaba o un signo. En español una palabra suele ocupar uno o varios tokens.
-
-Esto importa por tres razones:
+Los modelos no leen palabras ni letras, sino **tokens**: pedazos de texto, a veces una palabra completa, a veces una sílaba o un signo. En español una palabra suele ocupar uno o varios tokens. Esto importa por tres razones:
 
 - Los precios de las APIs se cobran por tokens de entrada y de salida.
 - El límite de lo que el modelo "recuerda" se mide en tokens.
@@ -27,9 +21,7 @@ Esto importa por tres razones:
 
 ## La arquitectura: transformers
 
-Casi todos los LLM actuales usan la arquitectura **transformer**, presentada en 2017 en el artículo "Attention Is All You Need". Su idea central es la **atención**: al procesar una palabra, el modelo pondera qué otras partes del texto son relevantes para interpretarla.
-
-En "El banco cerró temprano, así que no pude retirar dinero", la atención ayuda a relacionar "banco" con "dinero" y no con un asiento de parque. Esto se hace en paralelo sobre todo el texto, lo que permitió entrenar modelos mucho más grandes que con técnicas anteriores.
+Casi todos los LLM actuales usan la arquitectura **transformer**, presentada en 2017 en el artículo "Attention Is All You Need". Su idea central es la **atención**: al procesar una palabra, el modelo pondera qué otras partes del texto son relevantes para interpretarla. En "El banco cerró temprano, así que no pude retirar dinero", la atención ayuda a relacionar "banco" con "dinero" y no con un asiento de parque. Esto se hace en paralelo sobre todo el texto, lo que permitió entrenar modelos mucho más grandes que con técnicas anteriores.
 
 ## Cómo se entrena
 
@@ -43,9 +35,7 @@ Los detalles exactos varían entre proveedores y, en muchos casos, no son públi
 
 ## Ventana de contexto
 
-La **ventana de contexto** es la cantidad de tokens que el modelo puede considerar a la vez: tu mensaje, el historial de la conversación, documentos adjuntos y su propia respuesta. Lo que queda fuera, el modelo no lo "ve".
-
-Dos consecuencias prácticas:
+La **ventana de contexto** es la cantidad de tokens que el modelo puede considerar a la vez: tu mensaje, el historial de la conversación, documentos adjuntos y su propia respuesta. Lo que queda fuera, el modelo no lo "ve". Dos consecuencias prácticas:
 
 - Un modelo **no tiene memoria entre conversaciones** por sí mismo. Si parece recordarte, es porque la aplicación le reenvía información o usa una función de memoria aparte.
 - Contexto más largo no significa que use bien todo el contexto. Si el dato clave está enterrado en medio de muchísimo texto, puede pasarlo por alto.
@@ -96,6 +86,4 @@ La inteligencia artificial es un campo amplio: visión por computadora, sistemas
 
 ## Para finalizar
 
-Un LLM no es un buscador ni una persona: es un modelo estadístico muy potente que predice texto. Esa descripción corta te sirve para casi todo: explica por qué redacta tan bien, por qué a veces inventa y por qué mejora cuando le das buen contexto.
-
-Úsalo como un colega rápido que sabe de muchísimos temas pero necesita que lo revises. En los siguientes artículos de esta serie veo qué son los agentes y cómo se usan estos modelos en el trabajo de código.
+Un LLM no es un buscador ni una persona: es un modelo estadístico muy potente que predice texto. Esa descripción corta te sirve para casi todo: explica por qué redacta tan bien, por qué a veces inventa y por qué mejora cuando le das buen contexto. Úsalo como un colega rápido que sabe de muchísimos temas pero necesita que lo revises. En los siguientes artículos de esta serie veo qué son los agentes y cómo se usan estos modelos en el trabajo de código.

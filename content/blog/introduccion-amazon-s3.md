@@ -5,9 +5,7 @@ description: "Cómo funciona S3 por dentro (claves, consistencia, particiones), 
 tags: [AWS, S3, Almacenamiento]
 ---
 
-S3 es el servicio de AWS que casi todo el mundo usa desde el primer día y casi nadie revisa después. Funciona tan bien que se vuelve invisible, hasta que llega una factura por almacenamiento que nadie reconoce, un bucket que alguien dejó abierto o una aplicación que de pronto tarda segundos en listar un prefijo.
-
-Este artículo es la versión larga: cómo está modelado S3, qué garantiza de verdad, cómo se paga, cómo se protege por capas y dónde están las trampas.
+S3 es el servicio de AWS que casi todo el mundo usa desde el primer día y casi nadie revisa después. Funciona tan bien que se vuelve invisible, hasta que llega una factura por almacenamiento que nadie reconoce, un bucket que alguien dejó abierto o una aplicación que de pronto tarda segundos en listar un prefijo. Este artículo es la versión larga: cómo está modelado S3, qué garantiza de verdad, cómo se paga, cómo se protege por capas y dónde están las trampas.
 
 ## Qué es S3 (y qué no es)
 
@@ -18,9 +16,7 @@ S3 es un **almacén de objetos**. Cada objeto es:
 - **Metadatos** del sistema y definidos por ti, y hasta 10 **etiquetas**.
 - Opcionalmente, un **identificador de versión**.
 
-No existe una jerarquía de carpetas. La barra es un carácter más de la clave; la consola dibuja "carpetas" agrupando por prefijo para que sea cómodo. Esto importa porque **"renombrar una carpeta" en S3 significa copiar y borrar cada objeto**, y porque listar un prefijo con millones de objetos es una operación de lista, no de directorio.
-
-Tampoco es un disco ni un sistema de archivos POSIX:
+No existe una jerarquía de carpetas. La barra es un carácter más de la clave; la consola dibuja "carpetas" agrupando por prefijo para que sea cómodo. Esto importa porque **"renombrar una carpeta" en S3 significa copiar y borrar cada objeto**, y porque listar un prefijo con millones de objetos es una operación de lista, no de directorio. Tampoco es un disco ni un sistema de archivos POSIX:
 
 | Necesitas | Usa |
 |---|---|
@@ -41,9 +37,7 @@ Once nueves no significan que no puedas borrarlo tú. La mayor causa de pérdida
 
 ### Consistencia
 
-Desde diciembre de 2020, S3 ofrece **consistencia fuerte de lectura tras escritura** para todos los objetos, incluyendo listados. Si escribes un objeto y lo lees o lo listas de inmediato, ves la versión nueva. Esto eliminó una familia entera de parches (esperas, reintentos, capas de consistencia como S3Guard) que antes eran habituales.
-
-Lo que **sigue sin ser transaccional** es el conjunto: no hay operaciones atómicas sobre varios objetos ni "commit de una carpeta". Si necesitas eso (por ejemplo, publicar un conjunto de archivos que debe verse completo o nada), usa un archivo marcador de "listo" o un formato de tabla como Apache Iceberg o Delta Lake, que lo resuelven a nivel de metadatos.
+Desde diciembre de 2020, S3 ofrece **consistencia fuerte de lectura tras escritura** para todos los objetos, incluyendo listados. Si escribes un objeto y lo lees o lo listas de inmediato, ves la versión nueva. Esto eliminó una familia entera de parches (esperas, reintentos, capas de consistencia como S3Guard) que antes eran habituales. Lo que **sigue sin ser transaccional** es el conjunto: no hay operaciones atómicas sobre varios objetos ni "commit de una carpeta". Si necesitas eso (por ejemplo, publicar un conjunto de archivos que debe verse completo o nada), usa un archivo marcador de "listo" o un formato de tabla como Apache Iceberg o Delta Lake, que lo resuelven a nivel de metadatos.
 
 ## Clases de almacenamiento: pagar según cómo accedes
 
@@ -198,9 +192,7 @@ S3 puede notificar la creación o eliminación de objetos a **Lambda, SQS, SNS o
 
 ## Rendimiento
 
-S3 escala por prefijo: a cada **prefijo** le corresponde un rendimiento mínimo de **3 500 solicitudes de escritura (PUT/COPY/POST/DELETE) y 5 500 de lectura (GET/HEAD) por segundo**, y puedes usar tantos prefijos como quieras. El viejo consejo de "aleatoriza el inicio de las claves" ya no es necesario para la mayoría de los casos.
-
-Para sacar rendimiento:
+S3 escala por prefijo: a cada **prefijo** le corresponde un rendimiento mínimo de **3 500 solicitudes de escritura (PUT/COPY/POST/DELETE) y 5 500 de lectura (GET/HEAD) por segundo**, y puedes usar tantos prefijos como quieras. El viejo consejo de "aleatoriza el inicio de las claves" ya no es necesario para la mayoría de los casos. Para sacar rendimiento:
 
 - **Cargas multiparte** para objetos grandes (recomendadas a partir de unos 100 MB; obligatorias por encima de 5 GB en una sola operación) y **en paralelo**.
 - **Descargas por rangos** (`Range`) en paralelo para archivos grandes.
@@ -272,6 +264,4 @@ S3 cobra por varios conceptos, y el almacenamiento rara vez es el único:
 
 ## Para finalizar
 
-S3 es sencillo de usar y fácil de usar mal. La buena noticia es que casi todos los problemas se previenen con unas pocas decisiones tomadas el primer día: bloquear el acceso público a nivel de cuenta, elegir bien el cifrado, activar el versionado con su regla de limpieza, definir el ciclo de vida y vigilar el gasto con etiquetas y alertas.
-
-Si recibes un bucket heredado, no empieces por optimizar: empieza por mirar qué hay, quién puede acceder y cuánto crece. Lo que encuentres en esa revisión casi siempre vale más que cualquier ajuste fino.
+S3 es sencillo de usar y fácil de usar mal. La buena noticia es que casi todos los problemas se previenen con unas pocas decisiones tomadas el primer día: bloquear el acceso público a nivel de cuenta, elegir bien el cifrado, activar el versionado con su regla de limpieza, definir el ciclo de vida y vigilar el gasto con etiquetas y alertas. Si recibes un bucket heredado, no empieces por optimizar: empieza por mirar qué hay, quién puede acceder y cuánto crece. Lo que encuentres en esa revisión casi siempre vale más que cualquier ajuste fino.

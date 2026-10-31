@@ -5,15 +5,11 @@ description: "Qué es la cultura de un equipo técnico, cómo se nota en el trab
 tags: [Cultura, Equipos, DevOps]
 ---
 
-Dos equipos con las mismas herramientas, el mismo presupuesto y gente igual de capaz pueden dar resultados muy distintos. La diferencia suele estar en algo que no aparece en ningún organigrama: **cómo se hacen las cosas aquí**.
-
-Eso es la cultura.
+Dos equipos con las mismas herramientas, el mismo presupuesto y gente igual de capaz pueden dar resultados muy distintos. La diferencia suele estar en algo que no aparece en ningún organigrama: **cómo se hacen las cosas aquí**. Eso es la cultura.
 
 ## Qué es la cultura (sin humo)
 
-La cultura no son los valores en la pared ni las frases del manual de bienvenida. Es lo que realmente ocurre cuando nadie está mirando: qué pasa cuando alguien comete un error, cómo se toman las decisiones, a quién se escucha, qué comportamientos se premian y cuáles se toleran.
-
-Una definición útil: **cultura es lo que el equipo hace de forma consistente y lo que la gente cree que es seguro hacer**.
+La cultura no son los valores en la pared ni las frases del manual de bienvenida. Es lo que realmente ocurre cuando nadie está mirando: qué pasa cuando alguien comete un error, cómo se toman las decisiones, a quién se escucha, qué comportamientos se premian y cuáles se toleran. Una definición útil: **cultura es lo que el equipo hace de forma consistente y lo que la gente cree que es seguro hacer**.
 
 ## Por qué importa en TI en particular
 
@@ -89,9 +85,7 @@ La cultura no se decreta; se construye con **conductas repetidas**, y empieza po
 
 ## Cómo la entiendo yo
 
-Si tuviera que resumir la cultura que quiero ayudar a construir en tres ideas, serían estas: **que todos puedan crecer, que no haya culpables y que las personas del equipo se apoyen entre sí**. Todo lo demás (procesos, herramientas, rituales) se apoya en eso. Es lo que busco tanto en los equipos de trabajo como en las comunidades que he liderado, donde la confianza es lo único que sostiene el trabajo.
-
-Y lo aplico en lo técnico: por eso soy partidario de los análisis posteriores a incidentes sin culpables y de la trazabilidad como herramienta de aprendizaje, no de vigilancia.
+Si tuviera que resumir la cultura que quiero ayudar a construir en tres ideas, serían estas: **que todos puedan crecer, que no haya culpables y que las personas del equipo se apoyen entre sí**. Todo lo demás (procesos, herramientas, rituales) se apoya en eso. Es lo que busco tanto en los equipos de trabajo como en las comunidades que he liderado, donde la confianza es lo único que sostiene el trabajo. Y lo aplico en lo técnico: por eso soy partidario de los análisis posteriores a incidentes sin culpables y de la trazabilidad como herramienta de aprendizaje, no de vigilancia.
 
 ## Cultura y comunidad
 
@@ -106,6 +100,4 @@ Las comunidades tecnológicas muestran la cultura en estado puro: sin jerarquía
 
 ## Para finalizar
 
-Las herramientas se copian, los procesos se compran, pero la cultura es lo que hace que lo demás funcione. Se construye con decisiones pequeñas y repetidas: cómo reaccionas, qué premias, qué toleras.
-
-Si quieres mejorar tu equipo, empieza por una pregunta: ¿es seguro aquí decir "me equivoqué"? La respuesta te dirá mucho.
+Las herramientas se copian, los procesos se compran, pero la cultura es lo que hace que lo demás funcione. Se construye con decisiones pequeñas y repetidas: cómo reaccionas, qué premias, qué toleras. Si quieres mejorar tu equipo, empieza por una pregunta: ¿es seguro aquí decir "me equivoqué"? La respuesta te dirá mucho.

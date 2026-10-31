@@ -11,15 +11,11 @@ Es fácil confundir internet con la web. Internet existía desde mucho antes: er
 
 ## El problema: información dispersa
 
-A finales de los años 80, en el CERN (la organización europea de investigación nuclear, en Suiza) trabajaban miles de científicos de todo el mundo con equipos y sistemas distintos. La información vivía en computadoras diferentes, con formatos diferentes. Encontrar documentación o saber qué sistema usaba cada proyecto era difícil, y cuando alguien se iba, mucho conocimiento se perdía.
-
-Tim Berners-Lee, un ingeniero británico que trabajaba allí, quería resolver ese problema práctico: cómo conectar la información de forma que cualquiera pudiera navegarla sin importar en qué computadora estuviera.
+A finales de los años 80, en el CERN (la organización europea de investigación nuclear, en Suiza) trabajaban miles de científicos de todo el mundo con equipos y sistemas distintos. La información vivía en computadoras diferentes, con formatos diferentes. Encontrar documentación o saber qué sistema usaba cada proyecto era difícil, y cuando alguien se iba, mucho conocimiento se perdía. Tim Berners-Lee, un ingeniero británico que trabajaba allí, quería resolver ese problema práctico: cómo conectar la información de forma que cualquiera pudiera navegarla sin importar en qué computadora estuviera.
 
 ## La propuesta de 1989
 
-En marzo de 1989 Berners-Lee escribió un documento titulado *Information Management: A Proposal* ("Gestión de la información: una propuesta"). Su jefe, según se cuenta con frecuencia, lo calificó como "vago pero emocionante". La idea central: un sistema de **hipertexto**, es decir, documentos enlazados entre sí, accesible a través de la red.
-
-Hacia 1990, junto con Robert Cailliau, refinó la propuesta y construyó los primeros programas: el primer navegador (que era también editor) y el primer servidor. El nombre "World Wide Web" se adoptó entonces.
+En marzo de 1989 Berners-Lee escribió un documento titulado *Information Management: A Proposal* ("Gestión de la información: una propuesta"). Su jefe, según se cuenta con frecuencia, lo calificó como "vago pero emocionante". La idea central: un sistema de **hipertexto**, es decir, documentos enlazados entre sí, accesible a través de la red. Hacia 1990, junto con Robert Cailliau, refinó la propuesta y construyó los primeros programas: el primer navegador (que era también editor) y el primer servidor. El nombre "World Wide Web" se adoptó entonces.
 
 ## Los tres ingredientes
 
@@ -54,9 +50,7 @@ Existían otros sistemas de información en red. La web se impuso porque:
 
 ## Una idea profunda: la universalidad
 
-Berners-Lee ha insistido en que el valor de la web está en su **universalidad**: cualquier persona debería poder enlazar a cualquier información, y cualquiera debería poder acceder a ella, sin importar la tecnología que use. Eso solo es posible si la base técnica es abierta y neutral.
-
-Esa idea explica casi todo lo que vino después, y también lo que hoy se discute.
+Berners-Lee ha insistido en que el valor de la web está en su **universalidad**: cualquier persona debería poder enlazar a cualquier información, y cualquiera debería poder acceder a ella, sin importar la tecnología que use. Eso solo es posible si la base técnica es abierta y neutral. Esa idea explica casi todo lo que vino después, y también lo que hoy se discute.
 
 ## Lo que esta historia nos enseña
 
@@ -71,6 +65,4 @@ No es una charla técnica. Parte de una idea simple: la web es una herramienta q
 
 ## Para finalizar
 
-La web empezó como una propuesta para organizar documentos entre científicos. Su combinación de simplicidad, apertura y universalidad la convirtió en la infraestructura de información más grande de la historia.
-
-En el siguiente artículo veo qué pasó después: cómo creció, quién terminó controlándola y por qué su propio creador ha expresado preocupación por el rumbo que tomó.
+La web empezó como una propuesta para organizar documentos entre científicos. Su combinación de simplicidad, apertura y universalidad la convirtió en la infraestructura de información más grande de la historia. En el siguiente artículo veo qué pasó después: cómo creció, quién terminó controlándola y por qué su propio creador ha expresado preocupación por el rumbo que tomó.

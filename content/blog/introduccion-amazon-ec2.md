@@ -5,9 +5,7 @@ description: "Cómo elegir tipo de instancia, modelo de compra y almacenamiento 
 tags: [AWS, EC2, Cómputo]
 ---
 
-EC2 es el servicio más antiguo y más flexible de AWS, y por eso el más fácil de usar mal. Lanzar una instancia toma dos minutos; operarla bien durante tres años implica decisiones sobre imágenes, parches, discos, redes, escalado, compras y apagados que nadie toma el primer día y todos pagan después.
-
-Este artículo recorre esas decisiones en el orden en que aparecen.
+EC2 es el servicio más antiguo y más flexible de AWS, y por eso el más fácil de usar mal. Lanzar una instancia toma dos minutos; operarla bien durante tres años implica decisiones sobre imágenes, parches, discos, redes, escalado, compras y apagados que nadie toma el primer día y todos pagan después. Este artículo recorre esas decisiones en el orden en que aparecen.
 
 ## El modelo: una instancia es desechable (aunque no lo parezca)
 
@@ -57,9 +55,7 @@ Una T con CPU sostenida alta es un error de dimensionamiento: una M o C de tama�
 | **Spot** | Ninguno, pero AWS puede reclamar la capacidad con **aviso de 2 minutos** | Hasta ~90 % | Interrupciones; solo para cargas tolerantes |
 | **Capacity Reservations** | Reserva capacidad en una zona | Ninguno por sí solo | Pagas por capacidad no usada |
 
-Los descuentos concretos varían por región, familia, plazo y forma de pago; calcúlalos en la calculadora oficial.
-
-Una estrategia razonable: **base estable cubierta con Savings Plans, picos con bajo demanda, y trabajos tolerantes a interrupción (CI, lotes, procesamiento de datos) en Spot** con múltiples tipos de instancia para aumentar la probabilidad de capacidad. Compra compromisos **después** de medir un par de meses; comprometer a ciegas es otra forma de desperdicio.
+Los descuentos concretos varían por región, familia, plazo y forma de pago; calcúlalos en la calculadora oficial. Una estrategia razonable: **base estable cubierta con Savings Plans, picos con bajo demanda, y trabajos tolerantes a interrupción (CI, lotes, procesamiento de datos) en Spot** con múltiples tipos de instancia para aumentar la probabilidad de capacidad. Compra compromisos **después** de medir un par de meses; comprometer a ciegas es otra forma de desperdicio.
 
 ## Almacenamiento: EBS, instance store y los demás
 
@@ -91,9 +87,7 @@ Si varias instancias necesitan el mismo sistema de archivos, **EFS** (NFS admini
 
 ## Acceso: deja de abrir SSH
 
-El patrón antiguo: grupo de seguridad con el puerto 22 abierto, un par de llaves compartido por todo el equipo y una IP pública. Cada elemento es un riesgo.
-
-El patrón actual:
+El patrón antiguo: grupo de seguridad con el puerto 22 abierto, un par de llaves compartido por todo el equipo y una IP pública. Cada elemento es un riesgo. El patrón actual:
 
 1. **AWS Systems Manager Session Manager:** abre una sesión de terminal o reenvío de puertos **sin abrir puertos de entrada**, sin llaves y con **registro de sesiones** en CloudTrail/S3. Requiere el agente SSM y un rol con la política adecuada.
 2. **Sin IP pública** para las instancias de aplicación, detrás de un balanceador.
@@ -105,9 +99,7 @@ El **servicio de metadatos de instancia** (169.254.169.254) entrega, entre otras
 
 ## Redes en dos párrafos
 
-La instancia vive en una subred de una VPC con **grupos de seguridad** (firewall con estado). Permite lo mínimo: referencia **otros grupos** como origen en lugar de rangos de IP. Las **IP públicas** de IPv4 se cobran por hora desde 2024, así que no asignes públicas sin necesidad. Las **IP elásticas** sirven para direcciones fijas, aunque casi siempre es mejor un balanceador con DNS.
-
-El ancho de banda depende del tamaño de la instancia, y los tamaños pequeños tienen límites "hasta X Gbps" con ráfagas. Si una carga es sensible a la red, revisa los límites del tipo concreto y no solo la CPU.
+La instancia vive en una subred de una VPC con **grupos de seguridad** (firewall con estado). Permite lo mínimo: referencia **otros grupos** como origen en lugar de rangos de IP. Las **IP públicas** de IPv4 se cobran por hora desde 2024, así que no asignes públicas sin necesidad. Las **IP elásticas** sirven para direcciones fijas, aunque casi siempre es mejor un balanceador con DNS. El ancho de banda depende del tamaño de la instancia, y los tamaños pequeños tienen límites "hasta X Gbps" con ráfagas. Si una carga es sensible a la red, revisa los límites del tipo concreto y no solo la CPU.
 
 ## Escalado y alta disponibilidad
 
@@ -204,6 +196,4 @@ Las máquinas virtuales que dejé corriendo en mi cuenta personal fueron mi prim
 
 ## Para finalizar
 
-EC2 te da control total y, con él, la responsabilidad de parches, seguridad, capacidad y costo. Si las instancias se crean desde una plantilla versionada, se acceden por Session Manager, se escalan con un ASG en varias zonas y se compran con una estrategia basada en mediciones, la operación es predecible.
-
-Si una instancia tiene nombre propio y alguien le tiene miedo, ya sabes qué arreglar primero.
+EC2 te da control total y, con él, la responsabilidad de parches, seguridad, capacidad y costo. Si las instancias se crean desde una plantilla versionada, se acceden por Session Manager, se escalan con un ASG en varias zonas y se compran con una estrategia basada en mediciones, la operación es predecible. Si una instancia tiene nombre propio y alguien le tiene miedo, ya sabes qué arreglar primero.

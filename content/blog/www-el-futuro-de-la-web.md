@@ -11,9 +11,7 @@ Si la web actual concentra datos y poder en pocas plataformas, ¿hay alternativa
 
 ## La web semántica: datos que las máquinas entienden
 
-La **web semántica** fue una idea temprana de Berners-Lee: además de páginas para humanos, publicar datos estructurados con significado explícito, de modo que las máquinas pudieran relacionarlos y razonar sobre ellos.
-
-Piezas técnicas relacionadas:
+La **web semántica** fue una idea temprana de Berners-Lee: además de páginas para humanos, publicar datos estructurados con significado explícito, de modo que las máquinas pudieran relacionarlos y razonar sobre ellos. Piezas técnicas relacionadas:
 
 - **RDF:** un modelo para describir cosas y sus relaciones como tripletas (sujeto, predicado, objeto).
 - **Ontologías y vocabularios:** definen el significado de los términos.
@@ -77,6 +75,4 @@ Cuando aparezca otra "nueva web", sirven estas preguntas, inspiradas en los prin
 
 ## Para finalizar
 
-El futuro de la web no está escrito. Las propuestas técnicas, como Solid, identidad descentralizada, protocolos federados o passkeys, tienen avances desiguales; ninguna es una solución mágica. Lo que sí es claro es que la apertura y la universalidad que hicieron grande a la web se defienden con decisiones concretas de diseño, de negocio y de política.
-
-Quienes trabajamos con tecnología participamos en esa historia cada vez que elegimos un estándar, un modelo de datos o una forma de tratar a las personas usuarias. La historia de la web sigue inconclusa, y también nos toca escribirla.
+El futuro de la web no está escrito. Las propuestas técnicas, como Solid, identidad descentralizada, protocolos federados o passkeys, tienen avances desiguales; ninguna es una solución mágica. Lo que sí es claro es que la apertura y la universalidad que hicieron grande a la web se defienden con decisiones concretas de diseño, de negocio y de política. Quienes trabajamos con tecnología participamos en esa historia cada vez que elegimos un estándar, un modelo de datos o una forma de tratar a las personas usuarias. La historia de la web sigue inconclusa, y también nos toca escribirla.

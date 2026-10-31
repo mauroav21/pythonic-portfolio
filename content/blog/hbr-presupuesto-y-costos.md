@@ -69,6 +69,4 @@ Presenta las opciones pronto: recortar alcance, buscar más presupuesto, extende
 
 ## Para finalizar
 
-El presupuesto es una herramienta de decisión, no un cartel. Con una estimación en rangos, categorías completas, revisión periódica y una proyección de cierre, los números dejan de ser sorpresa y se vuelven información para decidir.
-
-El siguiente tema complementa al dinero con el recurso más escaso: cómo liderar a quienes no dependen directamente de ti.
+El presupuesto es una herramienta de decisión, no un cartel. Con una estimación en rangos, categorías completas, revisión periódica y una proyección de cierre, los números dejan de ser sorpresa y se vuelven información para decidir. El siguiente tema complementa al dinero con el recurso más escaso: cómo liderar a quienes no dependen directamente de ti.

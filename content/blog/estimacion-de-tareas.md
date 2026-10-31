@@ -24,19 +24,13 @@ Decir "5 días" transmite una certeza que no tienes. Dar un rango comunica la ve
 - "Probablemente entre 3 y 8 días; lo más probable, 5."
 - "Tengo alta confianza en el backend, baja en la integración con el proveedor."
 
-Un truco útil, el **estimado de tres puntos**: optimista (O), más probable (M) y pesimista (P). Una forma común de combinarlos es (O + 4M + P) / 6.
-
-El rango se estrecha conforme aprendes. Al inicio es normal que sea amplio; exigir precisión cuando falta información solo da cifras falsas.
+Un truco útil, el **estimado de tres puntos**: optimista (O), más probable (M) y pesimista (P). Una forma común de combinarlos es (O + 4M + P) / 6. El rango se estrecha conforme aprendes. Al inicio es normal que sea amplio; exigir precisión cuando falta información solo da cifras falsas.
 
 ## Estimar en tiempo o en tamaño relativo
 
 Hay dos enfoques:
 
-**Tiempo absoluto (horas o días):** intuitivo, pero depende de quién lo haga y de cuántas interrupciones tenga.
-
-**Tamaño relativo (puntos de historia, tallas de camiseta):** se compara una tarea con otras ya conocidas. "Esto es el doble de complejo que aquella." Evita discutir horas exactas y funciona mejor en equipo. Las tareas se miden en una escala como Fibonacci (1, 2, 3, 5, 8, 13), donde los saltos crecientes reflejan la incertidumbre creciente.
-
-Con el tiempo, el equipo descubre cuántos puntos termina por ciclo (su **velocidad**), y con eso proyecta.
+**Tiempo absoluto (horas o días):** intuitivo, pero depende de quién lo haga y de cuántas interrupciones tenga. **Tamaño relativo (puntos de historia, tallas de camiseta):** se compara una tarea con otras ya conocidas. "Esto es el doble de complejo que aquella." Evita discutir horas exactas y funciona mejor en equipo. Las tareas se miden en una escala como Fibonacci (1, 2, 3, 5, 8, 13), donde los saltos crecientes reflejan la incertidumbre creciente. Con el tiempo, el equipo descubre cuántos puntos termina por ciclo (su **velocidad**), y con eso proyecta.
 
 ## Planning Poker
 
@@ -89,9 +83,7 @@ Muchos conflictos nacen de confundir estas tres cosas. Si el objetivo es más am
 
 ## Una estimación que "cumplió" y me dejó pensando
 
-En un proyecto con tiempos muy ajustados, cumplimos la fecha pero a costa de no mapear todos los procesos ni identificar a todas las áreas involucradas. El cliente quedó satisfecho, que era el objetivo, pero yo me quedé con la sensación de haber entregado algo por debajo de mis estándares. Lo que faltaba se resolvió en funcionalidades futuras.
-
-Desde entonces, cuando estimo, pregunto dos cosas además del tiempo: **¿qué parte del problema aún no entendemos?** y **¿qué estamos dejando fuera para llegar a la fecha, y quién lo sabe?** Una estimación honesta no es solo un número: es el número más la lista de lo que no se está considerando.
+En un proyecto con tiempos muy ajustados, cumplimos la fecha pero a costa de no mapear todos los procesos ni identificar a todas las áreas involucradas. El cliente quedó satisfecho, que era el objetivo, pero yo me quedé con la sensación de haber entregado algo por debajo de mis estándares. Lo que faltaba se resolvió en funcionalidades futuras. Desde entonces, cuando estimo, pregunto dos cosas además del tiempo: **¿qué parte del problema aún no entendemos?** y **¿qué estamos dejando fuera para llegar a la fecha, y quién lo sabe?** Una estimación honesta no es solo un número: es el número más la lista de lo que no se está considerando.
 
 ## Para finalizar
 

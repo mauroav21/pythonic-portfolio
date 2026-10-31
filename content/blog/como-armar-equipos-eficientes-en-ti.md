@@ -5,27 +5,19 @@ description: "Tamaño, composición, autonomía y acuerdos de trabajo: qué hace
 tags: [Equipos, Liderazgo, Organización]
 ---
 
-"Eficiente" suena a hacer más con menos, y en equipos de personas esa idea se malinterpreta fácil. Un equipo eficiente no es el que trabaja más horas, sino el que **convierte el esfuerzo en resultados con poca fricción y de forma sostenible**.
-
-Estas son las decisiones que más pesan para lograrlo.
+"Eficiente" suena a hacer más con menos, y en equipos de personas esa idea se malinterpreta fácil. Un equipo eficiente no es el que trabaja más horas, sino el que **convierte el esfuerzo en resultados con poca fricción y de forma sostenible**. Estas son las decisiones que más pesan para lograrlo.
 
 ## 1. Tamaño: pequeño y claro
 
-Mientras más personas, más líneas de comunicación: el número de relaciones crece mucho más rápido que el de integrantes. Una referencia útil es el equipo de **entre 5 y 9 personas**. La regla popular de Amazon, "el equipo debe poder alimentarse con dos pizzas", expresa lo mismo.
-
-Si el trabajo exige más gente, divide en varios equipos pequeños con responsabilidades claras en lugar de uno enorme.
+Mientras más personas, más líneas de comunicación: el número de relaciones crece mucho más rápido que el de integrantes. Una referencia útil es el equipo de **entre 5 y 9 personas**. La regla popular de Amazon, "el equipo debe poder alimentarse con dos pizzas", expresa lo mismo. Si el trabajo exige más gente, divide en varios equipos pequeños con responsabilidades claras en lugar de uno enorme.
 
 ## 2. Composición: habilidades que se complementan
 
-Un equipo es eficiente cuando tiene dentro lo necesario para entregar sin depender de colas externas. Eso significa un equipo **multifuncional**: desarrollo, pruebas, operación, diseño y conocimiento del producto, según el caso.
-
-Piensa en personas con perfil "T": profundidad en una especialidad y amplitud para entender y ayudar en las demás. Evita equipos donde solo una persona sabe de cada cosa; el **bus factor** debe ser mayor que uno.
+Un equipo es eficiente cuando tiene dentro lo necesario para entregar sin depender de colas externas. Eso significa un equipo **multifuncional**: desarrollo, pruebas, operación, diseño y conocimiento del producto, según el caso. Piensa en personas con perfil "T": profundidad en una especialidad y amplitud para entender y ayudar en las demás. Evita equipos donde solo una persona sabe de cada cosa; el **bus factor** debe ser mayor que uno.
 
 ## 3. Misión clara y propiedad
 
-Un equipo con una misión ("mejorar el tiempo de entrega de pedidos") rinde más que uno con una lista de tareas. Y dale **propiedad de principio a fin** sobre un área del producto o del sistema, para que sienta suyo el resultado, incluida la operación.
-
-El libro *Team Topologies* propone ideas útiles: equipos alineados al flujo de valor, equipos de plataforma que reducen la carga de los demás y reglas claras de interacción entre equipos.
+Un equipo con una misión ("mejorar el tiempo de entrega de pedidos") rinde más que uno con una lista de tareas. Y dale **propiedad de principio a fin** sobre un área del producto o del sistema, para que sienta suyo el resultado, incluida la operación. El libro *Team Topologies* propone ideas útiles: equipos alineados al flujo de valor, equipos de plataforma que reducen la carga de los demás y reglas claras de interacción entre equipos.
 
 ## 4. Autonomía con alineación
 
@@ -87,9 +79,7 @@ El líder de un equipo eficiente quita obstáculos, aclara prioridades, protege 
 
 ## Cómo armo yo mis equipos
 
-Lo que mejor me ha funcionado es **formar a mi equipo directo** pensando en habilidades y fortalezas, no solo en disponibilidad. Al principio recurría a las personas que ya conocía; con el tiempo empecé a trabajar con gente que no conocía y, a través de un proyecto o por simple coincidencia, iba detectando lo que cada una hacía mejor.
-
-Tres hábitos me han servido:
+Lo que mejor me ha funcionado es **formar a mi equipo directo** pensando en habilidades y fortalezas, no solo en disponibilidad. Al principio recurría a las personas que ya conocía; con el tiempo empecé a trabajar con gente que no conocía y, a través de un proyecto o por simple coincidencia, iba detectando lo que cada una hacía mejor. Tres hábitos me han servido:
 
 1. **Definir responsabilidades y libertades** desde el principio: qué decide cada quien y dónde tiene espacio para hacerlo a su manera.
 2. **Acordar cuándo algo debe escalarse** y cuál es el proceso para resolverlo, antes de que haya un problema. Es lo que evita que una crisis se convierta en una discusión.
@@ -99,6 +89,4 @@ Es una de las cosas que se me dan con naturalidad, pero no es un talento mágico
 
 ## Para finalizar
 
-Un equipo eficiente es pequeño, completo, con misión clara, autónomo, honesto y sostenible. No requiere héroes ni horas extra; requiere buenas condiciones: claridad, confianza y un sistema de trabajo que no se interponga.
-
-Si solo vas a cambiar una cosa, empieza por los acuerdos de trabajo y por la seguridad psicológica; cuestan poco y mueven mucho.
+Un equipo eficiente es pequeño, completo, con misión clara, autónomo, honesto y sostenible. No requiere héroes ni horas extra; requiere buenas condiciones: claridad, confianza y un sistema de trabajo que no se interponga. Si solo vas a cambiar una cosa, empieza por los acuerdos de trabajo y por la seguridad psicológica; cuestan poco y mueven mucho.

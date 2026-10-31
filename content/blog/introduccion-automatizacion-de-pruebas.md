@@ -5,9 +5,7 @@ description: "Qué automatizar y qué no, la pirámide de pruebas, buenas prueba
 tags: [Pruebas, QA, Automatización]
 ---
 
-Casi todos los equipos empiezan igual: pocas pruebas, mucho miedo a cambiar cosas y una persona que "sabe qué probar a mano antes de cada entrega". Luego deciden automatizar y, con las mejores intenciones, acaban con una suite lenta, frágil y que nadie quiere tocar, que falla sin razón los lunes y a la que se le aplica `skip` hasta dejarla inútil.
-
-El problema casi nunca es la herramienta. Es la **estrategia**: qué probar, en qué nivel, con qué datos y cómo mantenerlo. Esta guía trata de eso.
+Casi todos los equipos empiezan igual: pocas pruebas, mucho miedo a cambiar cosas y una persona que "sabe qué probar a mano antes de cada entrega". Luego deciden automatizar y, con las mejores intenciones, acaban con una suite lenta, frágil y que nadie quiere tocar, que falla sin razón los lunes y a la que se le aplica `skip` hasta dejarla inútil. El problema casi nunca es la herramienta. Es la **estrategia**: qué probar, en qué nivel, con qué datos y cómo mantenerlo. Esta guía trata de eso.
 
 ## Para qué sirven las pruebas automáticas
 
@@ -38,9 +36,7 @@ Y lo que **no** son: una garantía de que el software es correcto (una prueba ve
 | **Contrato** | Que productor y consumidor respeten su interfaz | Rápida | Alta en los límites | Bajo-medio |
 | **Extremo a extremo (E2E)** | Un flujo completo como lo haría un usuario | Segundos a minutos | Amplia pero difusa | Alto |
 
-La idea: **muchas pruebas baratas abajo, pocas caras arriba.** Si la proporción se invierte (el "cono de helado": casi todo E2E y manual), tendrás ciclos lentos, fallos difíciles de diagnosticar y suites que nadie ejecuta localmente.
-
-Variantes del modelo que verás: el **"trofeo de pruebas"** (más peso a integración en aplicaciones donde las unidades casi no tienen lógica propia, como un frontend que sobre todo orquesta) y el **"panal"** para microservicios (el grueso en integración entre servicios más contratos). No son dogmas: el principio es **probar cada riesgo en el nivel más barato que lo detecte**.
+La idea: **muchas pruebas baratas abajo, pocas caras arriba.** Si la proporción se invierte (el "cono de helado": casi todo E2E y manual), tendrás ciclos lentos, fallos difíciles de diagnosticar y suites que nadie ejecuta localmente. Variantes del modelo que verás: el **"trofeo de pruebas"** (más peso a integración en aplicaciones donde las unidades casi no tienen lógica propia, como un frontend que sobre todo orquesta) y el **"panal"** para microservicios (el grueso en integración entre servicios más contratos). No son dogmas: el principio es **probar cada riesgo en el nivel más barato que lo detecte**.
 
 ## Pruebas unitarias que merecen existir
 
@@ -104,15 +100,11 @@ Prácticas que marcan la diferencia:
 | **Mock / Spy** | Registra y verifica llamadas | Cuando la **interacción** es el comportamiento a verificar |
 | **Dummy** | Relleno que no se usa | Cumplir una firma |
 
-Un exceso de *mocks* produce pruebas que verifican que el código llama a lo que llama, y pasan aunque el sistema real esté roto. Prefiere **fakes** y datos reales cuando sean baratos; usa mocks en los límites (reloj, red, servicios externos).
-
-**Diseño para probar:** separa la lógica pura de los efectos secundarios. Inyecta dependencias (reloj, repositorios, clientes HTTP) en lugar de crearlas dentro. Eso se alinea con arquitecturas hexagonales y hace que la mayor parte de la lógica se pruebe sin infraestructura.
+Un exceso de *mocks* produce pruebas que verifican que el código llama a lo que llama, y pasan aunque el sistema real esté roto. Prefiere **fakes** y datos reales cuando sean baratos; usa mocks en los límites (reloj, red, servicios externos). **Diseño para probar:** separa la lógica pura de los efectos secundarios. Inyecta dependencias (reloj, repositorios, clientes HTTP) en lugar de crearlas dentro. Eso se alinea con arquitecturas hexagonales y hace que la mayor parte de la lógica se pruebe sin infraestructura.
 
 ## Pruebas de integración: donde viven los bugs de verdad
 
-Muchos defectos están en las **costuras**: consultas SQL que no hacen lo que crees, serialización, transacciones, migraciones, configuraciones. Las unitarias no los ven.
-
-Lo que funciona hoy: levantar dependencias **reales y efímeras** en contenedores durante la prueba (por ejemplo, con **Testcontainers**), en lugar de bases de datos en memoria con comportamiento distinto al de producción.
+Muchos defectos están en las **costuras**: consultas SQL que no hacen lo que crees, serialización, transacciones, migraciones, configuraciones. Las unitarias no los ven. Lo que funciona hoy: levantar dependencias **reales y efímeras** en contenedores durante la prueba (por ejemplo, con **Testcontainers**), en lugar de bases de datos en memoria con comportamiento distinto al de producción.
 
 ```python
 import pytest
@@ -250,9 +242,7 @@ Tipos: **carga** (uso esperado), **estrés** (hasta romper), **picos** (subidas 
 
 ## Cuando me pasé de pruebas
 
-Una vez trabajé en un proyecto que tenía que salir antes de lo planeado. La reacción del equipo fue la más natural: llenar el proyecto de pruebas para sentirnos seguros. Funcionó para sentirnos seguros, pero llegamos a tener una suite que tardaba muchísimo en terminar. Cuando cada ciclo de retroalimentación se alarga tanto, la suite deja de ser una ayuda y empieza a ser un peaje.
-
-De ahí saqué dos reglas que sigo desde entonces: **medir cuánto tarda la suite como si fuera una funcionalidad más**, y **preguntarme en qué nivel de la pirámide cuesta menos detectar cada riesgo**. Más pruebas no es lo mismo que mejores pruebas.
+Una vez trabajé en un proyecto que tenía que salir antes de lo planeado. La reacción del equipo fue la más natural: llenar el proyecto de pruebas para sentirnos seguros. Funcionó para sentirnos seguros, pero llegamos a tener una suite que tardaba muchísimo en terminar. Cuando cada ciclo de retroalimentación se alarga tanto, la suite deja de ser una ayuda y empieza a ser un peaje. De ahí saqué dos reglas que sigo desde entonces: **medir cuánto tarda la suite como si fuera una funcionalidad más**, y **preguntarme en qué nivel de la pirámide cuesta menos detectar cada riesgo**. Más pruebas no es lo mismo que mejores pruebas.
 
 ## Qué automatizar y qué no
 
@@ -298,6 +288,4 @@ Y recuerda la **prueba exploratoria**: sesiones guiadas por curiosidad y experie
 
 ## Para finalizar
 
-Una buena suite de pruebas es un activo que acelera al equipo; una mala es una deuda que lo frena y que nadie se atreve a tirar. La diferencia está en probar cada riesgo en el nivel adecuado, mantener las pruebas rápidas y deterministas, tratarlas como código de primera clase y vigilar su salud como se vigila la de la producción.
-
-Si hoy solo mejoras una cosa, que sea esta: haz que la suite que corre en cada commit tarde menos de diez minutos y que cuando falle, la causa sea siempre real.
+Una buena suite de pruebas es un activo que acelera al equipo; una mala es una deuda que lo frena y que nadie se atreve a tirar. La diferencia está en probar cada riesgo en el nivel adecuado, mantener las pruebas rápidas y deterministas, tratarlas como código de primera clase y vigilar su salud como se vigila la de la producción. Si hoy solo mejoras una cosa, que sea esta: haz que la suite que corre en cada commit tarde menos de diez minutos y que cuando falle, la causa sea siempre real.

@@ -11,15 +11,11 @@ Un riesgo es algo que **puede** pasar y afectaría al proyecto. Un problema es a
 
 ## El problema: nadie quiere hablar de lo que puede salir mal
 
-Hablar de riesgos puede sentirse como pesimismo o falta de confianza en el equipo. Por eso se evita, y los riesgos viven en la cabeza de cada quien sin que nadie los gestione.
-
-La solución es cultural y práctica: hacerlo parte de la rutina, sin dramatismo.
+Hablar de riesgos puede sentirse como pesimismo o falta de confianza en el equipo. Por eso se evita, y los riesgos viven en la cabeza de cada quien sin que nadie los gestione. La solución es cultural y práctica: hacerlo parte de la rutina, sin dramatismo.
 
 ## Paso 1: identificar
 
-Pregunta al equipo, en una sesión corta: *"Si el proyecto fallara, ¿por qué habría sido?"* Esta pregunta, a veces llamada premortem, desbloquea mucha información que de otra forma nadie dice.
-
-Fuentes comunes de riesgo:
+Pregunta al equipo, en una sesión corta: *"Si el proyecto fallara, ¿por qué habría sido?"* Esta pregunta, a veces llamada premortem, desbloquea mucha información que de otra forma nadie dice. Fuentes comunes de riesgo:
 
 - Dependencias de terceros (proveedores, otros equipos)
 - Tecnología nueva que el equipo no domina
@@ -71,6 +67,4 @@ Un registro de riesgos que se hace una vez y se archiva no sirve. Revisa los pri
 
 ## Para finalizar
 
-Gestionar riesgos no es predecir el futuro, sino llegar preparado a él. Identifica en equipo, prioriza, asigna dueños y revisa con regularidad.
-
-Un equipo que habla abiertamente de lo que puede salir mal suele tener menos sorpresas, y cuando las tiene, reacciona más rápido. Siguiente tema: cómo comunicarte con quienes tienen interés en tu proyecto.
+Gestionar riesgos no es predecir el futuro, sino llegar preparado a él. Identifica en equipo, prioriza, asigna dueños y revisa con regularidad. Un equipo que habla abiertamente de lo que puede salir mal suele tener menos sorpresas, y cuando las tiene, reacciona más rápido. Siguiente tema: cómo comunicarte con quienes tienen interés en tu proyecto.

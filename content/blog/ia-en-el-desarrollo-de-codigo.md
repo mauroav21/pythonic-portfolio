@@ -106,6 +106,4 @@ Como responsable de DevSecOps, esto último me importa especialmente: el código
 
 ## Para finalizar
 
-La IA en el desarrollo es un gran amplificador: acelera lo mecánico y deja más tiempo para diseñar y decidir. Pero amplifica tanto los aciertos como los errores. Quien tiene buenas prácticas de ingeniería (pruebas, revisión, integración continua) la aprovecha mucho mejor.
-
-Úsala como a un compañero rápido y entusiasta que necesita supervisión: delégale lo que puedas verificar y conserva tú la responsabilidad del resultado.
+La IA en el desarrollo es un gran amplificador: acelera lo mecánico y deja más tiempo para diseñar y decidir. Pero amplifica tanto los aciertos como los errores. Quien tiene buenas prácticas de ingeniería (pruebas, revisión, integración continua) la aprovecha mucho mejor. Úsala como a un compañero rápido y entusiasta que necesita supervisión: delégale lo que puedas verificar y conserva tú la responsabilidad del resultado.

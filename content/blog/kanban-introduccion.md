@@ -24,9 +24,7 @@ Con solo ponerlo a la vista, aparecen cosas que antes eran invisibles: tareas at
 
 ### 2. Limita el trabajo en curso (WIP)
 
-Esta es la regla que distingue a Kanban de un simple tablero. Cada columna tiene un **límite**: por ejemplo, máximo 3 tarjetas en "En revisión". Si está llena, nadie empieza algo nuevo hasta que algo avance.
-
-¿Por qué ayuda? Hacer muchas cosas a la vez parece productivo, pero:
+Esta es la regla que distingue a Kanban de un simple tablero. Cada columna tiene un **límite**: por ejemplo, máximo 3 tarjetas en "En revisión". Si está llena, nadie empieza algo nuevo hasta que algo avance. ¿Por qué ayuda? Hacer muchas cosas a la vez parece productivo, pero:
 
 - Cada cambio de tarea cuesta concentración.
 - Las tareas tardan más en terminarse.
@@ -82,6 +80,4 @@ No son excluyentes: muchos equipos usan Scrum con un tablero Kanban, o práctica
 
 ## Para finalizar
 
-Kanban no pide cambiar de golpe tu forma de trabajar: empieza donde estás, hace visible el trabajo y limita lo que se hace en paralelo. Esos dos hábitos bastan para reducir el caos y entregar con mayor regularidad.
-
-Es un buen punto de partida para equipos de soporte, infraestructura u operaciones, donde el trabajo llega de forma constante y no cabe en ciclos fijos.
+Kanban no pide cambiar de golpe tu forma de trabajar: empieza donde estás, hace visible el trabajo y limita lo que se hace en paralelo. Esos dos hábitos bastan para reducir el caos y entregar con mayor regularidad. Es un buen punto de partida para equipos de soporte, infraestructura u operaciones, donde el trabajo llega de forma constante y no cabe en ciclos fijos.

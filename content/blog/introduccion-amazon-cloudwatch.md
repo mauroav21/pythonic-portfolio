@@ -5,9 +5,7 @@ description: "Métricas y resolución, logs estructurados y Logs Insights, Embed
 tags: [AWS, CloudWatch, Observabilidad]
 ---
 
-Hay dos formas de fallar con CloudWatch. La primera: no mirar nada, y enterarte de los incidentes por los usuarios. La segunda, más sutil: registrarlo **todo**, crear cien alarmas y pagar una factura de logs mayor que la del cómputo, mientras el equipo silencia las alertas porque suenan cada noche.
-
-Observabilidad útil es un equilibrio: pocas señales buenas, estructuradas, con dueño y con costo conocido. Veamos cómo construirla.
+Hay dos formas de fallar con CloudWatch. La primera: no mirar nada, y enterarte de los incidentes por los usuarios. La segunda, más sutil: registrarlo **todo**, crear cien alarmas y pagar una factura de logs mayor que la del cómputo, mientras el equipo silencia las alertas porque suenan cada noche. Observabilidad útil es un equilibrio: pocas señales buenas, estructuradas, con dueño y con costo conocido. Veamos cómo construirla.
 
 ## Tres señales y una pregunta
 
@@ -80,9 +78,7 @@ def log(evento, **campos):
 log("pedido.procesado", pedido_id="A001", total=1250.0, duracion_ms=84, request_id="abc-123")
 ```
 
-Con JSON, CloudWatch **descubre los campos automáticamente** y puedes filtrar y agregar por `pedido_id` o `duracion_ms` sin expresiones regulares. Incluye siempre un **identificador de correlación** (el `request_id`) para seguir una operación entre servicios.
-
-**No registres** contraseñas, tokens ni datos personales en claro. CloudWatch Logs ofrece **políticas de protección de datos** que enmascaran patrones sensibles, pero lo mejor es no escribirlos.
+Con JSON, CloudWatch **descubre los campos automáticamente** y puedes filtrar y agregar por `pedido_id` o `duracion_ms` sin expresiones regulares. Incluye siempre un **identificador de correlación** (el `request_id`) para seguir una operación entre servicios. **No registres** contraseñas, tokens ni datos personales en claro. CloudWatch Logs ofrece **políticas de protección de datos** que enmascaran patrones sensibles, pero lo mejor es no escribirlos.
 
 ### Clases de log
 
@@ -175,9 +171,7 @@ Prioriza **síntomas que sienten los usuarios** y que requieren una acción:
 | **Trabajo atascado** | Mensajes en una DLQ, antigüedad del mensaje más viejo, `IteratorAge` en streams |
 | **Presupuesto** | Facturación estimada, con AWS Budgets |
 
-Lo que **no** debería despertar a nadie: CPU al 80 % durante 2 minutos si el servicio sigue sano. Úsalo como panel, no como alerta de pager.
-
-**Cada alarma de pager debería responder tres cosas:** ¿qué ve el usuario?, ¿qué hago ahora?, ¿quién es el responsable? Si no, es ruido.
+Lo que **no** debería despertar a nadie: CPU al 80 % durante 2 minutos si el servicio sigue sano. Úsalo como panel, no como alerta de pager. **Cada alarma de pager debería responder tres cosas:** ¿qué ve el usuario?, ¿qué hago ahora?, ¿quién es el responsable? Si no, es ruido.
 
 ### Alarmas basadas en objetivos de nivel de servicio (SLO)
 
@@ -267,6 +261,4 @@ Consulta las tarifas vigentes. Cómo no pasarte:
 
 ## Para finalizar
 
-CloudWatch no te da observabilidad: te da los ladrillos. Lo que la construye son decisiones: logs estructurados con retención, métricas pensadas por usuario y no por recurso, alarmas con acción clara y dueño, y un ojo permanente en el costo.
-
-La mejor señal de que tu monitoreo funciona es esta: el último incidente lo detectó una alarma y no un cliente. Si no es así, ya sabes cuál es la siguiente alarma por escribir.
+CloudWatch no te da observabilidad: te da los ladrillos. Lo que la construye son decisiones: logs estructurados con retención, métricas pensadas por usuario y no por recurso, alarmas con acción clara y dueño, y un ojo permanente en el costo. La mejor señal de que tu monitoreo funciona es esta: el último incidente lo detectó una alarma y no un cliente. Si no es así, ya sabes cuál es la siguiente alarma por escribir.

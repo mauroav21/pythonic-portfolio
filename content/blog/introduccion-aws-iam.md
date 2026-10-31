@@ -5,9 +5,7 @@ description: "Identidades, políticas y roles de IAM, la lógica de evaluación 
 tags: [AWS, IAM, Seguridad]
 ---
 
-Casi todo incidente de seguridad grave en una cuenta de AWS tiene una de estas raíces: una credencial que no debía existir, un permiso mucho más amplio de lo necesario, o una política escrita con prisa que hacía algo distinto de lo que su autor creía. IAM es el servicio que cubre las tres cosas, y es gratuito, así que no hay excusa de costo para no entenderlo.
-
-Este artículo va más allá de "usuarios, grupos y roles": explica **cómo decide IAM** si una solicitud se permite, cuáles son los patrones que de verdad se usan y cómo depurar un `AccessDenied` sin adivinar.
+Casi todo incidente de seguridad grave en una cuenta de AWS tiene una de estas raíces: una credencial que no debía existir, un permiso mucho más amplio de lo necesario, o una política escrita con prisa que hacía algo distinto de lo que su autor creía. IAM es el servicio que cubre las tres cosas, y es gratuito, así que no hay excusa de costo para no entenderlo. Este artículo va más allá de "usuarios, grupos y roles": explica **cómo decide IAM** si una solicitud se permite, cuáles son los patrones que de verdad se usan y cómo depurar un `AccessDenied` sin adivinar.
 
 ## Dos preguntas que IAM responde siempre
 
@@ -122,9 +120,7 @@ Una función Lambda, una tarea de ECS o una instancia EC2 asume un rol para llam
 
 ### 2. Acceso entre cuentas
 
-La cuenta A crea un rol cuya política de confianza permite a la cuenta B (o a un rol específico de B) asumirlo. Una persona o un pipeline de B asume el rol de A y trabaja con **credenciales temporales de A**. Es el patrón base de estructuras multicuenta: una cuenta de herramientas despliega a las cuentas de producción asumiendo un rol en cada una.
-
-Cuando el rol lo asume un tercero (otra empresa), añade un **`ExternalId`** en la condición para evitar el problema del "suplente confundido".
+La cuenta A crea un rol cuya política de confianza permite a la cuenta B (o a un rol específico de B) asumirlo. Una persona o un pipeline de B asume el rol de A y trabaja con **credenciales temporales de A**. Es el patrón base de estructuras multicuenta: una cuenta de herramientas despliega a las cuentas de producción asumiendo un rol en cada una. Cuando el rol lo asume un tercero (otra empresa), añade un **`ExternalId`** en la condición para evitar el problema del "suplente confundido".
 
 ### 3. Federación para CI/CD sin llaves
 
@@ -182,9 +178,7 @@ Para que un servicio use un rol (Lambda, ECS, EC2), alguien debe **pasárselo** 
 
 ## Depurar un `AccessDenied` sin adivinar
 
-El mensaje de error suele indicar **qué principal** hizo la llamada, **qué acción** y a veces **qué tipo de política** lo denegó (por ejemplo, "con una denegación explícita en una política basada en identidad" o "porque ninguna política basada en identidad permite la acción"). Léelo completo antes de tocar nada.
-
-Una secuencia que funciona:
+El mensaje de error suele indicar **qué principal** hizo la llamada, **qué acción** y a veces **qué tipo de política** lo denegó (por ejemplo, "con una denegación explícita en una política basada en identidad" o "porque ninguna política basada en identidad permite la acción"). Léelo completo antes de tocar nada. Una secuencia que funciona:
 
 1. **¿Quién soy realmente?** `aws sts get-caller-identity` muestra la identidad efectiva. Muchas veces la sorpresa es que la llamada no la hace el rol que creías.
 2. **¿Hay un `Allow` para esa acción y ese recurso** en la política de identidad (o, si es entre cuentas, en ambos lados)?
@@ -217,12 +211,8 @@ Una secuencia que funciona:
 
 ## Mi forma de ver la seguridad
 
-Hasta ahora no he vivido un incidente de seguridad grave. No lo atribuyo a suerte: en las empresas por las que he pasado había controles de código y de seguridad fuertes, y eso me formó. Aprendí ahí a trabajar con esa disciplina, y después a mantenerla por mi cuenta: estar al día, leer sobre vulnerabilidades y asumir que el mundo de las amenazas no se detiene aunque mi sistema esté tranquilo.
-
-Hoy, como responsable de DevSecOps, lo resumo así: la seguridad no se logra con una herramienta ni con un permiso bien escrito, sino con el hábito de revisar. IAM es el mejor ejemplo, porque casi nunca falla por un error técnico espectacular: falla porque nadie volvió a mirar un permiso que se dio con prisa.
+Hasta ahora no he vivido un incidente de seguridad grave. No lo atribuyo a suerte: en las empresas por las que he pasado había controles de código y de seguridad fuertes, y eso me formó. Aprendí ahí a trabajar con esa disciplina, y después a mantenerla por mi cuenta: estar al día, leer sobre vulnerabilidades y asumir que el mundo de las amenazas no se detiene aunque mi sistema esté tranquilo. Hoy, como responsable de DevSecOps, lo resumo así: la seguridad no se logra con una herramienta ni con un permiso bien escrito, sino con el hábito de revisar. IAM es el mejor ejemplo, porque casi nunca falla por un error técnico espectacular: falla porque nadie volvió a mirar un permiso que se dio con prisa.
 
 ## Para finalizar
 
-IAM parece engorroso porque cada incidente es una combinación de capas. Pero el modelo se resume en pocas ideas: todo está denegado por defecto, un `Deny` explícito siempre gana, las SCP y los límites solo recortan, y las credenciales temporales son siempre mejores que las permanentes.
-
-Si solo vas a hacer tres cosas hoy: activa MFA en la cuenta raíz y en las personas, elimina las llaves de acceso permanentes que no necesites sustituyéndolas por roles, y pon `aws sts get-caller-identity` en tu rutina de depuración. Con eso evitas una enorme proporción de los problemas.
+IAM parece engorroso porque cada incidente es una combinación de capas. Pero el modelo se resume en pocas ideas: todo está denegado por defecto, un `Deny` explícito siempre gana, las SCP y los límites solo recortan, y las credenciales temporales son siempre mejores que las permanentes. Si solo vas a hacer tres cosas hoy: activa MFA en la cuenta raíz y en las personas, elimina las llaves de acceso permanentes que no necesites sustituyéndolas por roles, y pon `aws sts get-caller-identity` en tu rutina de depuración. Con eso evitas una enorme proporción de los problemas.

@@ -9,9 +9,7 @@ En muchos equipos la discusión sobre metodología se parece a una guerra de rel
 
 ## Cascada: planear primero, ejecutar después
 
-En el enfoque en cascada (waterfall) el trabajo avanza por fases: requisitos, diseño, construcción, pruebas, entrega. Cada fase termina antes de que empiece la siguiente.
-
-**Funciona bien cuando:**
+En el enfoque en cascada (waterfall) el trabajo avanza por fases: requisitos, diseño, construcción, pruebas, entrega. Cada fase termina antes de que empiece la siguiente. **Funciona bien cuando:**
 
 - Los requisitos son estables y se entienden desde el inicio.
 - Cambiar tarde es muy caro (construcción física, hardware, sistemas regulados).
@@ -26,11 +24,7 @@ En el enfoque en cascada (waterfall) el trabajo avanza por fases: requisitos, di
 
 ## Ágil: entregar en ciclos cortos y aprender
 
-El enfoque ágil, formalizado en el Manifiesto Ágil de 2001, parte de otra premisa: no podemos conocer todo de antemano, así que conviene construir en pedazos pequeños, mostrarlos y ajustar.
-
-Valora, como dice el manifiesto, a las personas e interacciones sobre procesos y herramientas, el software funcionando sobre documentación extensa, la colaboración con el cliente sobre la negociación de contratos y responder al cambio sobre seguir un plan. No dice que lo segundo no importe, sino que lo primero importa más.
-
-**Funciona bien cuando:**
+El enfoque ágil, formalizado en el Manifiesto Ágil de 2001, parte de otra premisa: no podemos conocer todo de antemano, así que conviene construir en pedazos pequeños, mostrarlos y ajustar. Valora, como dice el manifiesto, a las personas e interacciones sobre procesos y herramientas, el software funcionando sobre documentación extensa, la colaboración con el cliente sobre la negociación de contratos y responder al cambio sobre seguir un plan. No dice que lo segundo no importe, sino que lo primero importa más. **Funciona bien cuando:**
 
 - Hay incertidumbre sobre lo que se necesita.
 - Se puede entregar valor por partes.
@@ -83,12 +77,8 @@ Si la mayoría de las respuestas apunta a incertidumbre y cambio, ve por lo ági
 
 ## Dónde me siento más en mi elemento
 
-He gestionado de principio a fin proyectos muy distintos: capítulos y comunidades estudiantiles, congresos, concursos de programación y de redes, el AWS Student Community Day México, un CMMS a la medida y el área de DevSecOps. En la gran mayoría trabajé con metodologías ágiles, y es donde me siento más en mi elemento: ciclos cortos, retroalimentación frecuente y la libertad de ajustar sobre la marcha.
-
-Pero hay algo que no negocio con ninguna metodología: la **trazabilidad**. Poder seguir un requisito hasta lo que se entregó, y un entregable hasta la necesidad que lo originó, me parece una de las cosas más valiosas de gestionar bien un proyecto. Como decía Susana Siller: *«Todo con orden»*. Y el orden, para mí, es compatible con la agilidad.
+He gestionado de principio a fin proyectos muy distintos: capítulos y comunidades estudiantiles, congresos, concursos de programación y de redes, el AWS Student Community Day México, un CMMS a la medida y el área de DevSecOps. En la gran mayoría trabajé con metodologías ágiles, y es donde me siento más en mi elemento: ciclos cortos, retroalimentación frecuente y la libertad de ajustar sobre la marcha. Pero hay algo que no negocio con ninguna metodología: la **trazabilidad**. Poder seguir un requisito hasta lo que se entregó, y un entregable hasta la necesidad que lo originó, me parece una de las cosas más valiosas de gestionar bien un proyecto. Como decía Susana Siller: *«Todo con orden»*. Y el orden, para mí, es compatible con la agilidad.
 
 ## Para finalizar
 
-Ninguna metodología arregla un equipo sin objetivos claros, sin confianza o sin respaldo. Elige según la incertidumbre del proyecto y el costo del cambio, y adapta con criterio.
-
-En los siguientes artículos entro a dos marcos concretos del mundo ágil: Scrum y Kanban.
+Ninguna metodología arregla un equipo sin objetivos claros, sin confianza o sin respaldo. Elige según la incertidumbre del proyecto y el costo del cambio, y adapta con criterio. En los siguientes artículos entro a dos marcos concretos del mundo ágil: Scrum y Kanban.

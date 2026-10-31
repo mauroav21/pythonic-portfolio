@@ -5,15 +5,11 @@ description: "Claves y particiones, capacidad (RCU/WCU, bajo demanda vs. aprovis
 tags: [AWS, DynamoDB, NoSQL]
 ---
 
-DynamoDB tiene fama de ser rapidísima y de ser difícil. Las dos cosas son ciertas, y tienen la misma causa: está construida alrededor de una idea muy concreta —acceso por clave, a cualquier escala, con latencia predecible— y todo lo que no encaja con esa idea es costoso, torpe o imposible.
-
-Si lo tratas como "una base SQL sin esquema", vas a sufrir. Si entiendes el modelo, es una de las herramientas más fiables de AWS.
+DynamoDB tiene fama de ser rapidísima y de ser difícil. Las dos cosas son ciertas, y tienen la misma causa: está construida alrededor de una idea muy concreta —acceso por clave, a cualquier escala, con latencia predecible— y todo lo que no encaja con esa idea es costoso, torpe o imposible. Si lo tratas como "una base SQL sin esquema", vas a sufrir. Si entiendes el modelo, es una de las herramientas más fiables de AWS.
 
 ## La idea central: se modela para las consultas, no para los datos
 
-En una base relacional modelas las **entidades** y sus relaciones, normalizas, y después escribes las consultas que necesites (con `JOIN`, `WHERE`, `GROUP BY`). El motor las resuelve como pueda.
-
-En DynamoDB es al revés:
+En una base relacional modelas las **entidades** y sus relaciones, normalizas, y después escribes las consultas que necesites (con `JOIN`, `WHERE`, `GROUP BY`). El motor las resuelve como pueda. En DynamoDB es al revés:
 
 1. **Primero listas los patrones de acceso:** exactamente qué preguntas hará tu aplicación.
 2. **Después diseñas las claves** para que cada patrón sea una lectura directa y barata.
@@ -72,9 +68,7 @@ Los tamaños se redondean hacia arriba por operación. Un elemento de 1.1 KB cue
 | Ideal | Tráfico impredecible, nuevo, esporádico | Tráfico estable y predecible |
 | Riesgo | Más caro por solicitud a carga alta y constante | *Throttling* si subestimas; pago de más si sobrestimas |
 
-Una práctica común: empieza **bajo demanda**, mide durante unas semanas y, si el tráfico es predecible y sostenido, evalúa el aprovisionado (con compromisos de capacidad reservada para reducir más). Se puede cambiar de modo con ciertas restricciones de frecuencia.
-
-También existen dos **clases de tabla**: Standard y **Standard-IA** (menor costo de almacenamiento, mayor costo por operación), útil para tablas grandes que se acceden poco.
+Una práctica común: empieza **bajo demanda**, mide durante unas semanas y, si el tráfico es predecible y sostenido, evalúa el aprovisionado (con compromisos de capacidad reservada para reducir más). Se puede cambiar de modo con ciertas restricciones de frecuencia. También existen dos **clases de tabla**: Standard y **Standard-IA** (menor costo de almacenamiento, mayor costo por operación), útil para tablas grandes que se acceden poco.
 
 ## Consistencia
 
@@ -142,9 +136,7 @@ siguiente = respuesta.get("LastEvaluatedKey")  # para paginar
 
 ### ¿Tabla única o varias tablas?
 
-El **diseño de tabla única** (varias entidades en una tabla, con claves compuestas por prefijos) permite leer entidades relacionadas en una sola llamada y es muy eficiente, pero tiene costos: es menos legible, más difícil de evolucionar, complica la exportación y el análisis, y exige conocer los patrones de acceso de antemano.
-
-**Varias tablas** (una por entidad) son más simples de entender y operar, y siguen siendo una buena elección cuando las entidades se consultan de forma independiente. No es un dogma: elige según la complejidad de tus patrones y la experiencia del equipo. Un camino honesto: empieza simple, y adopta la tabla única donde un patrón de acceso lo justifique claramente.
+El **diseño de tabla única** (varias entidades en una tabla, con claves compuestas por prefijos) permite leer entidades relacionadas en una sola llamada y es muy eficiente, pero tiene costos: es menos legible, más difícil de evolucionar, complica la exportación y el análisis, y exige conocer los patrones de acceso de antemano. **Varias tablas** (una por entidad) son más simples de entender y operar, y siguen siendo una buena elección cuando las entidades se consultan de forma independiente. No es un dogma: elige según la complejidad de tus patrones y la experiencia del equipo. Un camino honesto: empieza simple, y adopta la tabla única donde un patrón de acceso lo justifique claramente.
 
 ## Escrituras condicionales y concurrencia
 
@@ -225,6 +217,4 @@ Junto con Lambda, RDS y SES, DynamoDB es de lo que más uso. Las soluciones serv
 
 ## Para finalizar
 
-DynamoDB premia a quien piensa antes de crear la tabla. Con patrones de acceso claros, claves bien repartidas e índices justos, la tabla responde en milisegundos y escala sola. Con patrones vagos, termina como un almacén caro del que solo se sabe sacar datos recorriéndolo entero.
-
-Antes de elegirla, hazte una pregunta honesta: ¿puedo escribir ahora mismo, en una lista, todas las consultas que va a necesitar mi aplicación? Si la respuesta es sí, DynamoDB probablemente encaja. Si es "ya veremos", empieza con una base relacional.
+DynamoDB premia a quien piensa antes de crear la tabla. Con patrones de acceso claros, claves bien repartidas e índices justos, la tabla responde en milisegundos y escala sola. Con patrones vagos, termina como un almacén caro del que solo se sabe sacar datos recorriéndolo entero. Antes de elegirla, hazte una pregunta honesta: ¿puedo escribir ahora mismo, en una lista, todas las consultas que va a necesitar mi aplicación? Si la respuesta es sí, DynamoDB probablemente encaja. Si es "ya veremos", empieza con una base relacional.

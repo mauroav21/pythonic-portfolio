@@ -5,21 +5,15 @@ description: "Direccionamiento, subredes y zonas, tablas de rutas, NAT, grupos d
 tags: [AWS, VPC, Redes]
 ---
 
-La red es la decisión de AWS más difícil de cambiar después. Puedes cambiar el tipo de una instancia en minutos, pero cambiar el rango de direcciones de una VPC con cientos de recursos, o descubrir que dos redes que ahora quieres conectar usan el mismo CIDR, es un proyecto de semanas.
-
-Por eso conviene diseñar la VPC una vez, con calma, entendiendo qué hace cada pieza.
+La red es la decisión de AWS más difícil de cambiar después. Puedes cambiar el tipo de una instancia en minutos, pero cambiar el rango de direcciones de una VPC con cientos de recursos, o descubrir que dos redes que ahora quieres conectar usan el mismo CIDR, es un proyecto de semanas. Por eso conviene diseñar la VPC una vez, con calma, entendiendo qué hace cada pieza.
 
 ## Qué es una VPC
 
-Una **VPC (Virtual Private Cloud)** es una red virtual aislada dentro de una región, definida por un bloque de direcciones IP (CIDR). Dentro de ella creas subredes, rutas, puertas de enlace y reglas de seguridad. Nada entra ni sale de la VPC a menos que tú lo habilites con rutas y reglas.
-
-Toda cuenta trae una **VPC predeterminada** por región (rango 172.31.0.0/16) con subredes públicas en cada zona. Sirve para pruebas rápidas; para cualquier cosa seria, crea las tuyas, porque la predeterminada pone todo en subredes públicas con rutas a internet.
+Una **VPC (Virtual Private Cloud)** es una red virtual aislada dentro de una región, definida por un bloque de direcciones IP (CIDR). Dentro de ella creas subredes, rutas, puertas de enlace y reglas de seguridad. Nada entra ni sale de la VPC a menos que tú lo habilites con rutas y reglas. Toda cuenta trae una **VPC predeterminada** por región (rango 172.31.0.0/16) con subredes públicas en cada zona. Sirve para pruebas rápidas; para cualquier cosa seria, crea las tuyas, porque la predeterminada pone todo en subredes públicas con rutas a internet.
 
 ## Direccionamiento: la decisión irreversible
 
-Una VPC tiene un CIDR principal, de **/16 (65 536 direcciones) a /28 (16)**. Puedes agregar CIDR secundarios después, pero el principal no se cambia.
-
-Recomendaciones:
+Una VPC tiene un CIDR principal, de **/16 (65 536 direcciones) a /28 (16)**. Puedes agregar CIDR secundarios después, pero el principal no se cambia. Recomendaciones:
 
 1. **Usa rangos privados** (RFC 1918): `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`.
 2. **Planifica un esquema para toda la organización** antes de crear la primera VPC. Si hoy tienes una sola, mañana tendrás diez, y los rangos **no pueden solaparse** si quieres conectarlas por peering, Transit Gateway o con la red corporativa.
@@ -38,15 +32,11 @@ Un esquema de ejemplo, documentado en un wiki o en código:
 
 ## Subredes y zonas de disponibilidad
 
-Una subred vive en **una sola zona de disponibilidad (AZ)**. Para alta disponibilidad, creas el mismo tipo de subred en al menos **dos** zonas (idealmente tres).
-
-Un detalle poco conocido: los **nombres de zona** (`us-east-1a`) se asignan de forma distinta para cada cuenta, para repartir la carga. Si necesitas que dos cuentas coincidan en la misma zona física (por ejemplo, para reducir transferencia entre zonas), usa los **AZ ID** (`use1-az1`).
+Una subred vive en **una sola zona de disponibilidad (AZ)**. Para alta disponibilidad, creas el mismo tipo de subred en al menos **dos** zonas (idealmente tres). Un detalle poco conocido: los **nombres de zona** (`us-east-1a`) se asignan de forma distinta para cada cuenta, para repartir la carga. Si necesitas que dos cuentas coincidan en la misma zona física (por ejemplo, para reducir transferencia entre zonas), usa los **AZ ID** (`use1-az1`).
 
 ### Públicas y privadas: lo define la ruta
 
-No hay una casilla "pública". Una subred es pública si su **tabla de rutas** envía el tráfico a internet por un **Internet Gateway (IGW)** y los recursos tienen IP pública. Privada si no.
-
-Un esquema típico de tres capas:
+No hay una casilla "pública". Una subred es pública si su **tabla de rutas** envía el tráfico a internet por un **Internet Gateway (IGW)** y los recursos tienen IP pública. Privada si no. Un esquema típico de tres capas:
 
 | Capa | Subred | Salida a internet |
 |---|---|---|
@@ -177,6 +167,4 @@ Para una aplicación típica en una región, en código:
 
 ## Para finalizar
 
-Una VPC bien pensada es aburrida: rangos documentados, tres capas, endpoints donde ahorran, grupos de seguridad que se refieren unos a otros y registros de flujo encendidos. Esa aburrición es lo que evita rediseños con producción corriendo.
-
-Antes de crear tu primera VPC, escribe el plan de direccionamiento de toda tu organización. Es la hora más rentable de todo el proyecto de red.
+Una VPC bien pensada es aburrida: rangos documentados, tres capas, endpoints donde ahorran, grupos de seguridad que se refieren unos a otros y registros de flujo encendidos. Esa aburrición es lo que evita rediseños con producción corriendo. Antes de crear tu primera VPC, escribe el plan de direccionamiento de toda tu organización. Es la hora más rentable de todo el proyecto de red.

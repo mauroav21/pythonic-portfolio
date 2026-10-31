@@ -5,9 +5,7 @@ description: "Cuentas múltiples, políticas preventivas, etiquetado, control de
 tags: [Gobernanza, Cloud, AWS]
 ---
 
-Al principio, una cuenta de nube la crea una persona, con una tarjeta y buenas intenciones. Meses después hay veinte cuentas, recursos sin dueño, permisos de administrador por todos lados y una factura que nadie puede explicar. Es el camino habitual cuando la adopción de la nube crece sin gobierno.
-
-La buena noticia: gobernar la nube no exige frenar a los equipos. Exige construir **guardarraíles**.
+Al principio, una cuenta de nube la crea una persona, con una tarjeta y buenas intenciones. Meses después hay veinte cuentas, recursos sin dueño, permisos de administrador por todos lados y una factura que nadie puede explicar. Es el camino habitual cuando la adopción de la nube crece sin gobierno. La buena noticia: gobernar la nube no exige frenar a los equipos. Exige construir **guardarraíles**.
 
 ## El principio: seguridad y autonomía a la vez
 
@@ -103,6 +101,4 @@ Muchas organizaciones forman un **equipo de plataforma** que ofrece a los demás
 
 ## Para finalizar
 
-Gobernar la nube es poner límites automáticos donde el riesgo es alto y libertad donde no. Con estructura de cuentas, identidad bien hecha, políticas preventivas, etiquetado y automatización, los equipos avanzan rápido y la organización duerme tranquila.
-
-Empieza por lo que más duele hoy, automatiza el control y mejora poco a poco. Los guardarraíles se construyen, no se compran.
+Gobernar la nube es poner límites automáticos donde el riesgo es alto y libertad donde no. Con estructura de cuentas, identidad bien hecha, políticas preventivas, etiquetado y automatización, los equipos avanzan rápido y la organización duerme tranquila. Empieza por lo que más duele hoy, automatiza el control y mejora poco a poco. Los guardarraíles se construyen, no se compran.
