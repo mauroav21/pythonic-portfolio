@@ -24,9 +24,7 @@ Cada etapa trajo beneficios enormes: acceso, voz para millones de personas, serv
 
 ## El efecto de red y la centralización
 
-Las plataformas sociales y de servicios crecen porque son más útiles cuanto más gente las usa (**efecto de red**). Eso favorece a quien llega primero y concentra usuarios, datos y atención en pocas empresas.
-
-Consecuencias frecuentes:
+Las plataformas sociales y de servicios crecen porque son más útiles cuanto más gente las usa (**efecto de red**). Eso favorece a quien llega primero y concentra usuarios, datos y atención en pocas empresas. Consecuencias frecuentes:
 
 - **Tus datos viven en la plataforma**, no contigo. Si cierras tu cuenta o ella te cierra la tuya, pierdes contenido y relaciones.
 - **El negocio depende de la atención y los datos personales.** Muchos servicios "gratuitos" se pagan con información de los usuarios.
@@ -71,6 +69,4 @@ Y como usuarios: elegir servicios con modelos de negocio transparentes, aprender
 
 ## Para finalizar
 
-La web pasó de ser un espacio descentralizado de documentos enlazados a un ecosistema dominado por plataformas. Eso trajo comodidad y alcance, pero también concentración de datos y poder.
-
-No es una historia cerrada: las decisiones técnicas, económicas y de política que tomemos ahora definirán cómo seguirá. En el último artículo reviso algunas propuestas técnicas para devolver más control a las personas.
+La web pasó de ser un espacio descentralizado de documentos enlazados a un ecosistema dominado por plataformas. Eso trajo comodidad y alcance, pero también concentración de datos y poder. No es una historia cerrada: las decisiones técnicas, económicas y de política que tomemos ahora definirán cómo seguirá. En el último artículo reviso algunas propuestas técnicas para devolver más control a las personas.

@@ -5,9 +5,7 @@ description: "El problema que DevOps resuelve, qué es y qué no es, CALMS, prá
 tags: [DevOps, Cultura, Automatización]
 ---
 
-Hace unos años era normal que un equipo de desarrollo terminara una versión un viernes, la "lanzara" a operaciones y se fuera a casa. Operaciones recibía algo que no había visto, con instrucciones incompletas, para desplegar en un fin de semana y sostener con guardias. Si fallaba, cada lado tenía su relato: *"funcionaba en mi máquina"* contra *"ustedes no probaron en el entorno real"*.
-
-DevOps nació para deshacer ese nudo. Y como suele pasar con las ideas exitosas, hoy significa tantas cosas que conviene empezar por aclararlo.
+Hace unos años era normal que un equipo de desarrollo terminara una versión un viernes, la "lanzara" a operaciones y se fuera a casa. Operaciones recibía algo que no había visto, con instrucciones incompletas, para desplegar en un fin de semana y sostener con guardias. Si fallaba, cada lado tenía su relato: *"funcionaba en mi máquina"* contra *"ustedes no probaron en el entorno real"*. DevOps nació para deshacer ese nudo. Y como suele pasar con las ideas exitosas, hoy significa tantas cosas que conviene empezar por aclararlo.
 
 ## El problema de fondo: incentivos opuestos
 
@@ -16,15 +14,11 @@ Dos equipos, dos mandatos:
 - **Desarrollo** es evaluado por **entregar cambios**: funcionalidades, correcciones, mejoras.
 - **Operaciones** es evaluado por **estabilidad**: disponibilidad, rendimiento, menos incidentes.
 
-Pero **todo cambio es un riesgo para la estabilidad**. Con esos incentivos, desarrollo empuja y operaciones frena. La respuesta natural a la inestabilidad es **cambiar menos y con más ceremonias**, lo que agranda cada cambio, y los cambios grandes fallan más. Un círculo vicioso: despliegues escasos, enormes, temidos y propensos a fallar.
-
-DevOps rompe el círculo con una apuesta contraintuitiva: **cambiar más seguido, en piezas pequeñas, con automatización y retroalimentación rápida**, de modo que cada cambio sea menos riesgoso y más fácil de revertir.
+Pero **todo cambio es un riesgo para la estabilidad**. Con esos incentivos, desarrollo empuja y operaciones frena. La respuesta natural a la inestabilidad es **cambiar menos y con más ceremonias**, lo que agranda cada cambio, y los cambios grandes fallan más. Un círculo vicioso: despliegues escasos, enormes, temidos y propensos a fallar. DevOps rompe el círculo con una apuesta contraintuitiva: **cambiar más seguido, en piezas pequeñas, con automatización y retroalimentación rápida**, de modo que cada cambio sea menos riesgoso y más fácil de revertir.
 
 ## Qué es (y qué no es)
 
-El término se popularizó alrededor de 2009. Una definición práctica: **un conjunto de cultura, prácticas y herramientas que alinea a quienes construyen y a quienes operan software con un objetivo compartido: entregar valor de forma rápida, frecuente y fiable.**
-
-Lo que **no** es:
+El término se popularizó alrededor de 2009. Una definición práctica: **un conjunto de cultura, prácticas y herramientas que alinea a quienes construyen y a quienes operan software con un objetivo compartido: entregar valor de forma rápida, frecuente y fiable.** Lo que **no** es:
 
 - **No es un equipo "DevOps"** que se interpone entre desarrollo y operaciones. Suele convertirse en un tercer silo con su propia cola de tickets.
 - **No es un título** que se pone a un administrador de sistemas.
@@ -114,9 +108,7 @@ Elementos de un proceso sano:
 
 ### Postmortems sin culpables
 
-Tras un incidente significativo, se analiza lo ocurrido con un documento compartido. La regla: **sin culpables** (*blameless*). No porque las personas no importen, sino porque si se castiga al que se equivocó, la gente esconde información, y la próxima vez nadie contará lo que realmente pasó. La pregunta correcta no es *"¿quién falló?"* sino *"¿qué del sistema hizo fácil este error y difícil detectarlo?"*.
-
-Estructura útil:
+Tras un incidente significativo, se analiza lo ocurrido con un documento compartido. La regla: **sin culpables** (*blameless*). No porque las personas no importen, sino porque si se castiga al que se equivocó, la gente esconde información, y la próxima vez nadie contará lo que realmente pasó. La pregunta correcta no es *"¿quién falló?"* sino *"¿qué del sistema hizo fácil este error y difícil detectarlo?"*. Estructura útil:
 
 | Sección | Contenido |
 |---|---|
@@ -131,9 +123,7 @@ El valor está en las **acciones que se cumplen**. Un postmortem sin seguimiento
 
 ## Ingeniería de plataforma: cómo escalar DevOps
 
-A medida que la organización crece, pedir a cada equipo que domine nube, redes, seguridad, observabilidad y pipelines genera una **carga cognitiva** enorme y soluciones duplicadas. La respuesta de muchas organizaciones es la **ingeniería de plataforma**: un equipo que construye una **plataforma interna** como producto —caminos pavimentados (*golden paths*), plantillas, pipelines, entornos bajo demanda— para que los equipos de producto entreguen sin reinventar lo común.
-
-Para que no se convierta en un nuevo silo:
+A medida que la organización crece, pedir a cada equipo que domine nube, redes, seguridad, observabilidad y pipelines genera una **carga cognitiva** enorme y soluciones duplicadas. La respuesta de muchas organizaciones es la **ingeniería de plataforma**: un equipo que construye una **plataforma interna** como producto —caminos pavimentados (*golden paths*), plantillas, pipelines, entornos bajo demanda— para que los equipos de producto entreguen sin reinventar lo común. Para que no se convierta en un nuevo silo:
 
 - **Trátala como producto:** con usuarios (los equipos), retroalimentación y métricas de adopción.
 - **Autoservicio:** si hay que abrir un ticket, la plataforma falló.
@@ -192,9 +182,7 @@ Elige **un servicio piloto**, aprende y expande. Cambiar todo a la vez casi siem
 
 ## Cómo lo vivo desde DevSecOps
 
-Hoy soy desarrollador full stack y, a la vez, responsable de DevSecOps. Esa mezcla me ha dado una perspectiva que no tendría de otra forma: cuando construyes y también te toca desplegar y proteger lo que construyes, dejas de ver al pipeline y a la seguridad como obstáculos y los empiezas a ver como parte del producto.
-
-He trabajado en sectores muy distintos (comercio, jurídico, financiero, inmobiliario y construcción), y lo que más me ha sorprendido es lo mucho que se repite el patrón: los problemas de entrega casi nunca son de herramientas, son de **claridad, trazabilidad y confianza entre equipos**. Lo que más impacto me ha dado ha sido quitar fricción: por ejemplo, pasar a runners de CI/CD efímeros y sin servidores, que bajaron el costo y me dieron libertad para desplegar sin depender de infraestructura que mantener.
+Hoy soy desarrollador full stack y, a la vez, responsable de DevSecOps. Esa mezcla me ha dado una perspectiva que no tendría de otra forma: cuando construyes y también te toca desplegar y proteger lo que construyes, dejas de ver al pipeline y a la seguridad como obstáculos y los empiezas a ver como parte del producto. He trabajado en sectores muy distintos (comercio, jurídico, financiero, inmobiliario y construcción), y lo que más me ha sorprendido es lo mucho que se repite el patrón: los problemas de entrega casi nunca son de herramientas, son de **claridad, trazabilidad y confianza entre equipos**. Lo que más impacto me ha dado ha sido quitar fricción: por ejemplo, pasar a runners de CI/CD efímeros y sin servidores, que bajaron el costo y me dieron libertad para desplegar sin depender de infraestructura que mantener.
 
 ## Antipatrones frecuentes
 
@@ -212,6 +200,4 @@ He trabajado en sectores muy distintos (comercio, jurídico, financiero, inmobil
 
 ## Para finalizar
 
-DevOps es, en el fondo, una respuesta a un problema de incentivos y de flujo: acerca a quien construye y a quien opera, reduce el tamaño de los cambios, automatiza lo repetible, mide lo que importa y convierte cada error en aprendizaje.
-
-Las herramientas cambian cada pocos años; la lógica de fondo permanece. Si hoy quieres empezar con una sola cosa, haz visible el camino de un cambio hasta producción y elige el obstáculo más grande. Quitarlo suele enseñar más que cualquier marco teórico.
+DevOps es, en el fondo, una respuesta a un problema de incentivos y de flujo: acerca a quien construye y a quien opera, reduce el tamaño de los cambios, automatiza lo repetible, mide lo que importa y convierte cada error en aprendizaje. Las herramientas cambian cada pocos años; la lógica de fondo permanece. Si hoy quieres empezar con una sola cosa, haz visible el camino de un cambio hasta producción y elige el obstáculo más grande. Quitarlo suele enseñar más que cualquier marco teórico.

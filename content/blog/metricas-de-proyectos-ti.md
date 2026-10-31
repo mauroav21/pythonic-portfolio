@@ -87,6 +87,4 @@ Existe una ley conocida, la de Goodhart: cuando una medida se convierte en objet
 
 ## Para finalizar
 
-Una buena métrica te ayuda a tomar una decisión que antes no podías. Mide resultados además de actividad, equilibra velocidad con estabilidad y úsalas para aprender, no para vigilar.
-
-Si solo vas a empezar con algo, empieza por el tiempo que tarda un cambio en llegar a producción y por cuántos fallan. Con esas dos cifras ya sabrás mucho de cómo funciona tu equipo.
+Una buena métrica te ayuda a tomar una decisión que antes no podías. Mide resultados además de actividad, equilibra velocidad con estabilidad y úsalas para aprender, no para vigilar. Si solo vas a empezar con algo, empieza por el tiempo que tarda un cambio en llegar a producción y por cuántos fallan. Con esas dos cifras ya sabrás mucho de cómo funciona tu equipo.

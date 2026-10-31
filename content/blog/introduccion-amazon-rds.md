@@ -5,9 +5,7 @@ description: "Qué administra RDS y qué sigues administrando tú: Multi-AZ, ré
 tags: [AWS, RDS, Bases de datos]
 ---
 
-Una base de datos relacional en producción es la parte del sistema que más duele cuando falla y la que más se subestima cuando funciona. RDS quita una parte grande del trabajo (instalar, parchar, respaldar, conmutar) pero deja otra enteramente tuya (el esquema, las consultas, las conexiones, el dimensionamiento). Confundir cuál es cuál es la fuente de casi todos los problemas.
-
-Este artículo recorre ambas mitades.
+Una base de datos relacional en producción es la parte del sistema que más duele cuando falla y la que más se subestima cuando funciona. RDS quita una parte grande del trabajo (instalar, parchar, respaldar, conmutar) pero deja otra enteramente tuya (el esquema, las consultas, las conexiones, el dimensionamiento). Confundir cuál es cuál es la fuente de casi todos los problemas. Este artículo recorre ambas mitades.
 
 ## Qué administra AWS y qué no
 
@@ -177,12 +175,8 @@ Cómo bajar la cuenta sin perder seguridad:
 
 ## Dos lecciones que me dejó a mí
 
-**La primera fue con mi propio dinero.** En mi cuenta personal me han llegado facturas sorpresa por máquinas virtuales y bases RDS que se quedaron encendidas. Nada grave, pero suficiente para que hoy me parezca innegociable lo que decía arriba: etiquetas, alertas de presupuesto y apagar lo que no se usa. En una cuenta de empresa, ese mismo descuido se multiplica.
-
-**La segunda fue con una base que se reinició** por un problema de configuración muy sencillo: la forma en que una librería manejaba el tiempo. Nada exótico, y aun así tumbó una base. Me enseñó a no despreciar los detalles "aburridos" (zonas horarias, relojes, tiempos de espera) y a revisar con calma la configuración de las librerías que hablan con la base de datos, no solo la de la base.
+**La primera fue con mi propio dinero.** En mi cuenta personal me han llegado facturas sorpresa por máquinas virtuales y bases RDS que se quedaron encendidas. Nada grave, pero suficiente para que hoy me parezca innegociable lo que decía arriba: etiquetas, alertas de presupuesto y apagar lo que no se usa. En una cuenta de empresa, ese mismo descuido se multiplica. **La segunda fue con una base que se reinició** por un problema de configuración muy sencillo: la forma en que una librería manejaba el tiempo. Nada exótico, y aun así tumbó una base. Me enseñó a no despreciar los detalles "aburridos" (zonas horarias, relojes, tiempos de espera) y a revisar con calma la configuración de las librerías que hablan con la base de datos, no solo la de la base.
 
 ## Para finalizar
 
-RDS convierte una base de datos en un servicio, pero no en una caja mágica. Lo que hace por ti es enorme; lo que sigue siendo tuyo —el esquema, las consultas, las conexiones, las pruebas de restauración y de conmutación— es lo que decide si tu sistema aguanta un mal día.
-
-Si tuviera que elegir tres acciones para esta semana: probar una restauración completa, forzar una conmutación en pruebas para ver cómo reacciona la aplicación y revisar qué consultas consumen más con Performance Insights. Cada una suele revelar al menos un problema que de otro modo se descubriría en producción.
+RDS convierte una base de datos en un servicio, pero no en una caja mágica. Lo que hace por ti es enorme; lo que sigue siendo tuyo —el esquema, las consultas, las conexiones, las pruebas de restauración y de conmutación— es lo que decide si tu sistema aguanta un mal día. Si tuviera que elegir tres acciones para esta semana: probar una restauración completa, forzar una conmutación en pruebas para ver cómo reacciona la aplicación y revisar qué consultas consumen más con Performance Insights. Cada una suele revelar al menos un problema que de otro modo se descubriría en producción.

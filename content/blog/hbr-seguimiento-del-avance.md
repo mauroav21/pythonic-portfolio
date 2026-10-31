@@ -70,6 +70,4 @@ Con tres o cuatro indicadores bien elegidos y revisados con constancia basta. Un
 
 ## Para finalizar
 
-Un buen seguimiento se basa en resultados verificables, en una proyección honesta de lo que falta y en la costumbre de hablar pronto de los problemas. Se trata de ver la realidad con suficiente tiempo para actuar.
-
-Cuando el proyecto termina viene lo que casi todos se saltan, y que más aprendizaje deja: el cierre.
+Un buen seguimiento se basa en resultados verificables, en una proyección honesta de lo que falta y en la costumbre de hablar pronto de los problemas. Se trata de ver la realidad con suficiente tiempo para actuar. Cuando el proyecto termina viene lo que casi todos se saltan, y que más aprendizaje deja: el cierre.

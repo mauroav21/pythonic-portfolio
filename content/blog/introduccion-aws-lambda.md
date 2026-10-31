@@ -5,9 +5,7 @@ description: "Ciclo de vida del entorno de ejecución, concurrencia, cold starts
 tags: [AWS, Lambda, Serverless]
 ---
 
-La primera función Lambda que despliegas funciona a la primera. Tres semanas después, alguien pregunta por qué una operación se ejecutó dos veces, por qué la base de datos se quedó sin conexiones un martes a las nueve de la mañana, o por qué la factura no se parece a la del mes pasado. Nada de eso es un bug de Lambda: es el modelo de ejecución haciendo exactamente lo que dice la documentación, que casi nadie leyó con calma.
-
-Este artículo recorre ese modelo con el nivel de detalle que necesitas para operar Lambda en producción, no solo para desplegar un "hola mundo".
+La primera función Lambda que despliegas funciona a la primera. Tres semanas después, alguien pregunta por qué una operación se ejecutó dos veces, por qué la base de datos se quedó sin conexiones un martes a las nueve de la mañana, o por qué la factura no se parece a la del mes pasado. Nada de eso es un bug de Lambda: es el modelo de ejecución haciendo exactamente lo que dice la documentación, que casi nadie leyó con calma. Este artículo recorre ese modelo con el nivel de detalle que necesitas para operar Lambda en producción, no solo para desplegar un "hola mundo".
 
 ## El modelo mental: no es un servidor, es un entorno que se crea y se reutiliza
 
@@ -84,9 +82,7 @@ Y una verdad incómoda: en muchas cargas el cold start afecta a un porcentaje pe
 
 ## Memoria, CPU y costo: configurar a ciegas sale caro
 
-En Lambda eliges memoria (128 MB a 10 240 MB) y la CPU se asigna **proporcionalmente**. Como pagas **GB-segundo** (memoria × duración), subir memoria puede *reducir* el costo si la función termina bastante antes.
-
-Un ejemplo ilustrativo con números inventados para mostrar la lógica (mide el tuyo):
+En Lambda eliges memoria (128 MB a 10 240 MB) y la CPU se asigna **proporcionalmente**. Como pagas **GB-segundo** (memoria × duración), subir memoria puede *reducir* el costo si la función termina bastante antes. Un ejemplo ilustrativo con números inventados para mostrar la lógica (mide el tuyo):
 
 | Memoria | Duración | GB-s por invocación | Costo relativo |
 |---|---|---|---|
@@ -142,9 +138,7 @@ Con esto, los 9 buenos se eliminan y solo el malo vuelve a la cola (y tras *maxR
 
 ## Idempotencia: no es opcional
 
-Dado que cualquier invocación asíncrona o de cola puede repetirse, **cada handler debe tolerar ejecutarse dos veces con el mismo evento** sin efectos dobles (doble cobro, dos correos, dos filas).
-
-El patrón habitual: una **clave de idempotencia** derivada del evento y una tabla (DynamoDB con escritura condicional) que registra lo ya procesado.
+Dado que cualquier invocación asíncrona o de cola puede repetirse, **cada handler debe tolerar ejecutarse dos veces con el mismo evento** sin efectos dobles (doble cobro, dos correos, dos filas). El patrón habitual: una **clave de idempotencia** derivada del evento y una tabla (DynamoDB con escritura condicional) que registra lo ya procesado.
 
 ```python
 def procesar_una_vez(clave, accion):
@@ -272,9 +266,7 @@ Está pensada para ilustrar las decisiones: concurrencia reservada para proteger
 
 ## Costos: un ejemplo calculado
 
-Lambda cobra por **solicitudes** y por **GB-segundo**. Precios de referencia en us-east-1 para x86 (verifícalos, cambian por región y arquitectura): alrededor de 0.20 USD por millón de solicitudes y 0.0000166667 USD por GB-segundo, con una capa gratuita mensual de 1 millón de solicitudes y 400 000 GB-segundo.
-
-**Caso:** 5 millones de invocaciones al mes, 200 ms de duración promedio, 512 MB.
+Lambda cobra por **solicitudes** y por **GB-segundo**. Precios de referencia en us-east-1 para x86 (verifícalos, cambian por región y arquitectura): alrededor de 0.20 USD por millón de solicitudes y 0.0000166667 USD por GB-segundo, con una capa gratuita mensual de 1 millón de solicitudes y 400 000 GB-segundo. **Caso:** 5 millones de invocaciones al mes, 200 ms de duración promedio, 512 MB.
 
 ```text
 GB-s = 5 000 000 × 0.2 s × 0.5 GB = 500 000 GB-s
@@ -313,12 +305,8 @@ Lo que suele costar más que Lambda en estos sistemas no es Lambda:
 
 ## Cómo la uso yo
 
-Lambda es el servicio de AWS que más uso. Buena parte de lo que construyo fuera del trabajo nace de querer hacerme la vida más sencilla: automatizar algo que me estorba y no tener que acordarme de mantenerlo. Trato de llevar esa misma idea a las empresas: que los procesos complejos sean fáciles de entender.
-
-Una función pequeña, con una sola responsabilidad y un disparador claro, se le puede explicar a alguien que no la escribió en cinco minutos. Para mí eso vale tanto como lo que ahorra en infraestructura. Por eso insisto tanto en lo que ves arriba (idempotencia, DLQ, límites de concurrencia): no son detalles técnicos, son lo que hace que una automatización "sencilla" siga siendo sencilla el día que algo falla.
+Lambda es el servicio de AWS que más uso. Buena parte de lo que construyo fuera del trabajo nace de querer hacerme la vida más sencilla: automatizar algo que me estorba y no tener que acordarme de mantenerlo. Trato de llevar esa misma idea a las empresas: que los procesos complejos sean fáciles de entender. Una función pequeña, con una sola responsabilidad y un disparador claro, se le puede explicar a alguien que no la escribió en cinco minutos. Para mí eso vale tanto como lo que ahorra en infraestructura. Por eso insisto tanto en lo que ves arriba (idempotencia, DLQ, límites de concurrencia): no son detalles técnicos, son lo que hace que una automatización "sencilla" siga siendo sencilla el día que algo falla.
 
 ## Para finalizar
 
-Lambda es sencilla de empezar y se vuelve fiable cuando asumes tres cosas: los entornos se reutilizan (y se destruyen), los eventos pueden repetirse y la concurrencia es un recurso compartido que hay que presupuestar. Con idempotencia, DLQ, límites de concurrencia en las funciones que tocan recursos frágiles y observabilidad desde el primer día, deja de dar sorpresas.
-
-Si vas a medir una sola cosa antes de salir a producción, mide la concurrencia real bajo carga y lo que ocurre con tus dependencias cuando llega. Casi todos los incidentes con Lambda que se documentan públicamente empiezan ahí.
+Lambda es sencilla de empezar y se vuelve fiable cuando asumes tres cosas: los entornos se reutilizan (y se destruyen), los eventos pueden repetirse y la concurrencia es un recurso compartido que hay que presupuestar. Con idempotencia, DLQ, límites de concurrencia en las funciones que tocan recursos frágiles y observabilidad desde el primer día, deja de dar sorpresas. Si vas a medir una sola cosa antes de salir a producción, mide la concurrencia real bajo carga y lo que ocurre con tus dependencias cuando llega. Casi todos los incidentes con Lambda que se documentan públicamente empiezan ahí.

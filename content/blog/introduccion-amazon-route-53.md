@@ -5,9 +5,7 @@ description: "Cómo funciona la resolución DNS, zonas públicas y privadas, reg
 tags: [AWS, Route 53, DNS]
 ---
 
-El DNS tiene una propiedad curiosa: cuando funciona, nadie lo menciona, y cuando falla, **todo parece estar caído** aunque tus servidores estén perfectos. Un registro mal escrito, una zona recreada, un dominio vencido, un TTL demasiado alto durante una migración... y el sitio desaparece para los usuarios mientras tus gráficas están en verde.
-
-Route 53 es el servicio DNS de AWS (y registrador de dominios, y verificador de salud). Entenderlo bien es entender cómo se encuentra tu aplicación en internet.
+El DNS tiene una propiedad curiosa: cuando funciona, nadie lo menciona, y cuando falla, **todo parece estar caído** aunque tus servidores estén perfectos. Un registro mal escrito, una zona recreada, un dominio vencido, un TTL demasiado alto durante una migración... y el sitio desaparece para los usuarios mientras tus gráficas están en verde. Route 53 es el servicio DNS de AWS (y registrador de dominios, y verificador de salud). Entenderlo bien es entender cómo se encuentra tu aplicación en internet.
 
 ## Cómo se resuelve un nombre (el mínimo necesario)
 
@@ -239,6 +237,4 @@ Si el autoritativo responde bien y el resolvedor público no, es **caché**; si 
 
 ## Para finalizar
 
-El DNS es una de esas capas donde un cambio pequeño tiene un alcance enorme. Route 53 te da las herramientas para manejarlo bien: alias, políticas de enrutamiento, verificaciones de salud y Resolver. A cambio, exige disciplina con los TTL, con la propiedad de los registros y con los dominios que registras.
-
-Trata el DNS como infraestructura crítica: como código, con revisión de cambios, con acceso restringido, y con `dig` como primera herramienta cuando algo "no llega".
+El DNS es una de esas capas donde un cambio pequeño tiene un alcance enorme. Route 53 te da las herramientas para manejarlo bien: alias, políticas de enrutamiento, verificaciones de salud y Resolver. A cambio, exige disciplina con los TTL, con la propiedad de los registros y con los dominios que registras. Trata el DNS como infraestructura crítica: como código, con revisión de cambios, con acceso restringido, y con `dig` como primera herramienta cuando algo "no llega".

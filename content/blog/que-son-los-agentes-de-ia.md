@@ -5,9 +5,7 @@ description: "Qué diferencia a un agente de un chatbot, cómo funciona su ciclo
 tags: [Inteligencia Artificial, Agentes, LLM]
 ---
 
-Un modelo de lenguaje, por sí solo, recibe texto y devuelve texto. Puede explicarte cómo se reserva un vuelo, pero no reservarlo. Un **agente** da el siguiente paso: usa el modelo como cerebro para decidir qué hacer y se conecta a herramientas para hacerlo.
-
-Es una de las ideas más discutidas del momento, y vale la pena entenderla sin humo.
+Un modelo de lenguaje, por sí solo, recibe texto y devuelve texto. Puede explicarte cómo se reserva un vuelo, pero no reservarlo. Un **agente** da el siguiente paso: usa el modelo como cerebro para decidir qué hacer y se conecta a herramientas para hacerlo. Es una de las ideas más discutidas del momento, y vale la pena entenderla sin humo.
 
 ## Chatbot vs. agente
 
@@ -90,6 +88,4 @@ Si no puedes responder la cuarta pregunta, aún no estás listo para desplegarlo
 
 ## Para finalizar
 
-Un agente es un modelo de lenguaje con objetivos, herramientas y un bucle de acción. Amplía lo que la IA puede hacer, y también lo que puede salir mal. Empieza con tareas acotadas, permisos mínimos, supervisión humana en lo importante y buena trazabilidad.
-
-En el siguiente artículo veo cómo se aplican agentes y asistentes al trabajo de programar.
+Un agente es un modelo de lenguaje con objetivos, herramientas y un bucle de acción. Amplía lo que la IA puede hacer, y también lo que puede salir mal. Empieza con tareas acotadas, permisos mínimos, supervisión humana en lo importante y buena trazabilidad. En el siguiente artículo veo cómo se aplican agentes y asistentes al trabajo de programar.

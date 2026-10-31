@@ -5,9 +5,7 @@ description: "Temas estándar y FIFO, suscripciones y protocolos, políticas de 
 tags: [AWS, SNS, Mensajería]
 ---
 
-SNS responde una pregunta distinta a la de SQS. Una cola dice "este trabajo lo hará alguien". SNS dice "esto pasó, y **varios** interesados deben enterarse". Pagó un cliente: facturación debe emitir el comprobante, inventario debe reservar el stock, marketing debe actualizar su segmento y el sistema antifraude debe revisar el patrón. Quien publica el evento no debería saber ni cuántos son ni quiénes.
-
-Esto, bien hecho, desacopla equipos. Mal hecho, produce eventos perdidos, suscriptores que reciben lo que no les toca y permisos que fallan en silencio. Veamos cómo hacerlo bien.
+SNS responde una pregunta distinta a la de SQS. Una cola dice "este trabajo lo hará alguien". SNS dice "esto pasó, y **varios** interesados deben enterarse". Pagó un cliente: facturación debe emitir el comprobante, inventario debe reservar el stock, marketing debe actualizar su segmento y el sistema antifraude debe revisar el patrón. Quien publica el evento no debería saber ni cuántos son ni quiénes. Esto, bien hecho, desacopla equipos. Mal hecho, produce eventos perdidos, suscriptores que reciben lo que no les toca y permisos que fallan en silencio. Veamos cómo hacerlo bien.
 
 ## El modelo
 
@@ -63,9 +61,7 @@ sns.publish(
 
 ## Filtrado: que cada suscriptor reciba solo lo suyo
 
-Sin filtros, cada suscriptor recibe todo y descarta lo que no le toca (cuesta, genera ruido y acopla). Con una **política de filtro** en la suscripción, SNS entrega solo lo que coincide.
-
-Puede basarse en **atributos** del mensaje o en el **contenido (payload)** del cuerpo JSON. Ejemplo de política por atributos para una cola de pedidos internacionales grandes:
+Sin filtros, cada suscriptor recibe todo y descarta lo que no le toca (cuesta, genera ruido y acopla). Con una **política de filtro** en la suscripción, SNS entrega solo lo que coincide. Puede basarse en **atributos** del mensaje o en el **contenido (payload)** del cuerpo JSON. Ejemplo de política por atributos para una cola de pedidos internacionales grandes:
 
 ```json
 {
@@ -74,9 +70,7 @@ Puede basarse en **atributos** del mensaje o en el **contenido (payload)** del c
 }
 ```
 
-Operadores comunes: coincidencia exacta, `prefix`, `suffix`, `anything-but`, `numeric`, `exists`, `equals-ignore-case` y rangos de IP (`cidr`). Dentro de una clave, los valores se combinan con **OR**; entre claves distintas, con **AND**.
-
-Consejos:
+Operadores comunes: coincidencia exacta, `prefix`, `suffix`, `anything-but`, `numeric`, `exists`, `equals-ignore-case` y rangos de IP (`cidr`). Dentro de una clave, los valores se combinan con **OR**; entre claves distintas, con **AND**. Consejos:
 
 - Filtrar en SNS **reduce el costo** y la lógica de descarte en los consumidores.
 - Los mensajes que **no coinciden con ningún filtro** simplemente no se entregan, sin error visible: si un consumidor "no recibe nada", revisa primero su política de filtro y los tipos de dato de los atributos (un `Number` publicado como `String` no coincide con un filtro numérico).
@@ -90,9 +84,7 @@ pedido.creado ─► SNS ┼─ filtro: total≥1000 ──► cola "antifraude"
                      └─ sin filtro ──────────► cola "analitica"       ─► Firehose/S3
 ```
 
-Cada cola es independiente: su propio ritmo de consumo, reintentos, DLQ y retención. Si "analítica" se cae dos horas, "facturación" no se entera.
-
-Lo que hay que configurar (y que suele fallar silenciosamente):
+Cada cola es independiente: su propio ritmo de consumo, reintentos, DLQ y retención. Si "analítica" se cae dos horas, "facturación" no se entera. Lo que hay que configurar (y que suele fallar silenciosamente):
 
 **1. La política de la cola debe permitir al tema enviarle mensajes:**
 
@@ -108,17 +100,11 @@ Lo que hay que configurar (y que suele fallar silenciosamente):
 }
 ```
 
-La condición `aws:SourceArn` evita que otro tema ajeno escriba en tu cola.
-
-**2. Si usas cifrado con KMS** en la cola (o en el tema), la política de la **llave** debe permitir al servicio `sns.amazonaws.com` usarla (`kms:GenerateDataKey*`, `kms:Decrypt`). La cola con la llave administrada por AWS (`aws/sqs`) **no** sirve para este caso porque no se puede editar su política: usa una llave propia.
-
-**3. Entrega de mensaje sin envoltorio ("raw message delivery").** Por defecto, SNS envía a SQS un **sobre JSON** con metadatos y tu mensaje dentro como cadena. Activa *raw message delivery* y el consumidor recibe el cuerpo original (y los atributos como atributos de SQS). Decídelo desde el principio, porque cambiarlo después rompe a los consumidores.
+La condición `aws:SourceArn` evita que otro tema ajeno escriba en tu cola. **2. Si usas cifrado con KMS** en la cola (o en el tema), la política de la **llave** debe permitir al servicio `sns.amazonaws.com` usarla (`kms:GenerateDataKey*`, `kms:Decrypt`). La cola con la llave administrada por AWS (`aws/sqs`) **no** sirve para este caso porque no se puede editar su política: usa una llave propia. **3. Entrega de mensaje sin envoltorio ("raw message delivery").** Por defecto, SNS envía a SQS un **sobre JSON** con metadatos y tu mensaje dentro como cadena. Activa *raw message delivery* y el consumidor recibe el cuerpo original (y los atributos como atributos de SQS). Decídelo desde el principio, porque cambiarlo después rompe a los consumidores.
 
 ## Reintentos y entregas fallidas
 
-Para destinos administrados por AWS (**SQS, Lambda, Firehose**) SNS reintenta durante mucho tiempo (del orden de decenas de miles de intentos a lo largo de días) con espera creciente. Para **HTTP/S**, la política predeterminada es mucho más corta y **se puede personalizar** (número de reintentos, tiempos, tasa máxima de entrega para no saturar tu endpoint).
-
-Para no perder mensajes que agotaron los reintentos, configura una **DLQ en la suscripción** (una cola SQS). Ten en cuenta que:
+Para destinos administrados por AWS (**SQS, Lambda, Firehose**) SNS reintenta durante mucho tiempo (del orden de decenas de miles de intentos a lo largo de días) con espera creciente. Para **HTTP/S**, la política predeterminada es mucho más corta y **se puede personalizar** (número de reintentos, tiempos, tasa máxima de entrega para no saturar tu endpoint). Para no perder mensajes que agotaron los reintentos, configura una **DLQ en la suscripción** (una cola SQS). Ten en cuenta que:
 
 - Es **por suscripción**, no por tema.
 - La DLQ debe estar en la misma cuenta y región, con una política que permita a SNS escribir.
@@ -209,6 +195,4 @@ Consulta la tabla vigente. Para controlarlos: filtra para no entregar de más, t
 
 ## Para finalizar
 
-SNS es la forma más directa de que un evento llegue a muchos sitios sin que quien lo origina tenga que conocerlos. Su poder está en la combinación con SQS: cada consumidor con su cola, su ritmo y su DLQ, y filtros que mantienen cada flujo limpio.
-
-La mayoría de los problemas con SNS son de configuración silenciosa —permisos, KMS, filtros, raw delivery—, no de funcionamiento. Prueba cada suscripción de extremo a extremo con un mensaje real antes de darla por buena.
+SNS es la forma más directa de que un evento llegue a muchos sitios sin que quien lo origina tenga que conocerlos. Su poder está en la combinación con SQS: cada consumidor con su cola, su ritmo y su DLQ, y filtros que mantienen cada flujo limpio. La mayoría de los problemas con SNS son de configuración silenciosa —permisos, KMS, filtros, raw delivery—, no de funcionamiento. Prueba cada suscripción de extremo a extremo con un mensaje real antes de darla por buena.

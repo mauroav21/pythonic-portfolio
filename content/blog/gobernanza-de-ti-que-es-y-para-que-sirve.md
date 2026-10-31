@@ -98,6 +98,4 @@ Llevo un tiempo adentrándome en el área de gobernanza, sobre todo por los proy
 
 ## Para finalizar
 
-La gobernanza de TI es el sistema por el cual se dirige y controla el uso de la tecnología para que aporte valor con riesgos aceptables. Si empiezas por lo que duele, con roles claros y pocas reglas útiles, es una ventaja y no un freno.
-
-En los siguientes artículos veo dos temas concretos que le dan cuerpo: gestión de riesgos y cumplimiento, y gobernanza en la nube.
+La gobernanza de TI es el sistema por el cual se dirige y controla el uso de la tecnología para que aporte valor con riesgos aceptables. Si empiezas por lo que duele, con roles claros y pocas reglas útiles, es una ventaja y no un freno. En los siguientes artículos veo dos temas concretos que le dan cuerpo: gestión de riesgos y cumplimiento, y gobernanza en la nube.

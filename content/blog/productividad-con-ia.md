@@ -5,9 +5,7 @@ description: "Dónde la IA sí ahorra tiempo, dónde lo hace perder, cómo medir
 tags: [Inteligencia Artificial, Productividad, Trabajo]
 ---
 
-Hay una promesa muy repetida: con IA harás en minutos lo que antes tomaba horas. A veces es cierto. Otras veces terminas corrigiendo durante una hora lo que "se generó en diez segundos". Y casi nunca se mide cuál de los dos casos es el tuyo.
-
-Esto es lo que he aprendido para usarla de forma que de verdad ayude.
+Hay una promesa muy repetida: con IA harás en minutos lo que antes tomaba horas. A veces es cierto. Otras veces terminas corrigiendo durante una hora lo que "se generó en diez segundos". Y casi nunca se mide cuál de los dos casos es el tuyo. Esto es lo que he aprendido para usarla de forma que de verdad ayude.
 
 ## Dónde suele ahorrar tiempo
 
@@ -28,9 +26,7 @@ Esto es lo que he aprendido para usarla de forma que de verdad ayude.
 
 ## Lo que muestra la evidencia
 
-Los estudios todavía son pocos y dependen mucho del contexto. Algunos hallazgos públicos señalan mejoras notables en tareas acotadas, como escritura o programación de apoyo, y beneficios mayores para personas con menos experiencia. Otro estudio controlado de METR, publicado en 2025, encontró que desarrolladores con mucha experiencia en proyectos grandes y conocidos terminaron **más lentos** al usar asistentes de IA, aunque ellos percibían que iban más rápido.
-
-La lección no es que la IA ayude o no ayude, sino que **la percepción es un mal medidor**. Mide.
+Los estudios todavía son pocos y dependen mucho del contexto. Algunos hallazgos públicos señalan mejoras notables en tareas acotadas, como escritura o programación de apoyo, y beneficios mayores para personas con menos experiencia. Otro estudio controlado de METR, publicado en 2025, encontró que desarrolladores con mucha experiencia en proyectos grandes y conocidos terminaron **más lentos** al usar asistentes de IA, aunque ellos percibían que iban más rápido. La lección no es que la IA ayude o no ayude, sino que **la percepción es un mal medidor**. Mide.
 
 ## Cómo medir tu propio efecto
 
@@ -82,14 +78,8 @@ Producir más texto, más código o más documentos no es lo mismo que producir 
 
 ## Cómo la uso yo (y la vez que me ahorró y me costó a la vez)
 
-Hoy me apoyo mucho en Claude Code y en ChatGPT (no en Codex), sobre todo para **planeación, diseño y código**. Me ayudan a pensar alternativas, a estructurar un diseño antes de escribirlo y a acelerar el trabajo repetitivo.
-
-Hubo un proyecto en el que la IA hizo las dos cosas a la vez. Me ayudó a entregar antes de tiempo; al revisar lo que habíamos producido, detecté varios problemas. El proyecto salió a tiempo, pero la experiencia me dejó una regla clara: **la velocidad que da la IA hay que pagarla con revisión**. Desde entonces puse controles más estrictos para evitar que vuelva a pasar.
-
-Esos controles son los mismos que uso para cualquier código: **pruebas unitarias, pruebas de integración, inspección manual y análisis estático (SAST)** con herramientas como SonarQube. Si lo que genera la IA no pasa por ahí, para mí no está terminado.
+Hoy me apoyo mucho en Claude Code y en ChatGPT (no en Codex), sobre todo para **planeación, diseño y código**. Me ayudan a pensar alternativas, a estructurar un diseño antes de escribirlo y a acelerar el trabajo repetitivo. Hubo un proyecto en el que la IA hizo las dos cosas a la vez. Me ayudó a entregar antes de tiempo; al revisar lo que habíamos producido, detecté varios problemas. El proyecto salió a tiempo, pero la experiencia me dejó una regla clara: **la velocidad que da la IA hay que pagarla con revisión**. Desde entonces puse controles más estrictos para evitar que vuelva a pasar. Esos controles son los mismos que uso para cualquier código: **pruebas unitarias, pruebas de integración, inspección manual y análisis estático (SAST)** con herramientas como SonarQube. Si lo que genera la IA no pasa por ahí, para mí no está terminado.
 
 ## Para finalizar
 
-La IA es una gran palanca para quien sabe qué quiere, puede evaluar lo que recibe y mide el efecto real. Úsala como a un colega muy rápido pero poco fiable: delégale lo que puedas revisar, dale contexto y revisa antes de confiar.
-
-Productividad no es hacer más cosas, sino lograr mejores resultados con el mismo esfuerzo. Y eso se comprueba con datos, no con sensaciones.
+La IA es una gran palanca para quien sabe qué quiere, puede evaluar lo que recibe y mide el efecto real. Úsala como a un colega muy rápido pero poco fiable: delégale lo que puedas revisar, dale contexto y revisa antes de confiar. Productividad no es hacer más cosas, sino lograr mejores resultados con el mismo esfuerzo. Y eso se comprueba con datos, no con sensaciones.

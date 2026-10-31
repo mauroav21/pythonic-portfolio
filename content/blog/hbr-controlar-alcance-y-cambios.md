@@ -7,15 +7,11 @@ tags: [Gestión de proyectos, Alcance, HBR]
 
 *Serie inspirada en la Guía de Harvard Business Review sobre gestión de proyectos, con mi propia lectura y experiencia.*
 
-"Ya que estás, ¿podrías agregar también…?" Ninguna de esas peticiones parece grande por separado. Juntas, convierten un proyecto de tres meses en uno de seis.
-
-Eso se conoce como **scope creep**: el crecimiento gradual del alcance sin que cambien el tiempo, el presupuesto ni el equipo.
+"Ya que estás, ¿podrías agregar también…?" Ninguna de esas peticiones parece grande por separado. Juntas, convierten un proyecto de tres meses en uno de seis. Eso se conoce como **scope creep**: el crecimiento gradual del alcance sin que cambien el tiempo, el presupuesto ni el equipo.
 
 ## El problema: los cambios llegan por la puerta de atrás
 
-Casi nunca aparecen como una exigencia formal. Llegan en un pasillo, en un chat, en una reunión de revisión. Alguien con buena intención pide algo razonable y el equipo, por amabilidad o por miedo al conflicto, dice que sí.
-
-Cada "sí" informal tiene un costo oculto que paga el equipo con horas extras o con calidad.
+Casi nunca aparecen como una exigencia formal. Llegan en un pasillo, en un chat, en una reunión de revisión. Alguien con buena intención pide algo razonable y el equipo, por amabilidad o por miedo al conflicto, dice que sí. Cada "sí" informal tiene un costo oculto que paga el equipo con horas extras o con calidad.
 
 ## Los cambios no son el enemigo
 
@@ -58,6 +54,4 @@ A veces "esto no es lo que pedí" no es un cambio, sino una diferencia de interp
 
 ## Para finalizar
 
-Controlar el alcance no es decir no a todo, sino hacer visibles las consecuencias de cada cambio y que la decisión la tome quien corresponde. Con un proceso ligero y una conversación honesta, el equipo protege su calidad y el patrocinador mantiene el control del rumbo.
-
-Hablando de rumbo, el siguiente artículo trata del dinero: cómo planear y vigilar el presupuesto.
+Controlar el alcance no es decir no a todo, sino hacer visibles las consecuencias de cada cambio y que la decisión la tome quien corresponde. Con un proceso ligero y una conversación honesta, el equipo protege su calidad y el patrocinador mantiene el control del rumbo. Hablando de rumbo, el siguiente artículo trata del dinero: cómo planear y vigilar el presupuesto.

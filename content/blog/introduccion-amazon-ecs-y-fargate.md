@@ -5,9 +5,7 @@ description: "Cómo funcionan clústeres, servicios y tareas, dimensionamiento e
 tags: [AWS, ECS, Fargate, Contenedores]
 ---
 
-Ejecutar un contenedor en tu laptop toma un comando. Ejecutarlo en producción, de forma que se reinicie solo, reciba tráfico únicamente cuando esté listo, se actualice sin cortar conexiones, escale con la demanda y no dependa de nadie con acceso a un servidor, toma un orquestador. ECS con Fargate es la versión de AWS de esa promesa con la menor operación posible.
-
-Este artículo es la guía de ese camino, incluyendo las razones por las que un servicio "se queda en `PENDING`" o "se reinicia cada dos minutos".
+Ejecutar un contenedor en tu laptop toma un comando. Ejecutarlo en producción, de forma que se reinicie solo, reciba tráfico únicamente cuando esté listo, se actualice sin cortar conexiones, escale con la demanda y no dependa de nadie con acceso a un servidor, toma un orquestador. ECS con Fargate es la versión de AWS de esa promesa con la menor operación posible. Este artículo es la guía de ese camino, incluyendo las razones por las que un servicio "se queda en `PENDING`" o "se reinicia cada dos minutos".
 
 ## El modelo mental
 
@@ -24,9 +22,7 @@ Una tarea puede incluir varios contenedores que comparten red y ciclo de vida (l
 
 ## Fargate: qué te quita y qué no
 
-Con Fargate no ves ni administras servidores: cada tarea se ejecuta en un entorno aislado (microVM) con la CPU y memoria que declaras. Te quita parches, escalado de hosts y empaquetado de contenedores en máquinas. **No te quita**: el diseño de red, la seguridad, el dimensionamiento correcto de la tarea, los despliegues ni la observabilidad.
-
-Sus restricciones conviene conocerlas antes de elegirlo:
+Con Fargate no ves ni administras servidores: cada tarea se ejecuta en un entorno aislado (microVM) con la CPU y memoria que declaras. Te quita parches, escalado de hosts y empaquetado de contenedores en máquinas. **No te quita**: el diseño de red, la seguridad, el dimensionamiento correcto de la tarea, los despliegues ni la observabilidad. Sus restricciones conviene conocerlas antes de elegirlo:
 
 - **Combinaciones fijas de CPU y memoria** (por ejemplo, 0.25 vCPU con 0.5–2 GB; 1 vCPU con 2–8 GB; 4 vCPU con 8–30 GB, hasta 16 vCPU y 120 GB).
 - **Almacenamiento efímero:** 20 GiB por defecto, ampliable (hasta 200 GiB). Se pierde con la tarea.
@@ -121,11 +117,7 @@ Por defecto, el servicio hace un **despliegue gradual (rolling)** controlado por
 | `minimumHealthyPercent` | Mínimo de tareas sanas durante el cambio (100 = nunca bajas capacidad) |
 | `maximumPercent` | Máximo de tareas totales durante el cambio (200 = puedes duplicar temporalmente) |
 
-Con `100/200`, ECS lanza las nuevas, espera a que estén sanas, y retira las viejas: sin bajar capacidad, a costa de usar temporalmente el doble.
-
-Activa el **circuit breaker de despliegue con rollback automático**: si las tareas nuevas no logran estabilizarse tras varios intentos, ECS detiene el despliegue y vuelve a la versión anterior. Es el seguro contra publicar una versión rota que reinicia en bucle.
-
-También puedes añadir **alarmas de CloudWatch** al despliegue, de modo que ECS retroceda si, por ejemplo, la tasa de errores sube. Para tráfico controlado (canary, azul/verde con validación) existen integraciones con CodeDeploy y las opciones nativas más recientes del servicio; consulta qué soporta tu caso.
+Con `100/200`, ECS lanza las nuevas, espera a que estén sanas, y retira las viejas: sin bajar capacidad, a costa de usar temporalmente el doble. Activa el **circuit breaker de despliegue con rollback automático**: si las tareas nuevas no logran estabilizarse tras varios intentos, ECS detiene el despliegue y vuelve a la versión anterior. Es el seguro contra publicar una versión rota que reinicia en bucle. También puedes añadir **alarmas de CloudWatch** al despliegue, de modo que ECS retroceda si, por ejemplo, la tasa de errores sube. Para tráfico controlado (canary, azul/verde con validación) existen integraciones con CodeDeploy y las opciones nativas más recientes del servicio; consulta qué soporta tu caso.
 
 ### Apagado ordenado: la mitad del trabajo
 
@@ -171,9 +163,7 @@ Códigos de salida útiles: **137** = `SIGKILL` (casi siempre falta de memoria o
 
 ## Costos, con un ejemplo
 
-Fargate cobra por **vCPU-hora y GB-hora** de las tareas (por segundo, con un mínimo de un minuto), más almacenamiento efímero adicional. Precios de referencia en us-east-1 para Linux/x86 (verifícalos; cambian por región, arquitectura y con Spot): del orden de 0.04 USD por vCPU-hora y 0.0044 USD por GB-hora.
-
-**Caso:** 2 tareas permanentes de 0.5 vCPU y 1 GB, todo el mes (≈ 730 horas).
+Fargate cobra por **vCPU-hora y GB-hora** de las tareas (por segundo, con un mínimo de un minuto), más almacenamiento efímero adicional. Precios de referencia en us-east-1 para Linux/x86 (verifícalos; cambian por región, arquitectura y con Spot): del orden de 0.04 USD por vCPU-hora y 0.0044 USD por GB-hora. **Caso:** 2 tareas permanentes de 0.5 vCPU y 1 GB, todo el mes (≈ 730 horas).
 
 ```text
 por tarea y hora: 0.5 × 0.04048 + 1 × 0.004445 ≈ 0.0247 USD
@@ -238,12 +228,8 @@ Elige EKS cuando tengas una razón concreta (portabilidad, ecosistema, experienc
 
 ## Cómo lo vivo yo: Fargate y Kubernetes
 
-Kubernetes fue, con diferencia, lo que más me costó entender cuando empecé con AWS. Tiene muchísimas piezas, un vocabulario propio y una curva que no perdona. Por eso, cuando alguien me pregunta por contenedores sin tener ya un equipo con experiencia en Kubernetes, mi primera respuesta suele ser ECS con Fargate: menos conceptos, menos operación y suficiente para la mayoría de los casos.
-
-Fargate además es la base de una solución de la que me siento orgulloso: **runners de CI/CD autohospedados, efímeros y sin servidores**, que redujeron de forma importante el costo y me dieron mucha más libertad para lanzar despliegues. Lo conté con detalle, incluyendo los errores del camino, en este artículo: [Runners serverless con AWS Fargate: efímeros, baratos y sin servidores que mantener](https://builder.aws.com/content/3IhG8rAvz7DJJLElh1fsQeguYvk/runners-serverless-con-aws-fargate-efimeros-baratos-y-sin-servidores-que-mantener).
+Kubernetes fue, con diferencia, lo que más me costó entender cuando empecé con AWS. Tiene muchísimas piezas, un vocabulario propio y una curva que no perdona. Por eso, cuando alguien me pregunta por contenedores sin tener ya un equipo con experiencia en Kubernetes, mi primera respuesta suele ser ECS con Fargate: menos conceptos, menos operación y suficiente para la mayoría de los casos. Fargate además es la base de una solución de la que me siento orgulloso: **runners de CI/CD autohospedados, efímeros y sin servidores**, que redujeron de forma importante el costo y me dieron mucha más libertad para lanzar despliegues. Lo conté con detalle, incluyendo los errores del camino, en este artículo: [Runners serverless con AWS Fargate: efímeros, baratos y sin servidores que mantener](https://builder.aws.com/content/3IhG8rAvz7DJJLElh1fsQeguYvk/runners-serverless-con-aws-fargate-efimeros-baratos-y-sin-servidores-que-mantener).
 
 ## Para finalizar
 
-ECS con Fargate te da contenedores en producción sin servidores que parchar, pero te exige hacer bien lo que importa: la red hacia ECR, los dos roles, las verificaciones de salud con su periodo de gracia, el apagado ordenado y los despliegues con rollback.
-
-Cuando todo eso está en su sitio, un despliegue es un `git push` sin sobresaltos. Cuando falta una pieza, es el origen de la mayoría de los incidentes de contenedores que se ven en cualquier equipo.
+ECS con Fargate te da contenedores en producción sin servidores que parchar, pero te exige hacer bien lo que importa: la red hacia ECR, los dos roles, las verificaciones de salud con su periodo de gracia, el apagado ordenado y los despliegues con rollback. Cuando todo eso está en su sitio, un despliegue es un `git push` sin sobresaltos. Cuando falta una pieza, es el origen de la mayoría de los incidentes de contenedores que se ven en cualquier equipo.

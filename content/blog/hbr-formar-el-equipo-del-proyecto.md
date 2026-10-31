@@ -66,12 +66,8 @@ Los equipos pasan por etapas conocidas (formación, conflicto, normalización, d
 
 ## Cómo lo hago yo
 
-A mí me funciona formar a mi equipo directo pensando en **habilidades y fortalezas**. Al principio me apoyaba en la gente que ya tenía cerca. Con el tiempo empecé a trabajar con personas que no conocía; por un proyecto en común, o por simple coincidencia, iba descubriendo qué hacía bien cada una.
-
-Después de eso, lo que más importa es dejar claro **qué responsabilidades y qué libertades tiene cada persona**, cuándo algo debe escalarse y cuál es el proceso para resolverlo. Es una de las cosas que se me dan con naturalidad, pero la hago a propósito, porque un equipo con límites claros trabaja con más confianza.
+A mí me funciona formar a mi equipo directo pensando en **habilidades y fortalezas**. Al principio me apoyaba en la gente que ya tenía cerca. Con el tiempo empecé a trabajar con personas que no conocía; por un proyecto en común, o por simple coincidencia, iba descubriendo qué hacía bien cada una. Después de eso, lo que más importa es dejar claro **qué responsabilidades y qué libertades tiene cada persona**, cuándo algo debe escalarse y cuál es el proceso para resolverlo. Es una de las cosas que se me dan con naturalidad, pero la hago a propósito, porque un equipo con límites claros trabaja con más confianza.
 
 ## Para finalizar
 
-Formar un equipo es decidir qué capacidades hacen falta, dar roles claros, asegurar tiempo real y pactar cómo se trabaja. Es trabajo previo que no se ve en el cronograma y pesa más que cualquier herramienta.
-
-Cuando el equipo sabe qué hacer y cómo, el siguiente paso es convertir ese rumbo en un plan que se pueda seguir. De eso trata el siguiente artículo.
+Formar un equipo es decidir qué capacidades hacen falta, dar roles claros, asegurar tiempo real y pactar cómo se trabaja. Es trabajo previo que no se ve en el cronograma y pesa más que cualquier herramienta. Cuando el equipo sabe qué hacer y cómo, el siguiente paso es convertir ese rumbo en un plan que se pueda seguir. De eso trata el siguiente artículo.

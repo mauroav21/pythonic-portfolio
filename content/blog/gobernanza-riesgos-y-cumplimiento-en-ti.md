@@ -93,6 +93,4 @@ Proveedores y servicios en la nube forman parte de tu cadena. Evalúa a los crí
 
 ## Para finalizar
 
-Gestionar riesgos y cumplir no tiene que paralizar a nadie. Conoce tus activos, prioriza por probabilidad e impacto, aplica controles básicos bien hechos y deja evidencia como subproducto del trabajo diario.
-
-El objetivo no es eliminar el riesgo (imposible), sino que la organización decida con conocimiento cuáles asume.
+Gestionar riesgos y cumplir no tiene que paralizar a nadie. Conoce tus activos, prioriza por probabilidad e impacto, aplica controles básicos bien hechos y deja evidencia como subproducto del trabajo diario. El objetivo no es eliminar el riesgo (imposible), sino que la organización decida con conocimiento cuáles asume.

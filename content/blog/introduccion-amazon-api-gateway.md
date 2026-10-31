@@ -5,9 +5,7 @@ description: "HTTP API, REST API y WebSocket: diferencias reales, integraciones 
 tags: [AWS, API Gateway, Serverless]
 ---
 
-API Gateway es la puerta de entrada de muchísimas arquitecturas serverless, y también la fuente de una cantidad desproporcionada de mensajes de error que no explican nada: `Missing Authentication Token`, `Internal server error`, `502`, `504`, un CORS que "funciona en Postman y no en el navegador". Casi todos tienen causas concretas y repetibles.
-
-Este artículo cubre cómo decidir qué tipo usar, cómo se protege y limita una API, y cómo leer sus errores.
+API Gateway es la puerta de entrada de muchísimas arquitecturas serverless, y también la fuente de una cantidad desproporcionada de mensajes de error que no explican nada: `Missing Authentication Token`, `Internal server error`, `502`, `504`, un CORS que "funciona en Postman y no en el navegador". Casi todos tienen causas concretas y repetibles. Este artículo cubre cómo decidir qué tipo usar, cómo se protege y limita una API, y cómo leer sus errores.
 
 ## Qué hace (y qué no)
 
@@ -39,9 +37,7 @@ No es un servidor de aplicaciones, no ejecuta lógica de negocio, y tiene límit
 | Despliegues canary | No | **Sí** | — |
 | Formato de carga útil Lambda | 1.0 o **2.0** | 1.0 | — |
 
-La recomendación habitual: **HTTP API** para APIs nuevas de proxy a Lambda o servicios HTTP, y **REST API** cuando necesitas específicamente alguna de sus funciones (WAF directo, planes de uso para clientes externos, validación, caché, mapeo, endpoints privados). WebSocket para aplicaciones con comunicación bidireccional persistente (chats, paneles en vivo). Las funciones evolucionan; verifica la matriz vigente antes de decidir.
-
-Alternativas que a veces bastan: **URL de función de Lambda** (para un endpoint sencillo sin controles) y **ALB** con Lambda o contenedores como destino (cuando el resto de tu aplicación ya está detrás de un ALB).
+La recomendación habitual: **HTTP API** para APIs nuevas de proxy a Lambda o servicios HTTP, y **REST API** cuando necesitas específicamente alguna de sus funciones (WAF directo, planes de uso para clientes externos, validación, caché, mapeo, endpoints privados). WebSocket para aplicaciones con comunicación bidireccional persistente (chats, paneles en vivo). Las funciones evolucionan; verifica la matriz vigente antes de decidir. Alternativas que a veces bastan: **URL de función de Lambda** (para un endpoint sencillo sin controles) y **ALB** con Lambda o contenedores como destino (cuando el resto de tu aplicación ya está detrás de un ALB).
 
 ## Integraciones
 
@@ -114,9 +110,7 @@ En HTTP API, activa la **configuración de CORS** de la API y el gateway lo mane
 | **Tamaño de carga útil** | 10 MB por solicitud/respuesta en API Gateway; **6 MB** para la carga síncrona de Lambda | Archivos grandes: URL prefirmada de S3 |
 | **Rutas y recursos por API, etapas, claves** | Cuotas por cuenta | Revisa en Service Quotas |
 
-Verifica los valores vigentes: AWS ha ido ajustando algunos.
-
-**Para operaciones largas, no esperes:**
+Verifica los valores vigentes: AWS ha ido ajustando algunos. **Para operaciones largas, no esperes:**
 
 ```text
 POST /informes  →  202 Accepted + { "id": "r-123", "estado": "EN_COLA" }
@@ -240,6 +234,4 @@ Incluye lo que importa: autorización por defecto, CORS acotado, throttling, log
 
 ## Para finalizar
 
-API Gateway hace bien el trabajo repetitivo de una API —autenticar, limitar, validar, medir— con muy poca operación. Su coste es entender sus tipos, sus límites de tiempo y tamaño y sus mensajes de error, que son crípticos pero previsibles.
-
-Elige HTTP API por defecto, autoriza en el borde y en el backend, limita desde el primer día y diseña lo largo como asíncrono. Con eso, la mayoría de los errores que verás tendrán una causa que ya conoces.
+API Gateway hace bien el trabajo repetitivo de una API —autenticar, limitar, validar, medir— con muy poca operación. Su coste es entender sus tipos, sus límites de tiempo y tamaño y sus mensajes de error, que son crípticos pero previsibles. Elige HTTP API por defecto, autoriza en el borde y en el backend, limita desde el primer día y diseña lo largo como asíncrono. Con eso, la mayoría de los errores que verás tendrán una causa que ya conoces.

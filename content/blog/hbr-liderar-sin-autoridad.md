@@ -66,6 +66,4 @@ Antes de escalar, intenta entender. A veces la resistencia es sobrecarga, falta 
 
 ## Para finalizar
 
-Liderar sin autoridad es posible y común. Se apoya en confianza, claridad, beneficios compartidos y buenos acuerdos con quienes sí tienen la autoridad. Es una habilidad que sirve más allá de los proyectos: en comunidades y organizaciones voluntarias, donde nadie reporta a nadie, es la única forma de liderar.
-
-En el siguiente artículo veo cómo saber si el proyecto va bien: seguimiento y medición del avance.
+Liderar sin autoridad es posible y común. Se apoya en confianza, claridad, beneficios compartidos y buenos acuerdos con quienes sí tienen la autoridad. Es una habilidad que sirve más allá de los proyectos: en comunidades y organizaciones voluntarias, donde nadie reporta a nadie, es la única forma de liderar. En el siguiente artículo veo cómo saber si el proyecto va bien: seguimiento y medición del avance.

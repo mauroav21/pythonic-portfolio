@@ -5,9 +5,7 @@ description: "Integración, entrega y despliegue continuos: diseño de pipelines
 tags: [CI/CD, DevOps, Automatización]
 ---
 
-Hay un tipo de equipo que despliega una vez al mes, un sábado por la noche, con una lista de pasos manuales y tres personas pendientes del teléfono. Y hay otro que despliega varias veces al día, sin ceremonia, y cuando algo sale mal lo revierte en minutos. Rara vez la diferencia es talento: es un pipeline en el que se puede confiar y una forma de trabajar que lo hace posible.
-
-CI/CD es esa forma de trabajar. Este artículo explica qué es de verdad, cómo se diseña un pipeline que no se vuelva un problema, y qué detalles lo separan de un "script que corre en un servidor".
+Hay un tipo de equipo que despliega una vez al mes, un sábado por la noche, con una lista de pasos manuales y tres personas pendientes del teléfono. Y hay otro que despliega varias veces al día, sin ceremonia, y cuando algo sale mal lo revierte en minutos. Rara vez la diferencia es talento: es un pipeline en el que se puede confiar y una forma de trabajar que lo hace posible. CI/CD es esa forma de trabajar. Este artículo explica qué es de verdad, cómo se diseña un pipeline que no se vuelva un problema, y qué detalles lo separan de un "script que corre en un servidor".
 
 ## Las tres siglas, sin confundirlas
 
@@ -265,9 +263,7 @@ Lo que impide revertir: cambios de esquema incompatibles, artefactos borrados y 
 
 ## Lo que me ha tocado vivir
 
-**Mis herramientas.** Uso GitHub Actions en el día a día, le tengo cariño a GitLab, y mi favorita sigue siendo Azure DevOps. Lo que me importa de cada una no es la moda sino qué tan fácil hace que el pipeline sea legible y que la trazabilidad (de la tarea al commit, del commit al despliegue) quede completa.
-
-**Mi peor día de despliegue.** Me tocó desplegar una cantidad grande de microservicios en un solo día. Ya estaba todo listo. Y justo al intentar desplegar, el código dejó de pasar: aparecieron vulnerabilidades y librerías en cuarentena que bloquearon el pipeline. En otras ocasiones, el problema fue más tonto y más humano: me tocó desplegar imágenes hacia un proyecto distinto del que correspondía.
+**Mis herramientas.** Uso GitHub Actions en el día a día, le tengo cariño a GitLab, y mi favorita sigue siendo Azure DevOps. Lo que me importa de cada una no es la moda sino qué tan fácil hace que el pipeline sea legible y que la trazabilidad (de la tarea al commit, del commit al despliegue) quede completa. **Mi peor día de despliegue.** Me tocó desplegar una cantidad grande de microservicios en un solo día. Ya estaba todo listo. Y justo al intentar desplegar, el código dejó de pasar: aparecieron vulnerabilidades y librerías en cuarentena que bloquearon el pipeline. En otras ocasiones, el problema fue más tonto y más humano: me tocó desplegar imágenes hacia un proyecto distinto del que correspondía.
 
 Lo que me dejaron ambas cosas:
 
@@ -279,6 +275,4 @@ Lo que me dejaron ambas cosas:
 
 ## Para finalizar
 
-CI/CD no se trata de herramientas sino de un contrato con tu equipo: integrar a menudo, mantener verde la rama principal, desplegar artefactos inmutables y tener un camino claro de ida y de vuelta. Cuando eso se cumple, desplegar deja de ser un evento y se convierte en una rutina.
-
-La métrica que mejor resume tu pipeline es una sola: ¿cuánto tardas en llevar un cambio pequeño a producción y cuánto confías en que saldrá bien? Si ambas respuestas te incomodan, ya sabes por dónde empezar.
+CI/CD no se trata de herramientas sino de un contrato con tu equipo: integrar a menudo, mantener verde la rama principal, desplegar artefactos inmutables y tener un camino claro de ida y de vuelta. Cuando eso se cumple, desplegar deja de ser un evento y se convierte en una rutina. La métrica que mejor resume tu pipeline es una sola: ¿cuánto tardas en llevar un cambio pequeño a producción y cuánto confías en que saldrá bien? Si ambas respuestas te incomodan, ya sabes por dónde empezar.

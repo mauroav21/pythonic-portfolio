@@ -5,15 +5,11 @@ description: "Atributos de calidad como escenarios, estilos (monolito modular, m
 tags: [Arquitectura, Software, Diseño]
 ---
 
-Existe una definición clásica de arquitectura de software, atribuida a Martin Fowler: *"las decisiones que son difíciles de cambiar"*. Es útil porque no habla de diagramas ni de puestos. Habla de **costo de cambio**. Cambiar el nombre de una función cuesta cinco minutos; cambiar de base de datos, de estilo de comunicación entre servicios o de modelo de despliegue cuesta meses. A esas decisiones es a las que conviene dedicar atención.
-
-Esta guía reúne lo que sirve de verdad para tomarlas: cómo traducir requisitos de calidad en decisiones, qué estilos existen y a qué costo, y cómo registrar y evolucionar lo decidido.
+Existe una definición clásica de arquitectura de software, atribuida a Martin Fowler: *"las decisiones que son difíciles de cambiar"*. Es útil porque no habla de diagramas ni de puestos. Habla de **costo de cambio**. Cambiar el nombre de una función cuesta cinco minutos; cambiar de base de datos, de estilo de comunicación entre servicios o de modelo de despliegue cuesta meses. A esas decisiones es a las que conviene dedicar atención. Esta guía reúne lo que sirve de verdad para tomarlas: cómo traducir requisitos de calidad en decisiones, qué estilos existen y a qué costo, y cómo registrar y evolucionar lo decidido.
 
 ## Arquitectura como compromiso
 
-Ningún sistema maximiza todas sus cualidades a la vez. Más seguridad suele costar facilidad de uso; más flexibilidad cuesta simplicidad; más rendimiento cuesta legibilidad o dinero. La arquitectura es el arte de elegir **qué cualidades importan en este sistema** y aceptar conscientemente lo que se sacrifica.
-
-Por eso el primer paso no es elegir tecnología. Es entender **qué atributos de calidad gobiernan este sistema**.
+Ningún sistema maximiza todas sus cualidades a la vez. Más seguridad suele costar facilidad de uso; más flexibilidad cuesta simplicidad; más rendimiento cuesta legibilidad o dinero. La arquitectura es el arte de elegir **qué cualidades importan en este sistema** y aceptar conscientemente lo que se sacrifica. Por eso el primer paso no es elegir tecnología. Es entender **qué atributos de calidad gobiernan este sistema**.
 
 ## Atributos de calidad, como escenarios medibles
 
@@ -50,9 +46,7 @@ Elige **tres o cuatro atributos dominantes**. Si todo es prioridad, nada lo es. 
 
 ### Monolito (y el monolito modular)
 
-Una sola unidad de despliegue. Ventajas reales: **simplicidad** de desarrollo, pruebas, despliegue y depuración; transacciones sencillas; latencia de llamadas en proceso. Su problema no es ser monolito, sino ser un **"big ball of mud"** (todo conoce a todo).
-
-El **monolito modular** impone límites internos claros (módulos con interfaces explícitas, sin acceso a las tablas de otros). Obtienes la mayor parte de la modularidad con un coste operativo mínimo, y deja abierta la puerta a extraer servicios después. Es una opción subestimada y una excelente base para la mayoría de equipos.
+Una sola unidad de despliegue. Ventajas reales: **simplicidad** de desarrollo, pruebas, despliegue y depuración; transacciones sencillas; latencia de llamadas en proceso. Su problema no es ser monolito, sino ser un **"big ball of mud"** (todo conoce a todo). El **monolito modular** impone límites internos claros (módulos con interfaces explícitas, sin acceso a las tablas de otros). Obtienes la mayor parte de la modularidad con un coste operativo mínimo, y deja abierta la puerta a extraer servicios después. Es una opción subestimada y una excelente base para la mayoría de equipos.
 
 ### Arquitectura en capas
 
@@ -89,13 +83,7 @@ src/
 
 ### Microservicios
 
-El sistema se divide en servicios pequeños, desplegables de forma independiente, normalmente con **sus propios datos**, organizados alrededor de capacidades de negocio.
-
-**Lo que ofrecen:** despliegue independiente, escalado selectivo, aislamiento de fallos, libertad tecnológica, y sobre todo **autonomía de equipos** (la Ley de Conway: la estructura del sistema reflejará la de la organización).
-
-**Lo que cuestan** (y se subestima): latencia y fallos de red en cada llamada; **consistencia de datos distribuidos** (sin transacciones simples); versionado de contratos; observabilidad compleja; pruebas de integración difíciles; y una **carga operativa** considerable (despliegue, monitoreo, seguridad por servicio).
-
-Dos advertencias:
+El sistema se divide en servicios pequeños, desplegables de forma independiente, normalmente con **sus propios datos**, organizados alrededor de capacidades de negocio. **Lo que ofrecen:** despliegue independiente, escalado selectivo, aislamiento de fallos, libertad tecnológica, y sobre todo **autonomía de equipos** (la Ley de Conway: la estructura del sistema reflejará la de la organización). **Lo que cuestan** (y se subestima): latencia y fallos de red en cada llamada; **consistencia de datos distribuidos** (sin transacciones simples); versionado de contratos; observabilidad compleja; pruebas de integración difíciles; y una **carga operativa** considerable (despliegue, monitoreo, seguridad por servicio). Dos advertencias:
 
 - **El monolito distribuido:** servicios que se despliegan juntos, comparten base de datos y se rompen entre sí. Tienes todo el costo de los microservicios y ninguno de los beneficios.
 - **Microservicios prematuros:** dividir antes de conocer los límites del dominio fija fronteras equivocadas que son carísimas de corregir. Empezar con un monolito modular y extraer lo que lo justifique suele ser más sensato.
@@ -104,9 +92,7 @@ Dos advertencias:
 
 ### Orientada a eventos
 
-Los componentes se comunican **publicando y reaccionando a eventos** ("pedido creado"). Reduce el acoplamiento temporal y facilita reaccionar a cambios y añadir consumidores. A cambio: el flujo completo es **implícito y difícil de seguir**, el orden y la duplicación hay que manejarlos, y la **consistencia es eventual**.
-
-Variantes que conviene manejar con cautela: **CQRS** (separar modelos de lectura y escritura) y **Event Sourcing** (guardar los eventos como fuente de verdad). Son potentes en dominios concretos y una fuente notable de complejidad si se adoptan sin necesidad.
+Los componentes se comunican **publicando y reaccionando a eventos** ("pedido creado"). Reduce el acoplamiento temporal y facilita reaccionar a cambios y añadir consumidores. A cambio: el flujo completo es **implícito y difícil de seguir**, el orden y la duplicación hay que manejarlos, y la **consistencia es eventual**. Variantes que conviene manejar con cautela: **CQRS** (separar modelos de lectura y escritura) y **Event Sourcing** (guardar los eventos como fuente de verdad). Son potentes en dominios concretos y una fuente notable de complejidad si se adoptan sin necesidad.
 
 ### Serverless
 
@@ -222,6 +208,4 @@ Cuando te toque decidir algo importante:
 
 ## Para finalizar
 
-La buena arquitectura rara vez es la más sofisticada. Es la que **encaja con los atributos de calidad que importan**, con el tamaño del equipo y con la etapa del producto; la que mantiene baratos los cambios más probables; y la que deja un rastro escrito de por qué es como es.
-
-Empieza simple, modulariza antes de distribuir, protege tus límites con pruebas automáticas, registra tus decisiones y deja que el sistema evolucione con lo que aprendes. Eso es, en esencia, todo el oficio.
+La buena arquitectura rara vez es la más sofisticada. Es la que **encaja con los atributos de calidad que importan**, con el tamaño del equipo y con la etapa del producto; la que mantiene baratos los cambios más probables; y la que deja un rastro escrito de por qué es como es. Empieza simple, modulariza antes de distribuir, protege tus límites con pruebas automáticas, registra tus decisiones y deja que el sistema evolucione con lo que aprendes. Eso es, en esencia, todo el oficio.

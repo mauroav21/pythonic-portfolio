@@ -15,9 +15,7 @@ El equipo técnico quiere detalles, el director quiere saber si habrá retraso o
 
 ## Paso 1: identificar a los interesados
 
-Un **interesado** (stakeholder) es cualquier persona que puede afectar al proyecto o ser afectada por él. Haz una lista sin filtrar: patrocinadores, usuarios, áreas de soporte, seguridad, finanzas, proveedores.
-
-Luego clasifica por dos ejes:
+Un **interesado** (stakeholder) es cualquier persona que puede afectar al proyecto o ser afectada por él. Haz una lista sin filtrar: patrocinadores, usuarios, áreas de soporte, seguridad, finanzas, proveedores. Luego clasifica por dos ejes:
 
 | | Poco interés | Mucho interés |
 |---|---|---|
@@ -71,6 +69,4 @@ Un estado "verde" durante meses que de repente pasa a "rojo" revela que nadie qu
 
 ## Para finalizar
 
-Comunicar bien en un proyecto es saber a quién, qué, cuándo y cómo, y mantener la costumbre aun cuando hay poco que contar. La confianza se construye con constancia y honestidad, sobre todo en los momentos difíciles.
-
-En el siguiente artículo toco un tema que mueve esa confianza más que ningún otro: qué hacer cuando el alcance empieza a cambiar.
+Comunicar bien en un proyecto es saber a quién, qué, cuándo y cómo, y mantener la costumbre aun cuando hay poco que contar. La confianza se construye con constancia y honestidad, sobre todo en los momentos difíciles. En el siguiente artículo toco un tema que mueve esa confianza más que ningún otro: qué hacer cuando el alcance empieza a cambiar.

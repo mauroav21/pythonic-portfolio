@@ -97,6 +97,4 @@ Para empezar, usa lo más sencillo que cumpla tu necesidad.
 
 ## Para finalizar
 
-La IA te permite automatizar el trabajo que involucra lenguaje y criterio, que antes era territorio exclusivo de las personas. Funciona mejor combinada con reglas y código para lo exacto, evaluada con datos reales y con supervisión humana donde importa.
-
-Elige una tarea frecuente y de bajo riesgo, mide cómo la haces hoy y automatiza el primer paso. Lo que aprendas en esa primera iteración vale más que cualquier plan perfecto.
+La IA te permite automatizar el trabajo que involucra lenguaje y criterio, que antes era territorio exclusivo de las personas. Funciona mejor combinada con reglas y código para lo exacto, evaluada con datos reales y con supervisión humana donde importa. Elige una tarea frecuente y de bajo riesgo, mide cómo la haces hoy y automatiza el primer paso. Lo que aprendas en esa primera iteración vale más que cualquier plan perfecto.

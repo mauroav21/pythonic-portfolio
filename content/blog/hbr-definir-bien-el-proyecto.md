@@ -10,17 +10,11 @@ tags: [Gestión de proyectos, Planeación, HBR]
 > «Todo con orden.»
 > — Susana Siller
 
-Es una frase que me acompaña en cada proyecto. Para mí, el orden empieza antes de escribir una línea de código o de agendar un evento: empieza por definir bien qué se va a hacer.
-
-Hay una escena que se repite: arranca un proyecto con entusiasmo, el equipo empieza a construir y tres meses después descubren que cada quien entendía algo distinto. El retraso no se debe a que trabajaran lento, sino a que nunca se puso de acuerdo, por escrito y de forma clara, qué se iba a lograr.
-
-Esa fase previa, a veces incómoda, es donde se ganan o se pierden la mayoría de los proyectos.
+Es una frase que me acompaña en cada proyecto. Para mí, el orden empieza antes de escribir una línea de código o de agendar un evento: empieza por definir bien qué se va a hacer. Hay una escena que se repite: arranca un proyecto con entusiasmo, el equipo empieza a construir y tres meses después descubren que cada quien entendía algo distinto. El retraso no se debe a que trabajaran lento, sino a que nunca se puso de acuerdo, por escrito y de forma clara, qué se iba a lograr. Esa fase previa, a veces incómoda, es donde se ganan o se pierden la mayoría de los proyectos.
 
 ## El problema: empezar por la solución
 
-Casi todos los proyectos nacen como una solución: "necesitamos un portal", "hay que migrar a la nube", "vamos a usar IA". Pero una solución no es un objetivo. Detrás debería haber una pregunta: ¿qué problema cambia si esto sale bien?
-
-Un ejemplo:
+Casi todos los proyectos nacen como una solución: "necesitamos un portal", "hay que migrar a la nube", "vamos a usar IA". Pero una solución no es un objetivo. Detrás debería haber una pregunta: ¿qué problema cambia si esto sale bien? Un ejemplo:
 
 - **Solución:** "Construir una app móvil para clientes."
 - **Problema real:** "El 40 % de las llamadas a soporte son consultas de estado de pedido que el cliente podría resolver solo."
@@ -56,9 +50,7 @@ Las restricciones son límites conocidos: presupuesto, fecha, personal disponibl
 
 ## El triángulo y sus incómodas decisiones
 
-Alcance, tiempo y costo se afectan entre sí. Si alguien exige más alcance en menos tiempo con el mismo presupuesto, algo tiene que ceder, y casi siempre lo que cede es la calidad, sin que nadie lo haya decidido.
-
-Pregunta desde el inicio: **¿cuál de los tres es el menos flexible?** Si la fecha es fija (un evento, una normativa), entonces el alcance es lo que se negocia. Tener esa conversación pronto evita sorpresas.
+Alcance, tiempo y costo se afectan entre sí. Si alguien exige más alcance en menos tiempo con el mismo presupuesto, algo tiene que ceder, y casi siempre lo que cede es la calidad, sin que nadie lo haya decidido. Pregunta desde el inicio: **¿cuál de los tres es el menos flexible?** Si la fecha es fija (un evento, una normativa), entonces el alcance es lo que se negocia. Tener esa conversación pronto evita sorpresas.
 
 ## Una plantilla breve
 
@@ -85,14 +77,10 @@ Si no puedes responder alguna, ya encontraste dónde se va a torcer el proyecto,
 
 ## Cuando no alcancé a mapearlo todo
 
-Me pasó en un proyecto con una fecha que no se podía mover. Para cumplir los tiempos no alcanzamos a mapear todos los procesos con el cuidado que merecían ni a identificar a todas las áreas involucradas. Entregamos en tiempo, que era justo lo que el cliente quería, y quedó contento con el resultado.
-
-Yo, sin embargo, sentí que lo que entregué estaba incompleto: no cumplía con mis estándares personales. Lo que faltaba y lo que había que mejorar se fue trabajando en funcionalidades posteriores. Aprendí que el alcance se puede recortar de forma consciente, pero lo que no conviene recortar es **entender el problema**: quién está involucrado, qué procesos toca y qué significa "terminado". Eso es lo que permite decidir qué se queda para después sin que se vuelva una deuda escondida.
+Me pasó en un proyecto con una fecha que no se podía mover. Para cumplir los tiempos no alcanzamos a mapear todos los procesos con el cuidado que merecían ni a identificar a todas las áreas involucradas. Entregamos en tiempo, que era justo lo que el cliente quería, y quedó contento con el resultado. Yo, sin embargo, sentí que lo que entregué estaba incompleto: no cumplía con mis estándares personales. Lo que faltaba y lo que había que mejorar se fue trabajando en funcionalidades posteriores. Aprendí que el alcance se puede recortar de forma consciente, pero lo que no conviene recortar es **entender el problema**: quién está involucrado, qué procesos toca y qué significa "terminado". Eso es lo que permite decidir qué se queda para después sin que se vuelva una deuda escondida.
 
 También por eso valoro tanto la **trazabilidad**: poder ir de la necesidad al entregable (de atrás hacia adelante) y del entregable a la necesidad que lo originó (de adelante hacia atrás). Cuando hay trazabilidad, recortar o priorizar es una decisión con información; cuando no la hay, es una apuesta.
 
 ## Para finalizar
 
-Definir el proyecto no es burocracia: es el momento más barato para equivocarte. Una página honesta con objetivo, alcance, éxito, supuestos y riesgos hace que todos jalen hacia el mismo lado.
-
-En el siguiente artículo de la serie veo cómo armar el equipo y repartir responsabilidades una vez que el rumbo está claro.
+Definir el proyecto no es burocracia: es el momento más barato para equivocarte. Una página honesta con objetivo, alcance, éxito, supuestos y riesgos hace que todos jalen hacia el mismo lado. En el siguiente artículo de la serie veo cómo armar el equipo y repartir responsabilidades una vez que el rumbo está claro.

@@ -15,9 +15,7 @@ Existe una tendencia bien documentada llamada **falacia de la planificación**: 
 
 ## Paso 1: desglosar el trabajo
 
-Empieza dividiendo el proyecto en piezas cada vez más pequeñas, lo que se conoce como **estructura de desglose del trabajo** (WBS). Una buena regla: si no puedes estimar una tarea con cierta confianza, todavía es demasiado grande.
-
-Un entregable como "Módulo de pagos" se convierte en:
+Empieza dividiendo el proyecto en piezas cada vez más pequeñas, lo que se conoce como **estructura de desglose del trabajo** (WBS). Una buena regla: si no puedes estimar una tarea con cierta confianza, todavía es demasiado grande. Un entregable como "Módulo de pagos" se convierte en:
 
 - Diseñar el flujo de pago
 - Integrar con el proveedor
@@ -33,9 +31,7 @@ Algunas tareas no pueden empezar hasta que otra termina. Otras se pueden hacer e
 
 ## Paso 3: la ruta crítica
 
-La **ruta crítica** es la cadena más larga de tareas dependientes; su duración define cuándo termina el proyecto. Cualquier retraso en esa cadena retrasa todo, mientras que las tareas fuera de ella tienen holgura.
-
-Esto te dice dónde poner atención: no todas las tareas merecen el mismo seguimiento.
+La **ruta crítica** es la cadena más larga de tareas dependientes; su duración define cuándo termina el proyecto. Cualquier retraso en esa cadena retrasa todo, mientras que las tareas fuera de ella tienen holgura. Esto te dice dónde poner atención: no todas las tareas merecen el mismo seguimiento.
 
 ## Paso 4: estimar con honestidad
 
@@ -67,6 +63,4 @@ Se actualiza cuando aprendes algo. Lo que importa no es que la fecha nunca cambi
 
 ## Para finalizar
 
-Un cronograma realista no promete lo que quisieras, sino lo que es probable. Desglosa, mapea dependencias, identifica la ruta crítica, estima con rangos y deja colchones visibles.
-
-La planificación nunca elimina la incertidumbre, pero sí te permite verla. Ese es el tema del siguiente artículo: cómo gestionar los riesgos.
+Un cronograma realista no promete lo que quisieras, sino lo que es probable. Desglosa, mapea dependencias, identifica la ruta crítica, estima con rangos y deja colchones visibles. La planificación nunca elimina la incertidumbre, pero sí te permite verla. Ese es el tema del siguiente artículo: cómo gestionar los riesgos.

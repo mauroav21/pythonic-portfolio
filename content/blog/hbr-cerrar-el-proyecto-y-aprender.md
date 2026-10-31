@@ -7,9 +7,7 @@ tags: [Gestión de proyectos, Retrospectiva, HBR]
 
 *Serie inspirada en la Guía de Harvard Business Review sobre gestión de proyectos, con mi propia lectura y experiencia.*
 
-El sistema se lanza, hay felicitaciones, y al lunes siguiente el equipo ya está en otro proyecto. Nadie documentó lo aprendido, el soporte recibió un sistema que no conoce y los errores cometidos se repetirán en el siguiente proyecto.
-
-El cierre es la fase menos glamorosa y una de las más rentables.
+El sistema se lanza, hay felicitaciones, y al lunes siguiente el equipo ya está en otro proyecto. Nadie documentó lo aprendido, el soporte recibió un sistema que no conoce y los errores cometidos se repetirán en el siguiente proyecto. El cierre es la fase menos glamorosa y una de las más rentables.
 
 ## El problema: terminar es más que lanzar
 
@@ -77,6 +75,4 @@ Las lecciones aprendidas fallan cuando se archivan. Para que sirvan:
 
 ## Para finalizar
 
-Un proyecto bien cerrado deja un sistema que se puede operar, un equipo que aprendió y una organización que hará mejor el siguiente. Reserva tiempo y presupuesto para esto desde el plan inicial, porque si no lo haces entonces, nunca habrá un momento mejor.
-
-Con este artículo termino esta serie sobre las fases de un proyecto; en los siguientes hablo de metodologías y de prácticas concretas de gestión.
+Un proyecto bien cerrado deja un sistema que se puede operar, un equipo que aprendió y una organización que hará mejor el siguiente. Reserva tiempo y presupuesto para esto desde el plan inicial, porque si no lo haces entonces, nunca habrá un momento mejor. Con este artículo termino esta serie sobre las fases de un proyecto; en los siguientes hablo de metodologías y de prácticas concretas de gestión.

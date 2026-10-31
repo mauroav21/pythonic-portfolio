@@ -5,15 +5,11 @@ description: "El marco de principios detrás de DevOps: acelerar el flujo de tra
 tags: [DevOps, Cultura, Principios]
 ---
 
-Cuando se habla de DevOps, la conversación suele irse a herramientas: Docker, Kubernetes, Terraform, Jenkins. Pero hay un conjunto de principios debajo de todas ellas que explica **por qué** funcionan. Se conocen como **las tres vías de DevOps**, y se popularizaron con la novela *The Phoenix Project* y *The DevOps Handbook*.
-
-Aquí las explico en mis palabras y con ejemplos.
+Cuando se habla de DevOps, la conversación suele irse a herramientas: Docker, Kubernetes, Terraform, Jenkins. Pero hay un conjunto de principios debajo de todas ellas que explica **por qué** funcionan. Se conocen como **las tres vías de DevOps**, y se popularizaron con la novela *The Phoenix Project* y *The DevOps Handbook*. Aquí las explico en mis palabras y con ejemplos.
 
 ## Primera vía: el flujo
 
-**Idea:** acelerar el camino que recorre el trabajo desde que se pide (desarrollo) hasta que llega al cliente (operaciones).
-
-Piensa en el trabajo como un río. El objetivo es que fluya sin presas.
+**Idea:** acelerar el camino que recorre el trabajo desde que se pide (desarrollo) hasta que llega al cliente (operaciones). Piensa en el trabajo como un río. El objetivo es que fluya sin presas.
 
 ### Cómo se logra
 
@@ -30,9 +26,7 @@ Nunca pases un defecto conocido al siguiente paso. Detenerlo donde nace es más 
 
 ## Segunda vía: la retroalimentación
 
-**Idea:** crear canales rápidos y constantes de información de derecha a izquierda, es decir, de producción hacia desarrollo, para detectar y corregir problemas pronto.
-
-Si el flujo es el río hacia adelante, la retroalimentación es la señal de regreso que te dice si vas bien.
+**Idea:** crear canales rápidos y constantes de información de derecha a izquierda, es decir, de producción hacia desarrollo, para detectar y corregir problemas pronto. Si el flujo es el río hacia adelante, la retroalimentación es la señal de regreso que te dice si vas bien.
 
 ### Cómo se logra
 
@@ -92,6 +86,4 @@ Con las respuestas ya sabes por dónde empezar.
 
 ## Para finalizar
 
-Las tres vías son una forma de pensar: acelerar el flujo, escuchar pronto lo que dice la realidad y convertir cada experiencia en aprendizaje. Las herramientas cambian cada pocos años, estos principios se mantienen.
-
-Si tuviera que quedarme con una sola idea sería esta: mejora el sistema donde trabajas, no solo el trabajo que haces dentro de él.
+Las tres vías son una forma de pensar: acelerar el flujo, escuchar pronto lo que dice la realidad y convertir cada experiencia en aprendizaje. Las herramientas cambian cada pocos años, estos principios se mantienen. Si tuviera que quedarme con una sola idea sería esta: mejora el sistema donde trabajas, no solo el trabajo que haces dentro de él.
