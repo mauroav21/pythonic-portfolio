@@ -36,7 +36,7 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
   if (!post) notFound();
 
   return (
-    <article className="pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <article className="pt-24 pb-20 sm:pt-28 sm:pb-28">
       <Container className="max-w-3xl lg:px-8 xl:px-8">
         <Link href="/blog" className="text-sm font-bold text-accent hover:underline">
           ← Blog
