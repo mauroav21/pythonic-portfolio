@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <Section id="blog" title="Lo que" highlight="escribo" className="pt-32 sm:pt-40">
+    <Section id="blog" title="Lo que" highlight="escribo" className="pt-24 sm:pt-28">
       <BlogIndex posts={getPosts()} />
     </Section>
   );
