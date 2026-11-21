@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { BlogList } from "@/components/blog-list";
+import { BlogIndex } from "@/components/blog-index";
 import { getPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <Section id="blog" title="Lo que" highlight="escribo" className="pt-32 sm:pt-40">
-      <BlogList posts={getPosts()} />
+      <BlogIndex posts={getPosts()} />
     </Section>
   );
 }

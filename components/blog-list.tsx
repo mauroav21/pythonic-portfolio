@@ -13,31 +13,36 @@ export function BlogList({ posts }: { posts: Post[] }) {
   }
 
   return (
-    <ul className="border-t border-border-strong">
+    <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 [&>li]:h-full">
       {posts.map((post, i) => (
-        <Reveal key={post.slug} delay={Math.min(i * 0.05, 0.3)}>
-          <li className="border-b border-border">
-            <Link href={`/blog/${post.slug}`} className="group flex items-start gap-6 py-7">
-              <div className="flex-1">
-                <p className="text-xs font-bold tracking-wider text-muted-foreground uppercase">
-                  {formatDate(post.date)} · {post.readingMinutes} min
+        <li key={post.slug}>
+          <Reveal delay={Math.min(i * 0.05, 0.3)} className="h-full">
+            <Link
+              href={`/blog/${post.slug}`}
+              className="group flex h-full flex-col border-t-2 border-border-strong pt-5 transition-colors hover:border-accent"
+            >
+              {post.tags.length > 0 ? (
+                <p className="text-xs font-bold tracking-wider text-accent uppercase">
+                  {post.tags[0]}
                 </p>
-                <h3 className="mt-2 text-xl font-bold tracking-tight transition-colors group-hover:text-accent sm:text-2xl">
-                  {post.title}
-                </h3>
-                {post.description ? (
-                  <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-                    {post.description}
-                  </p>
-                ) : null}
-                {post.tags.length > 0 ? (
-                  <p className="mt-3 text-xs text-muted-foreground">{post.tags.join(" · ")}</p>
-                ) : null}
+              ) : null}
+              <h3 className="mt-3 text-xl leading-snug font-bold tracking-tight text-balance transition-colors group-hover:text-accent">
+                {post.title}
+              </h3>
+              {post.description ? (
+                <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                  {post.description}
+                </p>
+              ) : null}
+              <div className="mt-auto flex items-center justify-between pt-5 text-xs text-muted-foreground">
+                <span>
+                  {formatDate(post.date)} · {post.readingMinutes} min
+                </span>
+                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
               </div>
-              <ArrowUpRight className="mt-1 size-5 shrink-0 text-muted-foreground transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent" />
             </Link>
-          </li>
-        </Reveal>
+          </Reveal>
+        </li>
       ))}
     </ul>
   );

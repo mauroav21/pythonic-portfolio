@@ -12,7 +12,7 @@ const links = [
   { href: "/#work", label: "Proyectos" },
   { href: "/#leadership", label: "Liderazgo" },
   { href: "/#talks", label: "Charlas" },
-  { href: "/#blog", label: "Blog" },
+  { href: "/blog", label: "Blog" },
   { href: "/#contact", label: "Contacto" },
 ];
 
